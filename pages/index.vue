@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="w-full flex flex-wrap justify-center items-center pt-24 container mx-auto px-10">
+    <div class="w-full flex flex-wrap justify-center items-center pt-24 container mx-auto px-10 lg:px-40">
       <p class="text-xl font-mono text-teal-400 w-full">Howdy, my name is</p>
       <h1 class="text-8xl font-semibold text-gray-200 w-full leading-tight">Smit Patel.</h1>
       <h2 class="text-8xl font-semibold text-gray-600 w-full leading-tight">I build things for web.</h2>

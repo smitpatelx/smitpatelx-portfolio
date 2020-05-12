@@ -18,7 +18,7 @@
         <svg class="w-8 h-8 fill-current text-teal-400 inline-block" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 8c-.55 0-1-.45-1-1s.45-1 1-1h16c.55 0 1 .45 1 1s-.45 1-1 1H4zm0 5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zm0 5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1z" /></svg>
       </button>
       <slide-x-right-transition>
-      <div class="z-20 fixed w-64 p-10 bg-secondary h-screen top-0 right-0 border-l border-teal-600 lg:hidden" v-if="menu">
+      <div class="z-20 fixed w-64 p-10 bg-secondary h-screen top-0 right-0 border-l border-teal-600 lg:hidden h-screen" v-if="menu">
         <div class="flex flex-wrap flex-col w-full items-center h-full">
           <div class="flex flex-wrap flex-col">
             <button class="pb-3 flex flex-wrap justify-end items-center focus:outline-none" @click="menu=!menu">
