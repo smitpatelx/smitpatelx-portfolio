@@ -39,7 +39,7 @@ export default {
   transition: background 0.4s;
 
   &:hover{
-    @apply bg-primary;
+    background: rgba(31, 248, 255, 0.151);
   }
 }
 
