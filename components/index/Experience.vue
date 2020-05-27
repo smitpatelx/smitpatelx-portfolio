@@ -11,7 +11,7 @@
                     <button type="button" class="w-auto px-4 lg:px-0 lg:w-full border-l-2 border-blue-900 focus:border-teal-400 focus:outline-none btn-anim-1 focus:text-teal-400">Netdevv</button>
                     <button type="button" class="w-auto px-4 lg:px-0 lg:w-full border-l-2 border-blue-900 focus:border-teal-400 focus:outline-none btn-anim-1 focus:text-teal-400">Netdevv</button>
                 </div>
-                <div class="w-4/5 pl-4 mt-6 lg:mt-0">
+                <div class="w-full lg:w-4/5 pl-4 mt-6 lg:mt-0">
                     <p class="text-xl font-medium text-gray-400">Full-stack Developer<span class="pl-2 text-teal-400">@ Netdevv</span></p>
                     <p class="text-sm text-gray-500 font-mono mt-3">Oct 2017 – Apr 2020</p>
                     <ul class="text-gray-500 pt-6 text-base">
