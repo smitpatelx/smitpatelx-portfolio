@@ -8,7 +8,7 @@
             </h2>
             <div class="w-full h-full flex flex-wrap mt-8">
                 <div class="w-full lg:w-1/5 text-gray-600 flex flex-wrap flex-row lg:flex-col text-center items-center justify-start font-mono tracking-tight">
-                    <button type="button" class="w-auto px-4 lg:px-0 lg:-full border-l-2 border-blue-900 focus:border-teal-400 focus:outline-none btn-anim-1 focus:text-teal-400">Netdevv</button>
+                    <button type="button" class="w-auto px-4 lg:px-0 lg:w-full border-l-2 border-blue-900 focus:border-teal-400 focus:outline-none btn-anim-1 focus:text-teal-400">Netdevv</button>
                     <button type="button" class="w-auto px-4 lg:px-0 lg:w-full border-l-2 border-blue-900 focus:border-teal-400 focus:outline-none btn-anim-1 focus:text-teal-400">Netdevv</button>
                 </div>
                 <div class="w-4/5 pl-4 mt-6 lg:mt-0">
