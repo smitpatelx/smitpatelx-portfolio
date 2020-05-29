@@ -7,7 +7,7 @@
                 <div class="bg-gray-700 ml-4" style="padding-top:0.6px; min-width:19rem;"></div>
             </h2>
             <p class="mt-5 text-gray-500 tracking-wide">
-                Hello, I'm Smit, a computer programmer based in Toronto, CA.
+                Hello, I'm Smit, a computer programmer based in Winnipeg, MB.
             </p>
             <p class="mt-5 text-gray-500 tracking-wide">
                 I enjoy inventing and building things for Web. My goal is to build attractive and smooth Apps, that all users enjoy using.
