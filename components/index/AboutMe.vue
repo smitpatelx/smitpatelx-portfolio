@@ -53,7 +53,7 @@
             </div>
         </div>
         <div class="w-full lg:w-1/2 flex flex-wrap justify-center items-center relative mt-10 lg:mt-0">
-            <img src="/smit-3.png" alt="Smit Patel" title="Smit Patel" class="w-2/3 z-10">
+            <img src="/smit-3.jpg" alt="Smit Patel" title="Smit Patel" class="w-2/3 z-10">
             <div class="w-2/3 absolute top-0 right-0 z-0 border-2 border-teal-500 bg-transparent h-full mt-8 mr-16"></div>
         </div>
     </div>
