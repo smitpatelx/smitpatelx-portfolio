@@ -1,5 +1,10 @@
 <template>
   <div>
+    <client-only>
+      <fade-transition>
+        <loading-amination v-if="loading"/>
+      </fade-transition>
+    </client-only>
     <Header></Header>
     <fade-transition>
       <nuxt />
@@ -12,13 +17,25 @@
 import { FadeTransition } from 'vue2-transitions';
 import Header from '@/components/Header.vue';
 import SideBars from '@/components/SideBars.vue';
+import LoadingAmination from '@/components/LoadingAmination.vue';
 
 export default {
   components: {
     FadeTransition,
     Header,
-    SideBars
+    SideBars,
+    LoadingAmination
   },
+  data(){
+    return{
+      loading: true
+    }
+  },
+  created(){
+    setTimeout(()=>{
+      this.loading = false;
+    }, 3500);
+  }
 }
 </script>
 
