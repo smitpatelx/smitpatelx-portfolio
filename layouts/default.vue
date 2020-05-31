@@ -18,6 +18,7 @@ import { FadeTransition } from 'vue2-transitions';
 import Header from '@/components/Header.vue';
 import SideBars from '@/components/SideBars.vue';
 import LoadingAmination from '@/components/LoadingAmination.vue';
+// import SmoothScroll from 'smooth-scroll/dist/smooth-scroll.polyfills'
 
 export default {
   components: {
@@ -35,6 +36,7 @@ export default {
     setTimeout(()=>{
       this.loading = false;
     }, 3500);
+    // var scroll = new SmoothScroll('a[href*="#"]');
   }
 }
 </script>
@@ -45,6 +47,7 @@ export default {
     background-color: rgb(10, 25, 47);
     width: 100%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
   }
 
   *::selection {
