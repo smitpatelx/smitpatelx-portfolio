@@ -5,12 +5,14 @@
         <loading-amination v-if="loading"/>
       </fade-transition>
     </client-only>
-    <Header/>
-    <fade-transition>
-      <nuxt />
-    </fade-transition>
-    <SideBars></SideBars>
-    <Footer/>
+    <div v-if="!loading">
+      <Header/>
+      <fade-transition>
+        <nuxt />
+      </fade-transition>
+      <SideBars></SideBars>
+      <Footer/>
+    </div>
   </div>
 </template>
 
@@ -20,7 +22,6 @@ import Header from '@/components/Header.vue';
 import Footer from '@/components/Footer.vue';
 import SideBars from '@/components/SideBars.vue';
 import LoadingAmination from '@/components/LoadingAmination.vue';
-// import SmoothScroll from 'smooth-scroll/dist/smooth-scroll.polyfills'
 
 export default {
   components: {
@@ -39,7 +40,6 @@ export default {
     setTimeout(()=>{
       this.loading = false;
     }, 3500);
-    // var scroll = new SmoothScroll('a[href*="#"]');
   }
 }
 </script>
