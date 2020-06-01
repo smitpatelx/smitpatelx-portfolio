@@ -5,17 +5,19 @@
         <loading-amination v-if="loading"/>
       </fade-transition>
     </client-only>
-    <Header></Header>
+    <Header/>
     <fade-transition>
       <nuxt />
     </fade-transition>
     <SideBars></SideBars>
+    <Footer/>
   </div>
 </template>
 
 <script>
 import { FadeTransition } from 'vue2-transitions';
 import Header from '@/components/Header.vue';
+import Footer from '@/components/Footer.vue';
 import SideBars from '@/components/SideBars.vue';
 import LoadingAmination from '@/components/LoadingAmination.vue';
 // import SmoothScroll from 'smooth-scroll/dist/smooth-scroll.polyfills'
@@ -25,7 +27,8 @@ export default {
     FadeTransition,
     Header,
     SideBars,
-    LoadingAmination
+    LoadingAmination,
+    Footer
   },
   data(){
     return{
