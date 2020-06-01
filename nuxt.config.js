@@ -4,14 +4,14 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'SmitPatelx | Welcome 🙏',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content: 'I`m a Computer Programmer based in Winnipeg, MB. Specialized in building and designing websites and applications.'
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }]
