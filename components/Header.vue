@@ -1,6 +1,6 @@
 <template>
   <div class="px-12 select-none">
-    <div class="w-full flex-wrap justify-between items-center flex relative">
+    <div v-click-outside="hideIt" class="w-full flex-wrap justify-between items-center flex relative">
       <nuxt-link to="/" class="focus:outline-none focus:shadow-outline py-3">
         <img src="/logo.png" class="h-20 w-20"/>
       </nuxt-link>
@@ -42,6 +42,7 @@
 
 <script>
 import { SlideXRightTransition } from 'vue2-transitions'
+import ClickOutside from 'vue-click-outside'
 
 export default {
   components: {
@@ -69,6 +70,15 @@ export default {
         }
       ]
     }
+  },
+  methods:{
+    hideIt(){
+      this.menu = false
+      console.log("Hide")
+    }
+  },
+  directives: {
+    ClickOutside
   }
 }
 </script>

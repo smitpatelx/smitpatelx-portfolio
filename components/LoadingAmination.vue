@@ -34,7 +34,7 @@ export default {
             targets: '.svg-loading .lines path',
             strokeDashoffset: [anime.setDashoffset, 0],
             easing: 'easeInOutSine',
-            duration: 2000,
+            duration: 1500,
             delay: anime.stagger(300, {easing: 'easeOutQuad'}),
             direction: 'normal',
             loop: false
@@ -43,7 +43,7 @@ export default {
             targets: '.svg-loading .lines rect',
             strokeDashoffset: [anime.setDashoffset, 0],
             easing: 'easeInOutSine',
-            duration: 2000,
+            duration: 1500,
             delay: 1000,
             direction: 'normal',
             loop: false
@@ -53,7 +53,7 @@ export default {
             scale: '0',
             easing: 'easeInCubic',
             duration: 500,
-            delay: 3000,
+            delay: 2500,
             direction: 'normal',
             loop: false
         });

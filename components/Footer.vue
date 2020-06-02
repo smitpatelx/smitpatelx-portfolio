@@ -31,7 +31,6 @@ export default {
             } else {
                 this.isVisible = false;
             }
-            console.log( scrollPos ) 
         },
     },
     mounted () {
