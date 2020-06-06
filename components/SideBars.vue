@@ -1,7 +1,7 @@
 <template>
   <div class="z-0 hidden lg:flex">
     <div class="flex flex-col w-1/12 justify-center items-center mt-4 fixed left-0 bottom-0 select-none">
-      <div v-scroll-reveal="{ delay: 1000, mobile: false, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="flex flex-col w-1/12 justify-center items-center mt-8">
+      <div class="flex flex-col w-1/12 justify-center items-center mt-8 slide-in-bottom">
         <a href="https://github.com/smitpatelx" target="_blank" class="text-gray-600 hover:text-teal-400 p-3 rounded-full transition-all">
           <svg class=" fill-current w-5 h-5" viewBox="0 0 24 24"><g clip-path="url(#clip0)"><path d="M16 23c-.6 0-1-.4-1-1v-3.9c.1-.8-.2-1.4-.7-1.9-.3-.3-.4-.7-.2-1 .1-.4.5-.6.8-.7 2.9-.3 5.6-1.3 5.6-6 0-1.1-.4-2.2-1.2-3.1-.3-.3-.3-.7-.2-1 .3-.8.3-1.6.1-2.4-.5.1-1.3.4-2.6 1.3-.2.2-.5.2-.8.1-2.1-.6-4.4-.6-6.5 0-.3.1-.6.1-.9-.1C7.2 2.4 6.3 2.1 5.8 2c-.2.8-.2 1.6.1 2.4.1.4.1.8-.2 1-.8.9-1.2 2-1.2 3.1 0 4.7 2.7 5.7 5.6 6 .4 0 .7.3.8.7.1.4 0 .8-.2 1-.5.5-.7 1.1-.7 1.8v3.9c0 .6-.4 1-1 1s-1-.4-1-1v-1.7c-3 .5-4.3-1.2-5.2-2.3-.4-.5-.7-.9-1.1-1-.5-.1-.9-.7-.7-1.2.1-.5.7-.9 1.2-.7 1 .3 1.6 1 2.2 1.7.8 1.1 1.5 1.9 3.6 1.5v-.1c0-.6.1-1.3.3-1.8-2.8-.6-5.8-2.4-5.8-7.7 0-1.5.5-2.9 1.4-4-.4-1.4-.3-2.7.3-4 .1-.3.3-.5.6-.6.4-.1 1.7-.3 4.4 1.4 2.2-.5 4.5-.5 6.6 0 2.6-1.7 4-1.5 4.4-1.4.3.1.5.3.6.6.5 1.3.6 2.6.3 3.9.9 1.1 1.4 2.5 1.4 4 0 5.7-3.4 7.2-5.8 7.8.2.6.3 1.3.3 1.9V22c0 .6-.4 1-1 1z" /></g><defs><clipPath id="clip0"><path d="M0 0h24v24H0V0z"/></clipPath></defs></svg>
         </a>
@@ -18,7 +18,7 @@
           <div class="bg-teal-400 h-full" style="width:1px;"></div>
         </div>
       </div>
-      <div v-scroll-reveal="{ delay: 1000, mobile: false, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="flex flex-col w-1/12 justify-center items-center mt-4 fixed right-0 bottom-0 select-none">
+      <div class="flex flex-col w-1/12 justify-center items-center mt-4 fixed right-0 bottom-0 select-none slide-in-bottom">
         <a href="mailto:smitpatel.dev@gmail.com" target="_blank" class="px-2 pt-3 flex flex-wrap justify-center items-center text-center transition-all text-gray-500 hover:text-teal-400 font-mono text-base" style="writing-mode: vertical-rl;text-orientation: mixed;">
           smitpatel.dev@gmail.com
         </a>
@@ -74,5 +74,31 @@ a{
     @apply pb-5;
     transition: all 0.5s;
   }
+}
+
+.slide-in-bottom {
+  animation: slide-in-bottom 1s ease-in-out forwards;
+          
+  @-webkit-keyframes slide-in-bottom {
+    0% {
+      transform: translateY(1000px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-bottom {
+    0% {
+      transform: translateY(1000px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
 }
 </style>

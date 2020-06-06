@@ -5,7 +5,7 @@
         <loading-amination v-if="loading"/>
       </fade-transition>
     </client-only>
-    <div v-if="!loading">
+    <div :class="loading ? 'hidden' : 'visible'" v-if="!loading">
       <Header/>
       <fade-transition>
         <nuxt />

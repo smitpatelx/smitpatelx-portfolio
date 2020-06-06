@@ -18,7 +18,7 @@
             </p>
             <h2 v-scroll-reveal.reset="{ delay: 700, mobile: false, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="mt-5 text-teal-500 tracking-wide font-medium">Here are some technologies, I have been working on lately:</h2>
             <div class="mt-5 w-full flex flex-wrap flex-row text-gray-600 font-mono text-sm">
-                <p v-scroll-reveal.reset="{ delay: (i*200)+700, mobile: false, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" v-for="(item, i) in skills" :key="i" class="w-1/2 flex flex-wrap justify-start items-center mb-1">
+                <p v-scroll-reveal.reset="{ delay: (i*50)+700, mobile: false, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" v-for="(item, i) in skills" :key="i" class="w-1/2 flex flex-wrap justify-start items-center mb-1">
                     <svg class="inline-block w-4 h-2 fill-current text-teal-400 mr-2" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.5208 2.1223a1 1 0 011.02.0365l14 9a1 1 0 010 1.6824l-14 9A1 1 0 015 21V3a1 1 0 01.5208-.8777zM7 4.8317v14.3366L18.1507 12 7 4.8317z" /></svg>
                     {{item}}
                 </p>
