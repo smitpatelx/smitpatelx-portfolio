@@ -74,7 +74,6 @@ export default {
   methods:{
     hideIt(){
       this.menu = false
-      console.log("Hide")
     }
   },
   directives: {

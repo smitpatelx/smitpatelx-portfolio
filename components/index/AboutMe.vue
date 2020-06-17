@@ -1,10 +1,10 @@
 <template>
     <div class="w-full flex flex-wrap justify-center items-center mt-10 lg:mt-0 p-10 lg:p-32" id="about">
-        <div class="w-full lg:w-1/2 flex flex-wrap justify-start items-center pl-0 lg:pl-20 cursor-default">
-            <h2 v-scroll-reveal.reset="{ delay: 200, mobile: false, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full text-left flex flex-wrap justify-start items-center">
-                <span class="mr-3 text-teal-400 text-2xl font-medium font-mono leading-tight">01.</span>
-                <span class="text-gray-400 text-3xl font-bold leading-tight mb-2">About Me</span>
-                <div class="bg-gray-700 ml-4" style="padding-top:0.6px; min-width:19rem;"></div>
+        <div class="max-w-2xl lg:max-w-full w-full lg:w-1/2 flex flex-wrap justify-start items-center pl-0 lg:pl-20 cursor-default text-sm lg:text-base">
+            <h2 v-scroll-reveal.reset="{ delay: 200, mobile: false, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="relative w-full text-left flex flex-wrap justify-start">
+                <span class="mr-3 text-teal-400 text-base lg:text-2xl font-medium font-mono leading-tight self-end">01.</span>
+                <span class="text-gray-400 text-xl lg:text-3xl font-bold leading-tight self-center">About Me</span>
+                <span class="flex-auto bg-gray-600 self-center ml-3" style="height:0.5px;"></span>
             </h2>
             <p v-scroll-reveal.reset="{ delay: 400, mobile: false, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="mt-5 text-gray-500 tracking-wide">
                 Hello, I'm Smit, a computer programmer based in Winnipeg, MB.

@@ -1,29 +1,31 @@
 <template>
-    <div class="w-full h-screen flex flex-wrap justify-center items-center mt-10 lg:mt-0 p-10 lg:p-32" id="experience">
+    <div class="w-full h-screen flex flex-wrap justify-center items-center mt-10 lg:mt-0 p-10 lg:p-32 mb-32" id="experience">
         <div class="max-w-2xl flex flex-wrap justify-start items-center cursor-default">
-            <h2 v-scroll-reveal.reset="{ delay: 300, mobile: false, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full text-left flex flex-wrap justify-start items-center">
-                <span class="mr-3 text-teal-400 text-2xl font-medium font-mono leading-tight">02.</span>
-                <span class="text-gray-400 text-3xl font-bold leading-tight mb-2">Experience</span>
-                <div class="bg-gray-700 ml-4" style="padding-top:0.6px; min-width:19rem;"></div>
+            <h2 v-scroll-reveal.reset="{ delay: 300, mobile: false, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="relative w-full text-left flex flex-wrap justify-start">
+                <span class="mr-3 text-teal-400 text-base lg:text-2xl font-medium font-mono leading-tight self-end">02.</span>
+                <span class="text-gray-400 text-xl lg:text-3xl font-bold leading-tight self-center">Experience</span>
+                <span class="flex-auto bg-gray-600 self-center ml-3" style="height:0.5px;"></span>
             </h2>
             <div class="w-full h-full flex flex-wrap mt-8">
-                <div v-scroll-reveal.reset="{ delay: 400, mobile: false, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full lg:w-1/5 text-gray-600 flex flex-wrap flex-row lg:flex-col text-center items-center justify-start font-mono tracking-tight">
-                    <button type="button" @click="change_company(1)" class="w-auto px-4 lg:px-0 lg:w-full border-l-2 border-blue-900 focus:border-teal-400 focus:outline-none btn-anim-1 focus:text-teal-400">Netdevv</button>
-                    <button type="button" @click="change_company(2)" class="w-auto px-4 lg:px-0 lg:w-full border-l-2 border-blue-900 focus:border-teal-400 focus:outline-none btn-anim-1 focus:text-teal-400">Netdevv</button>
+                <div v-scroll-reveal.reset="{ delay: 400, mobile: false, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="relative w-full lg:w-1/5 text-gray-600 flex flex-wrap flex-row lg:flex-col items-center justify-start font-mono tracking-tight text-sm">
+                    <button role="tab" aria-selected="true" type="button" @click="change_company(0)" class="w-auto lg:w-full px-4 lg:pr-0 lg:pl-6 lg:border-l-2 border-blue-900 focus:outline-none btn-anim-1 focus:text-teal-400">Netdevv</button>
+                    <button role="tab" aria-selected="false" type="button" @click="change_company(1)" class="w-auto lg:w-full px-4 lg:pr-0 lg:pl-6 lg:border-l-2 border-blue-900 focus:outline-none btn-anim-1 focus:text-teal-400">Netdevv</button>
+                    <span class="bg-teal-400 absolute left-0 hidden lg:block" style="width:2px; height: 36px; margin-top: -0px; transition:all 0.5s; transition-timing-function: cubic-bezier(.17,.67,0,.96);" :style='"transform: translateY("+ (36*current_company) +"px);"'></span>
+                    <span class="bg-teal-400 absolute left-0 block lg:hidden" style="width:90px; height: 2px; margin-top: 17px; transition:all 0.5s; transition-timing-function: cubic-bezier(.17,.67,0,.96);" :style='"transform: translateX("+ (90*current_company) +"px);"'></span>
                 </div>
                 <div class="w-full lg:w-4/5 flex block relative antialiased" style="height:25em;">
-                    <div v-if="current_company==1" class="w-full pl-4 mt-6 lg:mt-0">
-                        <p class="text-xl font-medium text-gray-400">Full-stack Developer<span class="pl-2 text-teal-400">@ Netdevv</span></p>
+                    <div v-if="current_company==0" class="w-full pl-4 mt-6 lg:mt-0">
+                        <p class="text-xl font-medium text-gray-400">Full-stack Developer <span class="pl-2 text-teal-400 whitespace-no-wrap">@ Netdevv</span></p>
                         <p class="text-sm text-gray-500 font-mono mt-3">Oct 2017 – Apr 2020</p>
-                        <ul class="text-gray-500 pt-6 text-base">
+                        <ul class="text-gray-500 pt-6 text-sm">
                             <li>Advanced PHP, Nodejs, MongoDB, Firebase, PostgreSQL and MySQL</li>
                             <li>Front-End based on Javascript (Vue), CSS, HTML</li>
                             <li>Git Version-Control in a team setting.</li>
                             <li>Maintaining GitHub repository issues, answering questions and merging pull requests.</li>
                         </ul>
                     </div>
-                    <div v-if="current_company==2" class="w-full pl-4 mt-6 lg:mt-0">
-                        <p class="text-xl font-medium text-gray-400">Project Lead Developer<span class="pl-2 text-teal-400">@ Netdevv</span></p>
+                    <div v-if="current_company==1" class="w-full pl-4 mt-6 lg:mt-0">
+                        <p class="text-xl font-medium text-gray-400">Project Lead Developer<span class="pl-2 text-teal-400 whitespace-no-wrap">@ Netdevv</span></p>
                         <p class="text-sm text-gray-500 font-mono mt-3">Oct 2017 – Apr 2020</p>
                         <ul class="text-gray-500 pt-6 text-sm">
                             <li>Perform web development tasks utilizing PHP/NodeJs Framework, Web Services, and SQL Server</li>
@@ -60,7 +62,7 @@ export default {
 <style lang="scss" scoped>
 .btn-anim-1{
     transition: all 0.4s ease-in-out;
-    @apply text-center items-center justify-center py-2;
+    @apply text-left items-center justify-center py-2;
 
     &:hover{
         background-color: rgb(23, 42, 69);
@@ -74,13 +76,12 @@ li{
         content:'';
         display:inline-flex; 
         height:0.7em; 
-        width:0.7em; 
+        width:1em; 
         background-image:url('/assets/list-style-svg.svg'); 
         background-size:contain; 
         background-repeat:no-repeat; 
         padding-left: 2em;
         margin-top: 5px;
-        @apply justify-center items-start;  
     }
 }
 </style>
