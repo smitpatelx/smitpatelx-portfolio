@@ -49,7 +49,7 @@ export default {
     },
     data(){
         return{
-            current_company: 1
+            current_company: 0
         }
     },
     methods: {
