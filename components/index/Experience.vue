@@ -18,13 +18,17 @@
                         <p class="text-xl font-medium text-gray-400">Full-stack Developer <span class="pl-2 text-teal-400 whitespace-no-wrap">@ Netdevv</span></p>
                         <p class="text-sm text-gray-500 font-mono mt-3">Oct 2017 – Apr 2020</p>
                         <ul class="text-gray-500 pt-6 text-sm">
-                            <li>Advanced PHP, Nodejs, MongoDB, Firebase, PostgreSQL and MySQL</li>
-                            <li>Front-End based on Javascript (Vue), CSS, HTML</li>
-                            <li>Git Version-Control in a team setting.</li>
-                            <li>Maintaining GitHub repository issues, answering questions and merging pull requests.</li>
+                            <li>Building Backend API using Node.js, PHP, ASP.NET, JAVA to serve 10,000+ requests and server content on front-end.</li>
+                            <li>Setup containers on Debian based systems to host Nginx and Apache servers. </li>
+                            <li>Improve security of websites using LetsEncrypt’s Certbot on linux and configure certificates for nginx and apache.</li>
+                            <li>Setup docker containers for Postgres, MySql and MongoDB to improve stability and scalability of projects.</li>
+                            <li>Develop UI/UX by using tools like AdobeXD, Figma and collobrate with other developers to improve design.</li>
+                            <li>Prototype responsive websites using Nuxt.js; design interactions using SCSS, TailwindCss and BootStrap.</li>
+                            <li>Use version control on Github and Gitlabs to collobrate with team and share my code as OpenSource.</li>
+                            <li>Work as part of an agile team fostering teamwork, mentoring others, and striving for overall excellence.</li>
                         </ul>
                     </div>
-                    <div v-if="current_company==1" class="w-full pl-4 mt-6 lg:mt-0">
+                    <!-- <div v-if="current_company==1" class="w-full pl-4 mt-6 lg:mt-0">
                         <p class="text-xl font-medium text-gray-400">Project Lead Developer<span class="pl-2 text-teal-400 whitespace-no-wrap">@ Netdevv</span></p>
                         <p class="text-sm text-gray-500 font-mono mt-3">Oct 2017 – Apr 2020</p>
                         <ul class="text-gray-500 pt-6 text-sm">
@@ -34,7 +38,7 @@
                             <li>Work as part of an agile team fostering teamwork, mentoring others, and striving for overall excellence</li>
                             <li>Utilize social media platforms, support advanced online Marketing activities, and integrate with internal systems.</li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
