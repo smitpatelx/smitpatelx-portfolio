@@ -1,22 +1,24 @@
 <template>
   <div class="px-12 select-none">
     <div v-click-outside="hideIt" class="w-full flex-wrap justify-between items-center flex relative">
-      <nuxt-link v-scroll-reveal="{ delay: 0, mobile: false, origin: 'top', easing: 'ease-in', distance: '40px'}" to="/" class="focus:outline-none focus:shadow-outline py-3">
-        <img src="/logo.png" class="h-20 w-20"/>
-      </nuxt-link>
-      <div class="hidden lg:flex flex-wrap justify-center items-center">
-        <nuxt-link v-scroll-reveal="{ delay: i*150, mobile: false, origin: 'top', easing: 'ease-in', distance: '40px' }" v-for="(data, i) in nav_links" :key="i" :to="data.href" exact class="focus:underline focus:outline-none text-gray-400 text-sm hover:text-teal-400 px-4 py-2">
-          <span class="text-teal-400 text-sm mr-2 font-mono">0{{i+1}}.</span>
-          {{data.name}}
+      <div class="w-full flex-wrap justify-between items-center flex">
+        <nuxt-link v-scroll-reveal="{ delay: 0, mobile: false, origin: 'top', easing: 'ease-in', distance: '40px'}" to="/" class="focus:outline-none focus:shadow-outline py-3">
+          <img src="/logo.png" class="h-20 w-20"/>
         </nuxt-link>
-        <a href="/resume.pdf" target="_blank" v-scroll-reveal="{ delay: 600, mobile: false, origin: 'top', easing: 'ease-in', distance: '40px'}" class="focus:outline-none focus:shadow-outline resume_button flex flex-wrap justify-center items-center ml-6">
-          <span>Resume</span>
-          <svg class="w-4 h-4 fill-current text-teal-400 inline-block ml-3" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.8787 1.8787A3 3 0 016 1h8a1 1 0 01.7071.2929l6 6C20.8946 7.4804 21 7.7348 21 8v12a3 3 0 01-3 3H6a3 3 0 01-3-3V4a3 3 0 01.8787-2.1213zM6 3a1 1 0 00-1 1v16a1 1 0 001 1h12a1.0001 1.0001 0 001-1V8.4142L13.5858 3H6z" /><path fill-rule="evenodd" clip-rule="evenodd" d="M14 1c.5523 0 1 .4477 1 1v5h5c.5523 0 1 .4477 1 1s-.4477 1-1 1h-6c-.5523 0-1-.4477-1-1V2c0-.5523.4477-1 1-1zM7 13c0-.5523.4477-1 1-1h8c.5523 0 1 .4477 1 1s-.4477 1-1 1H8c-.5523 0-1-.4477-1-1zM7 17c0-.5523.4477-1 1-1h8c.5523 0 1 .4477 1 1s-.4477 1-1 1H8c-.5523 0-1-.4477-1-1zM7 9c0-.5523.4477-1 1-1h2c.5523 0 1 .4477 1 1s-.4477 1-1 1H8c-.5523 0-1-.4477-1-1z" /></svg>
-        </a>
+        <div class="hidden lg:flex flex-wrap justify-center items-center">
+          <nuxt-link v-scroll-reveal="{ delay: i*150, mobile: false, origin: 'top', easing: 'ease-in', distance: '40px' }" v-for="(data, i) in nav_links" :key="i" :to="data.href" exact class="focus:underline focus:outline-none text-gray-400 text-sm hover:text-teal-400 px-4 py-2">
+            <span class="text-teal-400 text-sm mr-2 font-mono">0{{i+1}}.</span>
+            {{data.name}}
+          </nuxt-link>
+          <a href="/resume.pdf" target="_blank" v-scroll-reveal="{ delay: 600, mobile: false, origin: 'top', easing: 'ease-in', distance: '40px'}" class="focus:outline-none focus:shadow-outline resume_button flex flex-wrap justify-center items-center ml-6">
+            <span>Resume</span>
+            <svg class="w-4 h-4 fill-current text-teal-400 inline-block ml-3" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.8787 1.8787A3 3 0 016 1h8a1 1 0 01.7071.2929l6 6C20.8946 7.4804 21 7.7348 21 8v12a3 3 0 01-3 3H6a3 3 0 01-3-3V4a3 3 0 01.8787-2.1213zM6 3a1 1 0 00-1 1v16a1 1 0 001 1h12a1.0001 1.0001 0 001-1V8.4142L13.5858 3H6z" /><path fill-rule="evenodd" clip-rule="evenodd" d="M14 1c.5523 0 1 .4477 1 1v5h5c.5523 0 1 .4477 1 1s-.4477 1-1 1h-6c-.5523 0-1-.4477-1-1V2c0-.5523.4477-1 1-1zM7 13c0-.5523.4477-1 1-1h8c.5523 0 1 .4477 1 1s-.4477 1-1 1H8c-.5523 0-1-.4477-1-1zM7 17c0-.5523.4477-1 1-1h8c.5523 0 1 .4477 1 1s-.4477 1-1 1H8c-.5523 0-1-.4477-1-1zM7 9c0-.5523.4477-1 1-1h2c.5523 0 1 .4477 1 1s-.4477 1-1 1H8c-.5523 0-1-.4477-1-1z" /></svg>
+          </a>
+        </div>
+        <button class="flex lg:hidden flex-wrap justify-center items-center focus:outline-none select-none" @click="menu=!menu">
+          <svg class="w-8 h-8 fill-current text-teal-400 inline-block" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M9 6c0-.5523.4477-1 1-1h10c.5523 0 1 .4477 1 1s-.4477 1-1 1H10c-.5523 0-1-.4477-1-1zM3 12c0-.5523.4477-1 1-1h16c.5523 0 1 .4477 1 1s-.4477 1-1 1H4c-.5523 0-1-.4477-1-1zM13 18c0-.5523.4477-1 1-1h6c.5523 0 1 .4477 1 1s-.4477 1-1 1h-6c-.5523 0-1-.4477-1-1z"/></svg>
+        </button>
       </div>
-      <button class="flex lg:hidden flex-wrap justify-center items-center focus:outline-none select-none" @click="menu=!menu">
-        <svg class="w-8 h-8 fill-current text-teal-400 inline-block" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 8c-.55 0-1-.45-1-1s.45-1 1-1h16c.55 0 1 .45 1 1s-.45 1-1 1H4zm0 5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zm0 5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1z" /></svg>
-      </button>
       <slide-x-right-transition>
       <div class="z-20 fixed w-64 p-10 bg-secondary h-screen top-0 right-0 border-l border-teal-600 lg:hidden h-screen" v-if="menu">
         <div class="flex flex-wrap flex-col w-full items-center h-full">
