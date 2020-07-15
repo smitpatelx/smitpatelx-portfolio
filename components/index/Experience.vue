@@ -9,7 +9,7 @@
             <div class="w-full h-full flex flex-wrap mt-8">
                 <div v-scroll-reveal.reset="{ delay: 400, mobile: false, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="relative w-full lg:w-1/5 text-gray-600 flex flex-wrap flex-row lg:flex-col items-center justify-start font-mono tracking-tight text-sm">
                     <button role="tab" aria-selected="true" type="button" @click="change_company(0)" class="w-auto lg:w-full px-4 lg:pr-0 lg:pl-6 lg:border-l-2 border-blue-900 focus:outline-none btn-anim-1 focus:text-teal-400">Netdevv</button>
-                    <button role="tab" aria-selected="false" type="button" @click="change_company(1)" class="w-auto lg:w-full px-4 lg:pr-0 lg:pl-6 lg:border-l-2 border-blue-900 focus:outline-none btn-anim-1 focus:text-teal-400">Netdevv</button>
+                    <!-- <button role="tab" aria-selected="false" type="button" @click="change_company(1)" class="w-auto lg:w-full px-4 lg:pr-0 lg:pl-6 lg:border-l-2 border-blue-900 focus:outline-none btn-anim-1 focus:text-teal-400">Netdevv</button> -->
                     <span class="bg-teal-400 absolute left-0 hidden lg:block" style="width:2px; height: 36px; margin-top: -0px; transition:all 0.5s; transition-timing-function: cubic-bezier(.17,.67,0,.96);" :style='"transform: translateY("+ (36*current_company) +"px);"'></span>
                     <span class="bg-teal-400 absolute left-0 block lg:hidden" style="width:90px; height: 2px; margin-top: 17px; transition:all 0.5s; transition-timing-function: cubic-bezier(.17,.67,0,.96);" :style='"transform: translateX("+ (90*current_company) +"px);"'></span>
                 </div>
