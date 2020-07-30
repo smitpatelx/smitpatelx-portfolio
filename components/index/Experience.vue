@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full h-screen flex flex-wrap justify-center items-center mt-10 lg:mt-0 p-10 lg:p-32 mb-32" id="experience">
+    <div class="w-full min-h-screen flex flex-wrap justify-center items-center mt-10 lg:mt-0 p-10 lg:p-32 mb-10" id="experience">
         <div class="max-w-2xl flex flex-wrap justify-start items-center cursor-default">
             <h2 v-scroll-reveal.reset="{ delay: 300, mobile: false, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="relative w-full text-left flex flex-wrap justify-start">
                 <span class="mr-3 text-teal-400 text-base lg:text-2xl font-medium font-mono leading-tight self-end">02.</span>
@@ -13,8 +13,8 @@
                     <span class="bg-teal-400 absolute left-0 hidden lg:block" style="width:2px; height: 36px; margin-top: -0px; transition:all 0.5s; transition-timing-function: cubic-bezier(.17,.67,0,.96);" :style='"transform: translateY("+ (36*current_company) +"px);"'></span>
                     <span class="bg-teal-400 absolute left-0 block lg:hidden" style="width:90px; height: 2px; margin-top: 17px; transition:all 0.5s; transition-timing-function: cubic-bezier(.17,.67,0,.96);" :style='"transform: translateX("+ (90*current_company) +"px);"'></span>
                 </div>
-                <div class="w-full lg:w-4/5 flex block relative antialiased" style="height:25em;">
-                    <div v-if="current_company==0" class="w-full pl-4 mt-6 lg:mt-0">
+                <div class="w-full lg:w-4/5 block relative antialiased" >
+                    <div v-if="current_company==0" class="w-full flex flex-wrap flex-col pl-4 mt-6 lg:mt-0">
                         <p class="text-xl font-medium text-gray-400">Full-stack Developer <span class="pl-2 text-teal-400 whitespace-no-wrap">@ Netdevv</span></p>
                         <p class="text-sm text-gray-500 font-mono mt-3">Oct 2017 – Apr 2020</p>
                         <ul class="text-gray-500 pt-6 text-sm">

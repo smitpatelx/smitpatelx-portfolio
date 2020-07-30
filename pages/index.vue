@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="w-full flex flex-wrap justify-center items-center pt-16 pb-10 lg:py-24 container mx-auto px-5 lg:px-20 relative">
+    <div class="w-full flex flex-wrap justify-center items-center pt-16 pb-10 lg:py-24 container mx-auto px-10 lg:px-20 relative antialiased">
       <!-- <div class="w-2/3 flex flex-wrap"> -->
         <p v-scroll-reveal="{ delay: 800, mobile: false, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="text-lg lg:text-xl font-mono text-teal-400 w-full z-10">Hello, I'm</p>
         <h1 v-scroll-reveal="{ delay: 1000, mobile: false, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="text-8xl font-semibold text-gray-200 w-full z-10 leading-tight">Smit Patel.</h1>
@@ -17,27 +17,35 @@
         </div>
       <div class="hidden lg:inline-block absolute top-auto right-0 pr-16 w-auto">
           <svg class="inline-block circles z-0" style="height:30rem;" viewBox="0 0 994 844" fill="none" >
-            <circle cx="497" cy="275" r="97.5" stroke="#19273B" stroke-width="15"/>
-            <circle cx="536" cy="604" r="97.5" stroke="#19273B" stroke-width="5"/>
-            <circle cx="546" cy="422" r="97.5" stroke="#19273B" stroke-width="10"/>
-            <circle cx="398" cy="375" r="97.5" stroke="#19273B" stroke-width="5"/>
+            <circle cx="497" cy="275" r="97.5" stroke="#19273B" stroke-width="15" />
+            <circle cx="536" cy="604" r="97.5" stroke="#19273B" stroke-width="5" />
+            <circle cx="546" cy="422" r="97.5" stroke="#19273B" stroke-width="10" />
+            <circle cx="398" cy="375" r="97.5" stroke="#19273B" stroke-width="5" />
           </svg>
       </div>
     </div>
-    <AboutMe/>
-    <Experience/>
+    <div class="flex flex-wrap flex-col justify-center items-center">
+      <AboutMe/>
+      <Experience/>
+      <Work/>
+      <Contact/>
+    </div>
   </div>
 </template>
 
 <script>
 import AboutMe from '@/components/index/AboutMe.vue';
 import Experience from '@/components/index/Experience.vue';
+import Work from '@/components/index/Work.vue';
+import Contact from '@/components/index/Contact.vue';
 import anime from 'animejs/lib/anime.es';
 
 export default {
   components:{
     AboutMe,
-    Experience
+    Experience,
+    Work,
+    Contact
   },
   data(){
     return {
@@ -50,9 +58,10 @@ export default {
             targets: '.circles circle',
             translateX: 200,
             translateY: 50,
-            easing: 'easeInOutSine',
-            duration: 1000,
+            duration: 1200,
             delay: function(el, i) { return i * 250 },
+            endDelay: function(el, i) { return i * 250 },
+            easing: 'easeInOutBack',
             direction: 'alternate',
             loop: true
         });

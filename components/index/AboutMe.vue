@@ -1,6 +1,6 @@
 <template>
     <div class="w-full flex flex-wrap justify-center items-center mt-10 lg:mt-0 p-10 lg:p-32" id="about">
-        <div class="max-w-2xl lg:max-w-full w-full lg:w-1/2 flex flex-wrap justify-start items-center pl-0 lg:pl-20 cursor-default text-sm lg:text-base">
+        <div class="max-w-2xl lg:max-w-full w-full lg:w-1/2 flex flex-wrap justify-start items-center pl-0 lg:pl-20 cursor-default text-base">
             <h2 v-scroll-reveal.reset="{ delay: 200, mobile: false, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="relative w-full text-left flex flex-wrap justify-start">
                 <span class="mr-3 text-teal-400 text-base lg:text-2xl font-medium font-mono leading-tight self-end">01.</span>
                 <span class="text-gray-400 text-xl lg:text-3xl font-bold leading-tight self-center">About Me</span>
