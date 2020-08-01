@@ -1,7 +1,7 @@
 <template>
     <div class="w-full min-h-screen flex flex-wrap justify-center items-center mt-5 lg:mt-0 p-10 lg:p-32 mb-32" id="work">
         <div class="flex flex-wrap justify-start items-center cursor-default work-w">
-            <h2 v-scroll-reveal.reset="{ delay: 300, mobile: false, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="relative w-full text-left flex flex-wrap justify-start">
+            <h2 v-scroll-reveal="{ delay: 300, mobile: false, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="relative w-full text-left flex flex-wrap justify-start">
                 <span class="mr-3 text-teal-400 text-base lg:text-2xl font-medium font-mono leading-tight self-end">03.</span>
                 <span class="text-gray-400 text-xl lg:text-3xl font-bold leading-tight self-center">Work</span>
                 <span class="flex-auto bg-gray-600 self-center ml-3" style="height:0.5px;"></span>
@@ -9,13 +9,13 @@
             <div class="w-full h-full flex flex-wrap mt-8 py-10 justify-center items-center">
                 <!-- Project 1 - Start -->
                 <div class="w-full flex flex-wrap relative justify-end rounded mb-10" >
-                    <div v-scroll-reveal.reset="{ delay: 300, mobile: false, origin: 'left', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center">
+                    <div v-scroll-reveal="{ delay: 300, mobile: false, origin: 'left', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center">
                         <img class="rounded-sm project-img w-full" src="/projects/4unaturalistic.png" title="Featured Shot" alt="4unaturalistic">
                     </div>
-                    <div v-scroll-reveal.reset="{ delay: 300, mobile: false, origin: 'right', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 z-10 flex flex-wrap flex-col justify-start items-end py-5 md:min-h-full">
+                    <div v-scroll-reveal="{ delay: 300, mobile: false, origin: 'right', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 z-10 flex flex-wrap flex-col justify-start items-end py-5 md:min-h-full">
                         <h3 class="font-mono text-teal-400 text-sm text-right">Featured Project</h3>
                         <h4 class="font-sans text-gray-300 text-2xl text-right font-semibold tracking-wider">4unaturalistic</h4>
-                        <div class="text-sm md:text-base text-gray-400 font-normal mt-6 justify-end px-5 py-4 bg-gray-800 text-left md:text-right ml-0 md:-ml-10">
+                        <div class="text-sm md:text-base text-gray-400 font-normal mt-6 justify-end px-5 py-4 text-left md:text-right ml-0 md:-ml-10 bg-blue-secondary">
                             This is a sales funnel website for a nateropathic doctor. Includes functionalities like blogging, appoinment booking and faq sections.
                         </div>
                         <div class="w-full flex flex-wrap px-2 pt-4 text-sm tracking-wide text-gray-600 justify-center items-center">
@@ -37,10 +37,10 @@
                 <!-- Project 1 - End -->
                 <!-- Project 2 - Start -->
                 <div class="w-full flex flex-wrap-reverse md:flex-wrap relative justify-end rounded mb-10" >
-                    <div v-scroll-reveal.reset="{ delay: 300, mobile: false, origin: 'left', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 z-10 flex flex-wrap flex-col justify-start items-start py-5 md:min-h-full">
+                    <div v-scroll-reveal="{ delay: 300, mobile: false, origin: 'left', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 z-10 flex flex-wrap flex-col justify-start items-start py-5 md:min-h-full">
                         <h3 class="font-mono text-teal-400 text-sm text-right">Featured Project</h3>
                         <h4 class="font-sans text-gray-300 text-2xl text-right mt-1 font-semibold tracking-wider">4unaturalistic</h4>
-                        <div class="text-sm md:text-base text-gray-400 font-normal mt-6 justify-end px-5 py-4 bg-gray-800 text-left md:text-left mr-0 md:-mr-10">
+                        <div class="text-sm md:text-base text-gray-400 font-normal mt-6 justify-end px-5 py-4 text-left md:text-left mr-0 md:-mr-10 bg-blue-secondary">
                             This is a custom website for a nateropathic doctor. Includes functionalities like blogging, commenting, live search, appoinment booking and faq sections.
                         </div>
                         <div class="w-full flex flex-wrap px-2 pt-4 text-sm tracking-wide text-gray-600 justify-center items-center">
@@ -58,20 +58,20 @@
                             </a>
                         </div>
                     </div>
-                    <div v-scroll-reveal.reset="{ delay: 300, mobile: false, origin: 'right', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center">
+                    <div v-scroll-reveal="{ delay: 300, mobile: false, origin: 'right', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center">
                         <img class="rounded-sm project-img w-full" src="/projects/4unaturalistic-netlify.png" title="Featured Shot" alt="4unaturalistic">
                     </div>
                 </div>
                 <!-- Project 2 - End -->
                 <!-- Project 3 - Start -->
                 <div class="w-full flex flex-wrap relative justify-end rounded mb-10" >
-                    <div v-scroll-reveal.reset="{ delay: 300, mobile: false, origin: 'left', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center">
+                    <div v-scroll-reveal="{ delay: 300, mobile: false, origin: 'left', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center">
                         <img class="rounded-sm project-img w-full" src="/projects/avenest.png" title="Featured Shot" alt="4unaturalistic">
                     </div>
-                    <div v-scroll-reveal.reset="{ delay: 300, mobile: false, origin: 'right', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 z-10 flex flex-wrap flex-col justify-start items-end py-5 md:min-h-full">
+                    <div v-scroll-reveal="{ delay: 300, mobile: false, origin: 'right', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 z-10 flex flex-wrap flex-col justify-start items-end py-5 md:min-h-full">
                         <h3 class="font-mono text-teal-400 text-sm text-right">Featured Project</h3>
                         <h4 class="font-sans text-gray-300 text-2xl text-right mt-1 font-semibold tracking-wider">Avenest</h4>
-                        <div class="text-sm md:text-base text-gray-400 font-normal mt-6 justify-end px-5 py-4 bg-gray-800 text-left md:text-right ml-0 md:-ml-10">
+                        <div class="text-sm md:text-base text-gray-400 font-normal mt-6 justify-end px-5 py-4 text-left md:text-right ml-0 md:-ml-10 bg-blue-secondary">
                             This is a real estate listing website. Includes functionalities like login, register, user management, moderation and API.
                         </div>
                         <div class="w-full flex flex-wrap px-2 pt-4 text-sm tracking-wide text-gray-600 justify-center items-center">
@@ -93,10 +93,10 @@
                 <!-- Project 3 - End -->
                 <!-- Project 4 - Start -->
                 <div class="w-full flex flex-wrap-reverse md:flex-wrap relative justify-end rounded mb-10" >
-                    <div v-scroll-reveal.reset="{ delay: 300, mobile: false, origin: 'left', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 z-10 flex flex-wrap flex-col justify-start items-start py-5 md:min-h-full">
+                    <div v-scroll-reveal="{ delay: 300, mobile: false, origin: 'left', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 z-10 flex flex-wrap flex-col justify-start items-start py-5 md:min-h-full">
                         <h3 class="font-mono text-teal-400 text-sm text-right">Featured Project</h3>
                         <h4 class="font-sans text-gray-300 text-2xl text-right mt-1 font-semibold tracking-wider">Snapi</h4>
-                        <div class="text-sm md:text-base text-gray-400 font-normal mt-6 justify-end px-5 py-4 bg-gray-800 text-right md:text-left mr-0 md:-mr-10">
+                        <div class="text-sm md:text-base text-gray-400 font-normal mt-6 justify-end px-5 py-4 text-right md:text-left mr-0 md:-mr-10 bg-blue-secondary">
                             This is a SAS software website. Includes functionalities like product showcase, mega menu, login, register, subscribtion and many more. 
                         </div>
                         <div class="w-full flex flex-wrap px-2 pt-4 text-sm tracking-wide text-gray-600 justify-center items-center">
@@ -114,20 +114,20 @@
                             </a>
                         </div>
                     </div>
-                    <div v-scroll-reveal.reset="{ delay: 300, mobile: false, origin: 'right', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center">
+                    <div v-scroll-reveal="{ delay: 300, mobile: false, origin: 'right', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center">
                         <img class="rounded-sm project-img w-full" src="/projects/snapi.png" title="Featured Shot" alt="4unaturalistic">
                     </div>
                 </div>
                 <!-- Project 4 - End -->
                 <!-- Project 5 - Start -->
                 <div class="w-full flex flex-wrap relative justify-end rounded mb-10" >
-                    <div v-scroll-reveal.reset="{ delay: 300, mobile: false, origin: 'left', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center">
+                    <div v-scroll-reveal="{ delay: 300, mobile: false, origin: 'left', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center">
                         <img class="rounded-sm project-img w-full" src="/projects/dcwebd.png" title="Featured Shot" alt="4unaturalistic">
                     </div>
-                    <div v-scroll-reveal.reset="{ delay: 300, mobile: false, origin: 'right', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 z-10 flex flex-wrap flex-col justify-start items-end py-5 md:min-h-full">
+                    <div v-scroll-reveal="{ delay: 300, mobile: false, origin: 'right', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 z-10 flex flex-wrap flex-col justify-start items-end py-5 md:min-h-full">
                         <h3 class="font-mono text-teal-400 text-sm text-right">Featured Project</h3>
                         <h4 class="font-sans text-gray-300 text-2xl text-right mt-1 font-semibold tracking-wider">College Course Site</h4>
-                        <div class="text-sm md:text-base text-gray-400 font-normal mt-6 justify-end px-5 py-4 bg-gray-800 text-left md:text-right ml-0 md:-ml-10">
+                        <div class="text-sm md:text-base text-gray-400 font-normal mt-6 justify-end px-5 py-4 text-left md:text-right ml-0 md:-ml-10 bg-blue-secondary">
                             This is an educational site build for web development course. Includes functionality like - attandance tracker, docs, resources and user management.
                         </div>
                         <div class="w-full flex flex-wrap px-2 pt-4 text-sm tracking-wide text-gray-600 justify-center items-center">
@@ -157,6 +157,10 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.bg-blue-secondary{
+    background: #182d4c;
+}
+
 .project-img{
     // background-color: rgba(0, 253, 198, 0.52);
     // background-image: url('/projects/4unaturalistic.png');
