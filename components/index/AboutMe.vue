@@ -26,7 +26,7 @@
         </div>
         <div class="flex w-full lg:w-1/2 py-8 md:p-16">
             <div v-scroll-reveal="{ mobile: false, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full flex flex-wrap justify-center items-center relative mt-10 lg:mt-0">
-                <img src="/smit-3.jpg" alt="Smit Patel" title="Smit Patel" class="w-2/3 z-10 rounded-lg">
+                <img loading="lazy" src="/smit-3.jpg" alt="Smit Patel" title="Smit Patel" class="w-2/3 z-10 rounded-lg">
                 <div class="w-2/3 absolute top-0 right-0 z-0 border-2 border-teal-500 bg-transparent h-full mt-8 mr-12 md:mr-16 rounded-lg"></div>
             </div>
         </div>

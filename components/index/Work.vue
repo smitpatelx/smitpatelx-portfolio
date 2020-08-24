@@ -10,7 +10,7 @@
                 <!-- Project 1 - Start -->
                 <div class="w-full flex flex-wrap relative justify-end rounded mb-10" >
                     <div v-scroll-reveal="{ delay: 300, mobile: false, origin: 'left', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center">
-                        <img class="rounded-sm project-img w-full" src="/projects/4unaturalistic.png" title="Featured Shot" alt="4unaturalistic">
+                        <img loading="lazy" class="rounded-sm project-img w-full" src="/projects/4unaturalistic.png" title="Featured Shot" alt="4unaturalistic">
                     </div>
                     <div v-scroll-reveal="{ delay: 300, mobile: false, origin: 'right', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 z-10 flex flex-wrap flex-col justify-start items-end py-5 md:min-h-full">
                         <h3 class="font-mono text-teal-400 text-sm text-right">Featured Project</h3>
@@ -59,14 +59,14 @@
                         </div>
                     </div>
                     <div v-scroll-reveal="{ delay: 300, mobile: false, origin: 'right', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center">
-                        <img class="rounded-sm project-img w-full" src="/projects/4unaturalistic-netlify.png" title="Featured Shot" alt="4unaturalistic">
+                        <img loading="lazy" class="rounded-sm project-img w-full" src="/projects/4unaturalistic-netlify.png" title="Featured Shot" alt="4unaturalistic">
                     </div>
                 </div>
                 <!-- Project 2 - End -->
                 <!-- Project 3 - Start -->
                 <div class="w-full flex flex-wrap relative justify-end rounded mb-10" >
                     <div v-scroll-reveal="{ delay: 300, mobile: false, origin: 'left', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center">
-                        <img class="rounded-sm project-img w-full" src="/projects/avenest.png" title="Featured Shot" alt="4unaturalistic">
+                        <img loading="lazy" class="rounded-sm project-img w-full" src="/projects/avenest.png" title="Featured Shot" alt="4unaturalistic">
                     </div>
                     <div v-scroll-reveal="{ delay: 300, mobile: false, origin: 'right', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 z-10 flex flex-wrap flex-col justify-start items-end py-5 md:min-h-full">
                         <h3 class="font-mono text-teal-400 text-sm text-right">Featured Project</h3>
@@ -115,14 +115,14 @@
                         </div>
                     </div>
                     <div v-scroll-reveal="{ delay: 300, mobile: false, origin: 'right', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center">
-                        <img class="rounded-sm project-img w-full" src="/projects/snapi.png" title="Featured Shot" alt="4unaturalistic">
+                        <img loading="lazy" class="rounded-sm project-img w-full" src="/projects/snapi.png" title="Featured Shot" alt="4unaturalistic">
                     </div>
                 </div>
                 <!-- Project 4 - End -->
                 <!-- Project 5 - Start -->
                 <div class="w-full flex flex-wrap relative justify-end rounded mb-10" >
                     <div v-scroll-reveal="{ delay: 300, mobile: false, origin: 'left', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center">
-                        <img class="rounded-sm project-img w-full" src="/projects/dcwebd.png" title="Featured Shot" alt="4unaturalistic">
+                        <img loading="lazy" class="rounded-sm project-img w-full" src="/projects/dcwebd.png" title="Featured Shot" alt="4unaturalistic">
                     </div>
                     <div v-scroll-reveal="{ delay: 300, mobile: false, origin: 'right', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 z-10 flex flex-wrap flex-col justify-start items-end py-5 md:min-h-full">
                         <h3 class="font-mono text-teal-400 text-sm text-right">Featured Project</h3>
