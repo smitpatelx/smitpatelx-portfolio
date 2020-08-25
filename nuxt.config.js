@@ -1,5 +1,8 @@
 module.exports = {
   mode: 'universal',
+  publicRuntimeConfig: {
+    apiURL: process.env.API_URL || 'http://localhost:9009/'
+  },
   /*
    ** Headers of the page
    */

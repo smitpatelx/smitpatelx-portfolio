@@ -111,7 +111,7 @@ export default {
     },
     methods: {
         formSubmission(){
-            this.$axios.$post(`${process.env.API_URL}api/v1/contact`,
+            this.$axios.$post(`http://localhost:9009/api/v1/contact`,
             {
                 first_name: this.first_name,
                 last_name: this.last_name,

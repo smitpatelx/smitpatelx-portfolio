@@ -17,9 +17,10 @@
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/pwa": "^3.0.0-0",
     "animejs": "^3.2.0",
-    "cross-env": "^5.2.0",
+    "cross-env": "^7.0.2",
     "express": "^4.16.4",
     "nuxt": "^2.0.0",
+    "prettier": "^2.1.0",
     "vue-click-outside": "^1.1.0",
     "vue-scroll-reveal": "^1.0.11",
     "vue2-transitions": "^0.3.0"
@@ -38,7 +39,6 @@
     "jest": "^24.1.0",
     "node-sass": "^4.14.1",
     "nodemon": "^1.18.9",
-    "prettier": "^1.19.1",
     "sass-loader": "^8.0.2",
     "vue-jest": "^4.0.0-beta.4"
   }

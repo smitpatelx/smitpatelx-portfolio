@@ -1,11 +1,12 @@
 <template>
   <div>
-    <client-only>
+    <!-- <client-only>
       <fade-transition>
         <loading-amination v-if="loading"/>
       </fade-transition>
-    </client-only>
-    <div :class="loading ? 'hidden' : 'visible'" v-if="!loading">
+    </client-only> -->
+    <!-- <div :class="loading ? 'hidden' : 'visible'" v-if="!loading"> -->
+    <div>
       <Header/>
       <fade-transition>
         <nuxt />
@@ -21,25 +22,25 @@ import { FadeTransition } from 'vue2-transitions';
 import Header from '@/components/Header.vue';
 import Footer from '@/components/Footer.vue';
 import SideBars from '@/components/SideBars.vue';
-import LoadingAmination from '@/components/LoadingAmination.vue';
+// import LoadingAmination from '@/components/LoadingAmination.vue';
 
 export default {
   components: {
     FadeTransition,
     Header,
     SideBars,
-    LoadingAmination,
+    // LoadingAmination,
     Footer
   },
   data(){
     return{
-      loading: true
+      // loading: true
     }
   },
   created(){
-    setTimeout(()=>{
-      this.loading = false;
-    }, 3000);
+    // setTimeout(()=>{
+    //   this.loading = false;
+    // }, 3000);
   }
 }
 </script>
