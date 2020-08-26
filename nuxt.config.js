@@ -40,7 +40,9 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/eslint-module
     // '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@aceforth/nuxt-optimized-images',
+    'nuxt-purgecss',
   ],
   /*
    ** Nuxt.js modules
@@ -52,6 +54,9 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv'
   ],
+  optimizedImages: {
+    optimizeImages: true
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
