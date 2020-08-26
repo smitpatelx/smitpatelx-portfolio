@@ -3,7 +3,7 @@
     <div v-click-outside="hideIt" class="w-full flex-wrap justify-between items-center flex relative">
       <div class="w-full flex-wrap justify-between items-center flex">
         <nuxt-link v-scroll-reveal="{ delay: 0, mobile: false, origin: 'top', easing: 'ease-in', distance: '40px'}" to="/" class="focus:outline-none py-3">
-          <img src="/logo.png" class="h-20 w-20"/>
+          <img src="/logo.webp" class="h-20 w-20"/>
         </nuxt-link>
         <div class="hidden lg:flex flex-wrap justify-center items-center">
           <nuxt-link v-scroll-reveal="{ delay: i*150, mobile: false, origin: 'top', easing: 'ease-in', distance: '40px' }" v-for="(data, i) in nav_links" :key="i" :to="data.href" exact class="focus:underline focus:outline-none text-gray-400 text-sm hover:text-teal-400 px-4 py-2">
