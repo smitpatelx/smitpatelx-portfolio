@@ -111,26 +111,7 @@ export default {
     },
     methods: {
         formSubmission(){
-            this.$axios.$post(`http://localhost:9009/api/v1/contact`,
-            {
-                first_name: this.first_name,
-                last_name: this.last_name,
-                email: this.email,
-                phone: this.phone,
-                country_code: this.country,
-                business_name: this.business_name,
-                business_employees: this.no_of_employee,
-                est_budget: this.est_budget,
-                message: this.message,
-                ip_address: this.ip_address
-            })
-            .then(res=>{
-                alert('Thank you for contacting me!')
-                this.reset();
-            })
-            .catch(err=>{
-                console.error(err)
-            })
+            this.getIp();
         },
         reset(){
             this.email=''
@@ -146,17 +127,38 @@ export default {
         onCountrySelect(val){
             this.country = val;
         },
-        getIp() {
-            this.$axios.$get('https://json.geoiplookup.io/')
+        async getIp() {
+            await this.$axios.$get('https://json.geoiplookup.io/')
             .then(res=>{
                 this.ip_address = res.ip;
+
+                this.$axios.$post(`http://localhost:9009/api/v1/contact`,
+                {
+                    first_name: this.first_name,
+                    last_name: this.last_name,
+                    email: this.email,
+                    phone: this.phone,
+                    country_code: this.country,
+                    business_name: this.business_name,
+                    business_employees: this.no_of_employee,
+                    est_budget: this.est_budget,
+                    message: this.message,
+                    ip_address: this.ip_address
+                })
+                .then(res=>{
+                    alert('Thank you for contacting me!')
+                    this.reset();
+                })
+                .catch(err=>{
+                    console.error(err)
+                })
             }).catch(error=>{
                 console.log('Error getting ip: ',error);
             });
         }
     },
     created() {
-        this.getIp();
+        
     },
 }
 </script>
