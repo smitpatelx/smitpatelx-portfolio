@@ -74,21 +74,21 @@ export default {
 
       //audio loop
       
-      let clicks=0;
-      function playnow() {
-        clicks++
-        if(clicks==1){
-          var audioElement = document.createElement('audio');
-          audioElement.setAttribute('src', '/audio_loop.mp3');
-          audioElement.setAttribute('autoplay', 'autoplay');
-          audioElement.play(); 
-          audioElement.addEventListener('ended', function() {
-            this.currentTime = 0;
-              this.play();
-          }, false);
-        }
-      }
-      document.addEventListener('mousemove', playnow(), false)
+      // let clicks=0;
+      // function playnow() {
+      //   clicks++
+      //   if(clicks==1){
+      //     var audioElement = document.createElement('audio');
+      //     audioElement.setAttribute('src', '/audio_loop.mp3');
+      //     audioElement.setAttribute('autoplay', 'autoplay');
+      //     audioElement.play(); 
+      //     audioElement.addEventListener('ended', function() {
+      //       this.currentTime = 0;
+      //         this.play();
+      //     }, false);
+      //   }
+      // }
+      // document.addEventListener('mousemove', playnow(), false)
     }
 }
 </script>

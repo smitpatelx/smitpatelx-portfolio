@@ -49,6 +49,7 @@ export default {
         },
         open_menu(){
             this.menu_state = true;
+            this.load_countries();
             setTimeout(()=>{
                 document.getElementById("search_country").focus();
             },200);
@@ -62,7 +63,7 @@ export default {
         }
     },
     created() {
-        this.load_countries();
+        // this.load_countries();
     },
     watch:{
         search(val){
