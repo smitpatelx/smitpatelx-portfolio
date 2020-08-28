@@ -2,6 +2,7 @@
     <div class="w-full min-h-screen flex flex-wrap justify-center items-center mt-5 lg:mt-0 p-10 lg:p-32 mb-32" id="contact">
         <div class="flex flex-wrap justify-center items-center">
             <h2 v-scroll-reveal="{ delay: 300, mobile: false, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full text-gray-400 text-3xl md:text-4xl font-bold leading-tight text-center">
+                <span class="mr-3 text-teal-400 text-base lg:text-2xl font-medium font-mono leading-tight self-end">04.</span>
                 Lets get in touch
             </h2>
             <form method="post" @submit.prevent="formSubmission" class="flex flex-wrap flex-col mt-8 max-w-6xl px-6" v-scroll-reveal="{ delay: 350, mobile: false, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}">
