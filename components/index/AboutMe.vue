@@ -25,8 +25,10 @@
             </div>
         </div>
         <div class="flex w-full lg:w-1/2 py-8 md:p-16">
-            <div v-scroll-reveal="{ mobile: false, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full flex flex-wrap justify-center items-center relative mt-10 lg:mt-0">
-                <img loading="lazy" src="/smit-3.webp" alt="Smit Patel" title="Smit Patel" class="w-2/3 z-10 rounded-lg">
+            <div v-lazy-container="{ selector: 'img' }" v-scroll-reveal="{ mobile: false, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full flex flex-wrap justify-center items-center relative mt-10 lg:mt-0">
+                <img :data-src="require('~/static/smit-3.png?webp')" 
+                    :data-loading="require('~/static/smit-3.png?webp?lqip')" 
+                    alt="Smit Patel" title="Smit Patel" class="w-2/3 z-10 rounded-lg">
                 <div class="w-2/3 absolute top-0 right-0 z-0 border-2 border-teal-500 bg-transparent h-full mt-8 mr-12 md:mr-16 rounded-lg"></div>
             </div>
         </div>
@@ -50,6 +52,8 @@ export default {
     }
 }
 </script>
-<style lang="scss">
-
+<style lang="scss" scoped>
+    img[lazy='loading'] {
+        filter: blur(15px);
+    }
 </style>

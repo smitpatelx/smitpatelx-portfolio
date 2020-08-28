@@ -1,6 +1,6 @@
 <template>
     <div class="flex cursor-pointer bg-gray-800 rounded-l items-stretch justify-center border-r-2 border-primary" v-click-outside="hide_menu">
-        <button class="flex items-center justify-center rounded-l py-1 px-4 focus:outline-none border border-transparent focus:border-teal-400" @click.prevent="open_menu()" @focus.prevent="open_menu">
+        <button class="flex items-center justify-center rounded-l py-1 px-4 focus:outline-none border border-transparent focus:border-teal-400" @click.prevent="open_menu()" @focus.prevent="menu_state ? ()=>{} : open_menu()">
             <img loading="lazy" class="h-4 w-6 inline-block rounded-sm" :src="`/flags/${current_country}.webp`" :alt="`${current_country}`" :title="`${current_country.toUpperCase()}`">
         </button>
         <slide-y-down-transition>
@@ -32,8 +32,8 @@ export default {
         }
     },
     methods:{
-        async load_countries(){
-            await this.$axios.$get('/json/name_alpha2_calling_codes.json')
+        load_countries(){
+            this.$axios.$get('/json/name_alpha2_calling_codes.json')
             .then(res=>{
                 this.data = res;
                 this.new_array = res;
@@ -49,7 +49,7 @@ export default {
         },
         open_menu(){
             this.menu_state = true;
-            this.load_countries();
+            if (this.data.length == 0) { this.load_countries() }
             setTimeout(()=>{
                 document.getElementById("search_country").focus();
             },200);

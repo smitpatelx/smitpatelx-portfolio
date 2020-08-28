@@ -3,6 +3,7 @@ module.exports = {
   publicRuntimeConfig: {
     apiURL: process.env.API_URL || 'http://localhost:9009/'
   },
+  telemetry: false,
   /*
    ** Headers of the page
    */
@@ -52,7 +53,8 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    // '@aceforth/nuxt-optimized-images',
   ],
   optimizedImages: {
     optimizeImages: true
