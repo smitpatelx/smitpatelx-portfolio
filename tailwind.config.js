@@ -10,6 +10,9 @@ module.exports = {
     './layouts/**/*.vue',
     './pages/**/*.vue',
   ],
+  future: {
+    removeDeprecatedGapUtilities: true,
+  },
   theme: {
     extend: {
       colors: {

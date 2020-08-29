@@ -110,6 +110,9 @@ export default {
             }
         }
     },
+    asyncData (context) {
+        return context.env
+    },
     methods: {
         formSubmission(){
             if(this.ip_address == ""){
@@ -119,7 +122,7 @@ export default {
             }
         },
         async submit(){
-            await this.$axios.$post(`http://localhost:9009/api/v1/contact`,
+            await this.$axios.$post(`${process.env.API_URL}/api/v1/contact`,
             {
                 first_name: this.first_name,
                 last_name: this.last_name,
@@ -165,7 +168,6 @@ export default {
         }
     },
     created() {
-        
     },
 }
 </script>

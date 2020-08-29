@@ -1,7 +1,8 @@
+require('dotenv').config()
 module.exports = {
   mode: 'universal',
-  publicRuntimeConfig: {
-    apiURL: process.env.API_URL || 'http://localhost:9009/'
+  env: {
+    apiUrl: process.env.API_URL || 'http://localhost:3000'
   },
   telemetry: false,
   /*
@@ -41,6 +42,7 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/eslint-module
     // '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
+    '@nuxtjs/dotenv',
     '@nuxtjs/tailwindcss',
     '@aceforth/nuxt-optimized-images',
     'nuxt-purgecss',
