@@ -1,14 +1,14 @@
 <template>
-    <div class="flex cursor-pointer bg-gray-800 rounded-l items-stretch justify-center border-r-2 border-primary" >
-        <button class="flex items-center justify-center rounded-l py-1 px-4 focus:outline-none border border-transparent focus:border-teal-400" @click.prevent="open_menu()" @focus.prevent="menu_state ? ()=>{} : open_menu()">
+    <div v-click-outside="hide_menu" class="flex cursor-pointer bg-gray-800 rounded-l items-stretch justify-center border-r-2 border-primary" >
+        <button tabindex="2" class="flex items-center justify-center rounded-l py-1 px-4 focus:outline-none border border-transparent focus:border-teal-400" @click.prevent="open_menu()" @keydown.enter="menu_state ? ()=>{} : open_menu()" @keydown.prevent.up="up_one" @keydown.prevent.down="down_one">
             <img loading="lazy" class="h-4 w-6 inline-block rounded-sm" :src="`/flags/${current_country}.webp`" :alt="`${current_country}`" :title="`${current_country.toUpperCase()}`">
         </button>
         <slide-y-down-transition>
-            <div v-if="menu_state" class="mt-12 absolute custom_scroll flex flex-col w-56 bg-gray-900 border-2 border-gray-700 rounded h-48 overflow-y-scroll scrolling-touch top-0 left-0">
-                <div class="p-2 flex items-stretch justify-center w-full">
-                    <input id="search_country" @keydown.prevent.enter="select_first" tabindex="1" type="text" v-model="search" class="bg-gray-800 text-gray-200 focus:outline-none focus:bg-gray-700 w-full shadow rounded py-1 px-2" placeholder="Seach">
+            <div @blur="hide_menu" v-if="menu_state" class="mt-12 absolute custom_scroll flex flex-col w-56 bg-gray-800 border-2 border-gray-600 rounded h-48 overflow-y-scroll scrolling-touch top-0 left-0">
+                <div class="p-0 flex items-stretch justify-center w-full">
+                    <input :autocomplete="random_alpha" id="search_country" @keydown.esc="search=''" @keydown.prevent.enter="select_first" tabindex="3" type="text" v-model="search" class="bg-gray-700 text-gray-200 focus:outline-none w-full shadow rounded-sm py-2 px-2" placeholder="Seach...">
                 </div>
-                <span @keydown.prevent.enter="select(ct.alpha2Code)" tabindex="2" v-for="(ct, i) in new_array" :key="i" class="py-1 px-2 text-sm w-full text-gray-300 hover:underline bg-gray-800 hover:bg-gray-700 focus:outline-none focus:bg-gray-700" @click="select(ct.alpha2Code)">
+                <span tabindex="3" @keydown.prevent.enter="select(ct.alpha2Code)" v-for="(ct, i) in new_array" :key="i" class="py-1 px-2 text-sm w-full text-gray-300 hover:underline bg-gray-800 hover:bg-gray-700 focus:outline-none focus:text-gray-100 focus:bg-teal-500" @click="select(ct.alpha2Code, i)">
                     {{ct.name}}
                 </span>
             </div>
@@ -25,7 +25,8 @@ export default {
     data(){
         return{
             current_country: 'ca',
-            data:[],
+            current_index: 42,
+            countryData:[],
             menu_state: false,
             search:'',
             new_array:[]
@@ -35,21 +36,22 @@ export default {
         load_countries(){
             this.$axios.$get('/json/name_alpha2_calling_codes.json')
             .then(res=>{
-                this.data = res;
+                this.countryData = res;
                 this.new_array = res;
             })
             .catch(err=>{
                 console.error(err)
             })
         },
-        select(val){
+        select(val, i){
+            this.current_index=i;
             this.current_country = val.toLowerCase();
             this.search=''
             this.hide_menu();
         },
         open_menu(){
             this.menu_state = true;
-            if (this.data.length == 0) { this.load_countries() }
+            if (this.countryData.length == 0) { this.load_countries() }
             setTimeout(()=>{
                 document.getElementById("search_country").focus();
             },200);
@@ -60,15 +62,44 @@ export default {
         },
         select_first(){
             this.select(this.new_array[0].alpha2Code)
+        },
+        up_one(){
+            if(this.countryData.length!==0){
+                if(typeof this.countryData !== 'undefined'){
+                    this.current_index--;
+                    console.log(this.current_index)
+                    let countryCodeUp = this.countryData[this.current_index].alpha2Code;
+                    this.select(countryCodeUp, this.current_index);
+                }
+            }
+        },
+        down_one(){
+            if(this.countryData.length!==0){
+                if(this.current_index<=this.countryData.length){
+                    this.current_index++;
+                    console.log(this.current_index)
+                    let countryCodeUp = this.countryData[this.current_index].alpha2Code;
+                    this.select(countryCodeUp, this.current_index);
+                }
+            }
         }
     },
-    created() {
-        // this.load_countries();
+    computed:{
+        random_alpha(){
+            let length=9;
+            var result           = '';
+            var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            var charactersLength = characters.length;
+            for ( var i = 0; i < length; i++ ) {
+                result += characters.charAt(Math.floor(Math.random() * charactersLength));
+            }
+            return result;
+        },
     },
     watch:{
         search(val){
             let pattern=new RegExp(this.search.toLowerCase(),"g")
-            let search_arr = this.data.filter(function(arr,index){
+            let search_arr = this.countryData.filter(function(arr,index){
                 if(arr.name.toLowerCase().match(pattern) || arr.alpha2Code.toLowerCase().match(pattern)){
                     return true;
                 }else{
