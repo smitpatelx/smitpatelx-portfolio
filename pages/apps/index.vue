@@ -9,20 +9,24 @@
                 <span class="flex-auto bg-gray-600 self-center ml-3" style="height:0.5px;"></span>
             </div>
             <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div v-scroll-reveal="{ delay: i*100, mobile: false, origin: 'top', easing: 'ease-in', distance: '40px' }" v-for="(app, i) in apps" :key="i" class="w-full rounded-lg duration-300 transition-all border border-blue-500 bg-gray-200 grid grid-cols-1 shadow-xl">
+                <div v-scroll-reveal="{ delay: i*100, mobile: false, origin: 'top', easing: 'ease-in', distance: '40px' }" v-for="(app, i) in apps" :key="i" class="w-full rounded-lg duration-300 transition-all bg-gray-200 grid grid-cols-1 shadow-xl">
                     <div class="flex flex-wrap max:h-10 rounded-t-md md:rounded-t-lg">
                         <img :data-src="require(`~/static/${app.icon_url}?webp`)"
                             :data-loading="require(`~/static/${app.icon_url}?webp?lqip`)"
-                            class="w-full h-full block rounded-t-md md:rounded-t-lg" :alt="app.title">
+                            class="w-full h-full block rounded-t-md md:rounded-t-lg card-img" :alt="app.title">
                     </div>
-                    <div class="px-5 pt-6 pb-5 bg-gray-100 rounded-b-md md:rounded-b-lg">
+                    <div class="px-5 pt-6 pb-5 bg-white rounded-b-md md:rounded-b-lg">
                         <h2 class="text-xl font-bold text-blue-600">{{app.title}}</h2>
                         <p class="text-base text-gray-500 leading-tight mt-1">{{app.description | desc}}</p>
                         <div class="text-sm font-medium mt-4 flex flex-wrap justify-between items-center">
-                            <nuxt-link :to="`${app.path}/`" class="py-1 font-normal text-lg duration-300 transition-colors text-blue-600 hover:text-gray-500 rounded">
-                                Read More
-                                <svg class="w-5 h-5 inline-block fill-current ml-1" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.7 4.3a1 1 0 10-1.4 1.4l5.3 5.3H5a1 1 0 100 2h11.6l-5.3 5.3a1 1 0 001.4 1.4l7-7c.4-.4.4-1 0-1.4l-7-7z" clip-rule="evenodd"/></svg>
-                            </nuxt-link>
+                            <div class="flex flex-wrap justify-center items-center">
+                                <nuxt-link :to="`${app.path}/`" class="btn-secondary focus:shadow-outline">
+                                    Read More
+                                </nuxt-link>
+                                <a :href="`${app.download_url}`" target="_blank" class="btn-primary ml-4">
+                                    <svg class="w-6 h-6 inline-block fill-current" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 14c.6 0 1 .4 1 1v4a1 1 0 001 1h14a1 1 0 001-1v-4a1 1 0 112 0v4a3 3 0 01-3 3H5a3 3 0 01-3-3v-4c0-.6.4-1 1-1z" clip-rule="evenodd"/><path fill-rule="evenodd" d="M6.3 9.3a1 1 0 011.4 0l4.3 4.3 4.3-4.3a1 1 0 111.4 1.4l-5 5a1 1 0 01-1.4 0l-5-5a1 1 0 010-1.4z" clip-rule="evenodd"/><path fill-rule="evenodd" d="M12 2c.6 0 1 .4 1 1v12a1 1 0 11-2 0V3c0-.6.4-1 1-1z" clip-rule="evenodd"/></svg>
+                                </a>
+                            </div>
                             <span class="font-normal text-gray-600">{{app.reseaseDate | date}}</span>
                         </div>
                     </div>
@@ -52,7 +56,11 @@ export default {
         desc: val=>{
             let str_arrs = val.split(" ");
             str_arrs.shift();
-            return val.split(" ")[0].toUpperCase() + " " + str_arrs.join(" ").toLowerCase();
+            let capitalize = (s) => {
+                if (typeof s !== 'string') return ''
+                return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase()
+            }
+            return capitalize(val.split(" ")[0]) + " " + str_arrs.join(" ").toLowerCase();
         },
         date: val=>{
             const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
@@ -85,5 +93,42 @@ export default {
 .max\:h-10{
     max-height: 12rem;
     overflow: hidden;
+}
+
+.btn-secondary{
+  @apply bg-transparent px-5 py-2 text-blue-600 rounded-md text-base font-mono font-semibold flex flex-wrap justify-center items-center text-center shadow-2xl transition-all duration-300;
+  background: rgba(47, 140, 246, 0.25);
+  transition: all 0.4s;
+
+  &:hover{
+    @apply shadow-xl transition-all duration-300 ease-in-out text-blue-700 border-none;
+    background: rgba(47, 140, 246, 0.4);
+  }
+
+  &:focus{
+    @apply transition-all duration-300 ease-in-out text-blue-700 shadow-outline outline-none;
+    background: rgba(47, 140, 246, 0.4);
+  }
+}
+
+.btn-primary{
+  @apply bg-transparent text-base flex flex-wrap justify-center items-center text-center;
+  color: rgba(47, 140, 246, 0.7);
+  transition: all 0.4s;
+
+  &:hover{
+    @apply transition-all duration-300 ease-in-out outline-none;
+    color: rgba(47, 140, 246, 0.9);
+  }
+}
+
+.card-img{
+    filter: blur(5px);
+    transition: all 0.6 ease-in;
+
+    &:hover{
+        filter: blur(0px);
+        transition: all 0.6 ease-in-out;
+    }
 }
 </style>

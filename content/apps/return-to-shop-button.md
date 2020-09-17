@@ -3,7 +3,6 @@ title: Return To Shop
 description: Customize your return to shop button to redirect to different URL.
 tags: ["Wordpress","WooCommerce","WPML"]
 icon_url: apps/robust-user-search/icon.png
-banner_url: apps/robust-user-search/banner.png
 reseaseDate: 10 September 2020
 Contributors: smitpatelx
 Donate link: https://apps.smitpatelx.com/donate
@@ -11,6 +10,7 @@ Requires_at_least: 5.2
 Tested_up_to: 5.5.1
 Stable_tag: 1.0.4
 License: GPLv2
+download_url: https://github.com/smitpatelx/return-to-shop
 ---
 
 # Privacy Policy

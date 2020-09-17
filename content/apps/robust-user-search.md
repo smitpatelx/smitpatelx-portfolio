@@ -10,7 +10,8 @@ Donate link: https://apps.smitpatelx.com/donate
 Requires_at_least: 5.2
 Tested_up_to: 5.5.1
 Stable_tag: 1.0.4
-License: GPLv2
+License: GPL-v2-only
+download_url: https://wordpress.org/plugins/robust-user-search/
 ---
 
 # Privacy Policy

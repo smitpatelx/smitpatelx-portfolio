@@ -9,7 +9,7 @@
             <div class="w-full h-full flex flex-wrap mt-8 py-10 justify-center items-center">
                 <!-- Project 1 - Start -->
                 <div class="w-full flex flex-wrap relative justify-end rounded mb-10" >
-                    <a href="https://4unaturalistic.com/" target="_blank" v-lazy-container="{ selector: 'img' }" v-scroll-reveal="{ delay: 300, mobile: false, origin: 'left', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center">
+                    <a href="https://4unaturalistic.com/" target="_blank" v-lazy-container="{ selector: 'img' }" v-scroll-reveal="{ delay: 300, mobile: false, origin: 'left', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center shadow-xl">
                         <img :data-src="require('~/static/projects/4unaturalistic.png?webp')"
                             :data-loading="require('~/static/projects/4unaturalistic.png?lqip')"
                             class="rounded-sm project-img w-full" title="Featured Shot" alt="Project Image">
@@ -17,7 +17,7 @@
                     <div v-scroll-reveal="{ delay: 300, mobile: false, origin: 'right', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 z-10 flex flex-wrap flex-col justify-start items-end py-5 md:min-h-full">
                         <h3 class="font-mono text-blue-400 text-sm text-right">Featured Project</h3>
                         <h4 class="font-sans text-gray-600 text-2xl text-right font-semibold tracking-wider">4unaturalistic</h4>
-                        <div class="text-sm md:text-base text-gray-400 font-normal mt-6 justify-end px-5 py-4 text-left md:text-right ml-0 md:-ml-10 bg-blue-secondary">
+                        <div class="text-sm md:text-base text-gray-600 md:text-gray-400 font-normal mt-6 justify-end px-5 py-4 text-left md:text-right ml-0 md:-ml-10 bg-white md:bg-blue-800 shadow-xl">
                             This is a sales funnel website for a nateropathic doctor. Includes functionalities like blogging, appoinment booking and faq sections.
                         </div>
                         <div class="w-full flex flex-wrap px-2 pt-4 text-sm tracking-wide text-gray-600 justify-center items-center">
@@ -39,7 +39,7 @@
                     <div v-scroll-reveal="{ delay: 300, mobile: false, origin: 'left', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 z-10 flex flex-wrap flex-col justify-start items-start py-5 md:min-h-full">
                         <h3 class="font-mono text-blue-400 text-sm text-right">Featured Project</h3>
                         <h4 class="font-sans text-gray-600 text-2xl text-right mt-1 font-semibold tracking-wider">4unaturalistic</h4>
-                        <div class="text-sm md:text-base text-gray-400 font-normal mt-6 justify-end px-5 py-4 text-left md:text-left mr-0 md:-mr-10 bg-blue-secondary">
+                        <div class="text-sm md:text-base text-gray-600 md:text-gray-400 font-normal mt-6 justify-end px-5 py-4 text-left md:text-left mr-0 md:-mr-10 bg-white md:bg-blue-800 shadow-xl">
                             This is a custom website for a nateropathic doctor. Includes functionalities like blogging, commenting, live search, appoinment booking and faq sections.
                         </div>
                         <div class="w-full flex flex-wrap px-2 pt-4 text-sm tracking-wide text-gray-600 justify-center items-center">
@@ -57,7 +57,7 @@
                             </a>
                         </div>
                     </div>
-                    <a href="https://4unaturalistic.netlify.app" target="_blank" v-lazy-container="{ selector: 'img' }" v-scroll-reveal="{ delay: 300, mobile: false, origin: 'right', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center">
+                    <a href="https://4unaturalistic.netlify.app" target="_blank" v-lazy-container="{ selector: 'img' }" v-scroll-reveal="{ delay: 300, mobile: false, origin: 'right', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center shadow-xl">
                         <img :data-src="require('~/static/projects/4unaturalistic-netlify.png?webp')"
                             :data-loading="require('~/static/projects/4unaturalistic-netlify.png?lqip')"
                             class="rounded-sm project-img w-full" title="Featured Shot" alt="Project Image">
@@ -66,7 +66,7 @@
                 <!-- Project 2 - End -->
                 <!-- Project 3 - Start -->
                 <div class="w-full flex flex-wrap relative justify-end rounded mb-10" >
-                    <a href="https://avenest.smitpatelx.com" target="_blank" v-lazy-container="{ selector: 'img' }" v-scroll-reveal="{ delay: 300, mobile: false, origin: 'left', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center">
+                    <a href="https://avenest.smitpatelx.com" target="_blank" v-lazy-container="{ selector: 'img' }" v-scroll-reveal="{ delay: 300, mobile: false, origin: 'left', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center shadow-xl">
                         <img :data-src="require('~/static/projects/avenest.png?webp')"
                             :data-loading="require('~/static/projects/avenest.png?lqip')"
                             class="rounded-sm project-img w-full" title="Featured Shot" alt="Project Image">
@@ -74,7 +74,7 @@
                     <div v-scroll-reveal="{ delay: 300, mobile: false, origin: 'right', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 z-10 flex flex-wrap flex-col justify-start items-end py-5 md:min-h-full">
                         <h3 class="font-mono text-blue-400 text-sm text-right">Featured Project</h3>
                         <h4 class="font-sans text-gray-600 text-2xl text-right mt-1 font-semibold tracking-wider">Avenest</h4>
-                        <div class="text-sm md:text-base text-gray-400 font-normal mt-6 justify-end px-5 py-4 text-left md:text-right ml-0 md:-ml-10 bg-blue-secondary">
+                        <div class="text-sm md:text-base text-gray-600 md:text-gray-400 font-normal mt-6 justify-end px-5 py-4 text-left md:text-right ml-0 md:-ml-10 bg-white md:bg-blue-800 shadow-xl">
                             This is a real estate listing website. Includes functionalities like login, register, user management, moderation and API.
                         </div>
                         <div class="w-full flex flex-wrap px-2 pt-4 text-sm tracking-wide text-gray-600 justify-center items-center">
@@ -99,7 +99,7 @@
                     <div v-scroll-reveal="{ delay: 300, mobile: false, origin: 'left', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 z-10 flex flex-wrap flex-col justify-start items-start py-5 md:min-h-full">
                         <h3 class="font-mono text-blue-400 text-sm text-right">Featured Project</h3>
                         <h4 class="font-sans text-gray-600 text-2xl text-right mt-1 font-semibold tracking-wider">Snapi</h4>
-                        <div class="text-sm md:text-base text-gray-400 font-normal mt-6 justify-end px-5 py-4 text-right md:text-left mr-0 md:-mr-10 bg-blue-secondary">
+                        <div class="text-sm md:text-base text-gray-600 md:text-gray-400 font-normal mt-6 justify-end px-5 py-4 text-right md:text-left mr-0 md:-mr-10 bg-white md:bg-blue-800 shadow-xl">
                             This is a SAS software website. Includes functionalities like product showcase, mega menu, login, register, subscribtion and many more. 
                         </div>
                         <div class="w-full flex flex-wrap px-2 pt-4 text-sm tracking-wide text-gray-600 justify-center items-center">
@@ -117,7 +117,7 @@
                             </a>
                         </div>
                     </div>
-                    <a href="https://snapi.netlify.app/" target="_blank" v-lazy-container="{ selector: 'img' }" v-scroll-reveal="{ delay: 300, mobile: false, origin: 'right', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center">
+                    <a href="https://snapi.netlify.app/" target="_blank" v-lazy-container="{ selector: 'img' }" v-scroll-reveal="{ delay: 300, mobile: false, origin: 'right', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center shadow-xl">
                         <img :data-src="require('~/static/projects/snapi.png?webp')"
                             :data-loading="require('~/static/projects/snapi.png?lqip')"
                             class="rounded-sm project-img w-full" title="Featured Shot" alt="Project Image">
@@ -126,7 +126,7 @@
                 <!-- Project 4 - End -->
                 <!-- Project 5 - Start -->
                 <div class="w-full flex flex-wrap relative justify-end rounded mb-10" >
-                    <a href="https://dcwebd.netlify.app/" target="_blank" v-lazy-container="{ selector: 'img' }" v-scroll-reveal="{ delay: 300, mobile: false, origin: 'left', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center">
+                    <a href="https://dcwebd.netlify.app/" target="_blank" v-lazy-container="{ selector: 'img' }" v-scroll-reveal="{ delay: 300, mobile: false, origin: 'left', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center shadow-xl">
                         <img :data-src="require('~/static/projects/dcwebd.png?webp')"
                             :data-loading="require('~/static/projects/dcwebd.png?lqip')"
                             class="rounded-sm project-img w-full" title="Featured Shot" alt="Project Image">
@@ -134,7 +134,7 @@
                     <div v-scroll-reveal="{ delay: 300, mobile: false, origin: 'right', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 z-10 flex flex-wrap flex-col justify-start items-end py-5 md:min-h-full">
                         <h3 class="font-mono text-blue-400 text-sm text-right">Featured Project</h3>
                         <h4 class="font-sans text-gray-600 text-2xl text-right mt-1 font-semibold tracking-wider">College Course Site</h4>
-                        <div class="text-sm md:text-base text-gray-400 font-normal mt-6 justify-end px-5 py-4 text-left md:text-right ml-0 md:-ml-10 bg-blue-secondary">
+                        <div class="text-sm md:text-base text-gray-600 md:text-gray-400 font-normal mt-6 justify-end px-5 py-4 text-left md:text-right ml-0 md:-ml-10 bg-white md:bg-blue-800 shadow-xl">
                             This is an educational site build for web development course. Includes functionality like - attandance tracker, docs, resources and user management.
                         </div>
                         <div class="w-full flex flex-wrap px-2 pt-4 text-sm tracking-wide text-gray-600 justify-center items-center">
@@ -164,20 +164,20 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.bg-blue-secondary{
+.bg-white md:bg-blue-800{
     background: #182d4c;
 }
 
 .project-img{
     cursor: pointer;
-    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
-    filter: sepia(0%) blur(0.2px) brightness(80%);
+    // transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+    // filter: sepia(0%) blur(0.2px) brightness(80%);
 
-    &:hover{
-        // background-color: rgba(0, 253, 198, 0.281);
-        filter: sepia(0%) blur(0px) brightness(100%);
-        transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
-    }
+    // &:hover{
+    //     // background-color: rgba(0, 253, 198, 0.281);
+    //     filter: sepia(0%) blur(0px) brightness(100%);
+    //     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+    // }
 }
 
 .min-h-auto{

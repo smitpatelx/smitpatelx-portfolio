@@ -6,10 +6,6 @@
                 <source :srcSet="require(`~/static/flags/${current_country}.webp?jpeg`)" type="image/jpeg" />
                 <img :data-src="require(`~/static/flags/${current_country}.webp`)" :data-loading="require(`~/static/image-loading.gif`)" class="h-4 w-6 inline-block rounded-sm"/>
             </picture>
-            <!-- <img :data-src="require(`@/static/flags/${current_country}.webp`)"
-                :data-loading="require(`@/static/flags/${current_country}.webp?lqip`)"
-                class="h-4 w-6 inline-block rounded-sm" 
-                :alt="`${current_country}`" :title="`${current_country.toUpperCase()}`"> -->
         </button>
         <slide-y-down-transition>
             <div @blur="hide_menu" v-if="menu_state" class="mt-12 absolute custom_scroll flex flex-col w-56 bg-gray-800 border-2 border-gray-600 rounded h-48 overflow-y-scroll scrolling-touch top-0 left-0">
@@ -105,7 +101,7 @@ export default {
     }
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
     .custom_scroll{
         &::-webkit-scrollbar-track
         {
