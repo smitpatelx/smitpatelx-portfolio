@@ -1,42 +1,42 @@
 <template>
     <div class="w-full min-h-screen flex flex-wrap justify-center items-center mt-5 lg:mt-0 p-10 lg:p-32 mb-32" id="contact">
         <div class="flex flex-wrap justify-center items-center">
-            <h2 v-scroll-reveal="{ delay: 300, mobile: false, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full text-gray-400 text-3xl md:text-4xl font-bold leading-tight text-center">
-                <span class="mr-3 text-teal-400 text-base lg:text-2xl font-medium font-mono leading-tight self-end">04.</span>
+            <h2 v-scroll-reveal="{ delay: 300, mobile: false, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full text-gray-700 text-3xl md:text-4xl font-bold leading-tight text-center">
+                <span class="mr-3 text-blue-600 text-base lg:text-2xl font-medium font-mono leading-tight self-end">04.</span>
                 Lets get in touch
             </h2>
             <form method="post" @submit.prevent="formSubmission" class="flex flex-wrap flex-col mt-8 max-w-6xl px-6" v-scroll-reveal="{ delay: 350, mobile: false, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}">
                 <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 my-2">
                     <div class="flex flex-wrap flex-col">
-                        <label for="email" class="font-mono text-base text-teal-400 mb-2 w-full">Email</label>
-                        <input tabindex="1" required class="w-full placeholder-gray-600 text-white py-2 px-3 rounded bg-gray-800 text-lg focus:bg-gray-900 focus:outline-none border-2 border-transparent focus:border-teal-500" minlength="6" maxlength="50" type="email" name="email" id="email" v-model="email" placeholder="xyz@gmail.com">
+                        <label for="email" class="font-mono text-base text-blue-600 mb-2 w-full">Email</label>
+                        <input tabindex="1" required class="w-full placeholder-gray-600 text-white py-2 px-3 rounded bg-gray-400 text-lg focus:bg-gray-500 focus:outline-none border-2 border-transparent focus:border-blue-500" minlength="6" maxlength="50" type="email" name="email" id="email" v-model="email" placeholder="xyz@gmail.com">
                     </div>
                     <div class="flex flex-wrap flex-col w-full">
-                        <label for="phone" class="font-mono text-base text-teal-400 mb-2 w-full">Phone</label>
+                        <label for="phone" class="font-mono text-base text-blue-600 mb-2 w-full">Phone</label>
                         <div class="flex flex-wrap flex-row items-stretch relative w-full">
                             <Country class="flex flex-grow-0" v-on:countrySelected="onCountrySelect"/>
-                            <input tabindex="4" required class="flex-1 flex w-32 placeholder-gray-600 text-white py-2 px-3 rounded-r bg-gray-800 text-lg focus:bg-gray-900 focus:outline-none border-2 border-transparent focus:border-teal-500" type="tel" pattern="[0-9]{10}" name="phone" id="phone" v-model="phone" placeholder="000-000-0000">
+                            <input tabindex="4" required class="flex-1 flex w-32 placeholder-gray-600 text-white py-2 px-3 rounded-r bg-gray-400 text-lg focus:bg-gray-500 focus:outline-none border-2 border-transparent focus:border-blue-500" type="tel" pattern="[0-9]{10}" name="phone" id="phone" v-model="phone" placeholder="000-000-0000">
                         </div>
                     </div>
                 </div>
                 <div class="w-full grid grid-cols-2 gap-4 my-2">
                     <div class="flex flex-wrap flex-col">
-                        <label for="first_name" class="font-mono text-base text-teal-400 mb-2 w-full">First Name</label>
-                        <input tabindex="5" required class="w-full placeholder-gray-600 text-white py-2 px-3 rounded bg-gray-800 text-lg focus:bg-gray-900 focus:outline-none border-2 border-transparent focus:border-teal-500" minlength="2" maxlength="15" type="text" name="first_name" id="first_name" v-model="first_name" placeholder="Smit">
+                        <label for="first_name" class="font-mono text-base text-blue-600 mb-2 w-full">First Name</label>
+                        <input tabindex="5" required class="w-full placeholder-gray-600 text-white py-2 px-3 rounded bg-gray-400 text-lg focus:bg-gray-500 focus:outline-none border-2 border-transparent focus:border-blue-500" minlength="2" maxlength="15" type="text" name="first_name" id="first_name" v-model="first_name" placeholder="Smit">
                     </div>
                     <div class="flex flex-wrap flex-col">
-                        <label for="last_name" class="font-mono text-base text-teal-400 mb-2">Last Name</label>
-                        <input tabindex="6" required class="w-full placeholder-gray-600 text-white py-2 px-3 rounded bg-gray-800 text-lg focus:bg-gray-900 focus:outline-none border-2 border-transparent focus:border-teal-500" minlength="2" maxlength="15" type="text" name="last_name" id="last_name" v-model="last_name" placeholder="Patel">
+                        <label for="last_name" class="font-mono text-base text-blue-600 mb-2">Last Name</label>
+                        <input tabindex="6" required class="w-full placeholder-gray-600 text-white py-2 px-3 rounded bg-gray-400 text-lg focus:bg-gray-500 focus:outline-none border-2 border-transparent focus:border-blue-500" minlength="2" maxlength="15" type="text" name="last_name" id="last_name" v-model="last_name" placeholder="Patel">
                     </div>
                 </div>
                 <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-4 my-2">
                     <div class="flex flex-wrap flex-col">
-                        <label for="business_name" class="font-mono text-base text-teal-400 mb-2">Business Name</label>
-                        <input tabindex="7" required class="w-full placeholder-gray-600 text-white py-2 px-3 rounded bg-gray-800 text-lg focus:bg-gray-900 focus:outline-none border-2 border-transparent focus:border-teal-500" minlength="5" maxlength="30" type="text" name="business_name" id="business_name" v-model="business_name" placeholder="Google LLC.">
+                        <label for="business_name" class="font-mono text-base text-blue-600 mb-2">Business Name</label>
+                        <input tabindex="7" required class="w-full placeholder-gray-600 text-white py-2 px-3 rounded bg-gray-400 text-lg focus:bg-gray-500 focus:outline-none border-2 border-transparent focus:border-blue-500" minlength="5" maxlength="30" type="text" name="business_name" id="business_name" v-model="business_name" placeholder="Google LLC.">
                     </div>
                     <div class="flex flex-wrap flex-col">
-                        <label for="no_of_employee" class="font-mono text-base text-teal-400 mb-2">No. of Employee</label>
-                        <select tabindex="8" required class="w-full custom_select placeholder-gray-600 text-white py-2 px-3 rounded bg-gray-800 text-lg focus:bg-gray-900 focus:outline-none border-2 border-transparent focus:border-teal-500" minlength="5" maxlength="30" type="text" name="no_of_employee" id="no_of_employee" v-model="no_of_employee">
+                        <label for="no_of_employee" class="font-mono text-base text-blue-600 mb-2">No. of Employee</label>
+                        <select tabindex="8" required class="w-full custom_select placeholder-gray-600 text-white py-2 px-3 rounded bg-gray-400 text-lg focus:bg-gray-500 focus:outline-none border-2 border-transparent focus:border-blue-500" minlength="5" maxlength="30" type="text" name="no_of_employee" id="no_of_employee" v-model="no_of_employee">
                             <option value="" default disabled>Select No. of Employee</option>
                             <option value="2">upto 2</option>
                             <option value="10">upto 10</option>
@@ -49,24 +49,24 @@
                     </div>
                 </div>
                 <div class="w-full flex flex-wrap flex-col my-2" >
-                    <label for="est_budget" class="font-mono text-base text-teal-400 mb-2 flex">Estimated budget: <span class="text-lg ml-1">{{est_budget_f}}</span></label>
+                    <label for="est_budget" class="font-mono text-base text-blue-600 mb-2 flex">Estimated budget: <span class="text-lg ml-1">{{est_budget_f}}</span></label>
                     <div class="w-full flex flex-wrap flex-col relative">
                         <input tabindex="9" required step="500" class="focus:outline-none z-40" min="3000" max="200000" value="`${est_budget}`" type="range" name="est_budget" id="est_budget" v-model="est_budget">
                         <div class="slider_progress absolute h-2 w-1/2 z-0 rounded mt-2" :style="`width:${(est_budget*100/200000)-1}%`"></div>
                     </div>
                 </div>
                 <div class="w-full flex flex-wrap flex-col mt-4 mb-2 pr-2" >
-                    <label for="message" class="font-mono text-base text-teal-400 mb-2">Additional Message</label>
-                    <textarea tabindex="10" class="placeholder-gray-600 text-white py-2 px-3 rounded bg-gray-800 text-lg focus:bg-gray-900 focus:outline-none border-2 border-transparent focus:border-teal-500" rows="5" maxlength="2000" type="text" name="message" id="message" v-model="message" placeholder="Start typing ..."/>
+                    <label for="message" class="font-mono text-base text-blue-600 mb-2">Additional Message</label>
+                    <textarea tabindex="10" class="placeholder-gray-600 text-white py-2 px-3 rounded bg-gray-400 text-lg focus:bg-gray-500 focus:outline-none border-2 border-transparent focus:border-blue-500" rows="5" maxlength="2000" type="text" name="message" id="message" v-model="message" placeholder="Start typing ..."/>
                 </div>
                 <div class="w-full flex flex-wrap flex-row my-2 pr-2 pt-6 justify-between" >
                     <button tabindex="11" class="mb-10 focus:outline-none focus:shadow-outline form_button" type="submit">
                         Send
-                        <svg class="w-4 h-4 fill-current text-teal-400 inline-block ml-3" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M22.7071 1.293c.3905.3904.3905 1.0236 0 1.4141l-11 11c-.3905.3906-1.0237.3906-1.4142 0-.3905-.3905-.3905-1.0237 0-1.4142l11-11c.3905-.3905 1.0237-.3905 1.4142 0z" /><path fill-rule="evenodd" clip-rule="evenodd" d="M22.7071 1.293c.2716.2716.3637.6748.2368 1.0374l-7 20a1.0001 1.0001 0 01-1.8577.0758l-3.8438-8.6486-8.6485-3.8438a1 1 0 01.0757-1.8576l20.0001-7a1 1 0 011.0374.2367zM4.7111 9.1105l6.695 2.9756a1 1 0 01.5077.5077l2.9756 6.6951L20.37 3.63 4.711 9.1106z" /></svg>
+                        <svg class="w-4 h-4 fill-current text-blue-600 inline-block ml-3" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M22.7071 1.293c.3905.3904.3905 1.0236 0 1.4141l-11 11c-.3905.3906-1.0237.3906-1.4142 0-.3905-.3905-.3905-1.0237 0-1.4142l11-11c.3905-.3905 1.0237-.3905 1.4142 0z" /><path fill-rule="evenodd" clip-rule="evenodd" d="M22.7071 1.293c.2716.2716.3637.6748.2368 1.0374l-7 20a1.0001 1.0001 0 01-1.8577.0758l-3.8438-8.6486-8.6485-3.8438a1 1 0 01.0757-1.8576l20.0001-7a1 1 0 011.0374.2367zM4.7111 9.1105l6.695 2.9756a1 1 0 01.5077.5077l2.9756 6.6951L20.37 3.63 4.711 9.1106z" /></svg>
                     </button>
                     <button tabindex="12" class="mb-10 ml-3 focus:outline-none focus:shadow-outline form_button2" @click.prevent="reset" type="button">
                         Reset
-                        <svg class="w-4 h-4 fill-current text-teal-400 inline-block ml-3" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.7071 5.2929c.3905.3905.3905 1.0237 0 1.4142l-12 12c-.3905.3905-1.0237.3905-1.4142 0-.3905-.3905-.3905-1.0237 0-1.4142l12-12c.3905-.3905 1.0237-.3905 1.4142 0z" /><path fill-rule="evenodd" clip-rule="evenodd" d="M5.2929 5.2929c.3905-.3905 1.0237-.3905 1.4142 0l12 12c.3905.3905.3905 1.0237 0 1.4142-.3905.3905-1.0237.3905-1.4142 0l-12-12c-.3905-.3905-.3905-1.0237 0-1.4142z"/></svg>
+                        <svg class="w-4 h-4 fill-current text-blue-600 inline-block ml-3" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.7071 5.2929c.3905.3905.3905 1.0237 0 1.4142l-12 12c-.3905.3905-1.0237.3905-1.4142 0-.3905-.3905-.3905-1.0237 0-1.4142l12-12c.3905-.3905 1.0237-.3905 1.4142 0z" /><path fill-rule="evenodd" clip-rule="evenodd" d="M5.2929 5.2929c.3905-.3905 1.0237-.3905 1.4142 0l12 12c.3905.3905.3905 1.0237 0 1.4142-.3905.3905-1.0237.3905-1.4142 0l-12-12c-.3905-.3905-.3905-1.0237 0-1.4142z"/></svg>
                     </button>
                 </div>
             </form>
@@ -176,41 +176,42 @@ export default {
 .custom_select{
     -moz-appearance: none;
     -webkit-appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 23 13'%3E%3Cpath d='M11.027 12.2522L.4506.5007C.277.3077.414 0 .6736 0h21.1528c.2597 0 .3967.3076.223.5007L11.473 12.2522a.3.3 0 01-.446 0z' fill='%2300FFD1'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSI1IiB2aWV3Qm94PSIwIDAgOSA1IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNNC4yNzcwMSA0Ljc1MjIzTDAuNDUwNjIxIDAuNTAwNjg5QzAuMjc2ODY5IDAuMzA3NjMzIDAuNDEzODc4IDAgMC42NzM2MDkgMEg4LjMyNjM5QzguNTg2MTIgMCA4LjcyMzEzIDAuMzA3NjMzIDguNTQ5MzggMC41MDA2OUw0LjcyMjk5IDQuNzUyMjRDNC42MDM4MiA0Ljg4NDY1IDQuMzk2MTggNC44ODQ2NSA0LjI3NzAxIDQuNzUyMjNaIiBmaWxsPSIjNEI4Q0Q5Ii8+Cjwvc3ZnPgo=");
     background-repeat: no-repeat;
     background-position: right .7em top 50%;
     background-size: .65em auto;
 }
 
 .form_button{
-  @apply bg-transparent px-5 py-2 text-teal-400 border border-teal-400 rounded-md text-lg font-medium  flex flex-wrap justify-center items-center self-stretch mt-auto;
+  @apply bg-transparent px-5 py-2 text-blue-600 border border-blue-600 rounded-md text-lg font-medium  flex flex-wrap justify-center items-center self-stretch mt-auto;
   transition: background 0.4s;
 
   &:hover{
-    background: rgba(31, 248, 255, 0.151);
+    background: rgba(47, 140, 246, 0.151);
   }
 }
 
 .form_button2{
-  @apply bg-gray-800 px-5 py-2 text-teal-400 border border-transparent rounded-md text-lg font-medium  flex flex-wrap justify-center items-center self-stretch mt-auto;
+  @apply px-5 py-2 text-blue-500 border border-transparent rounded-md text-lg font-medium  flex flex-wrap justify-center items-center self-stretch mt-auto;
+  background: rgba(47, 140, 246, 0.3);
   transition: background 0.4s;
 
   &:hover{
-    background: rgba(31, 248, 255, 0.151);
+    background: rgba(47, 140, 246, 0.151);
   }
 }
 
 .slider_progress{
-    background: linear-gradient(90deg, rgb(104, 241, 227) 0%, rgba(232, 255, 253, 0) 100%);
+    background: linear-gradient(90deg, rgb(47, 140, 246) 0%, rgba(232, 255, 253, 0) 100%);
 }
 
 #est_budget{
     -webkit-appearance: none;
-    @apply cursor-pointer h-2 mt-2 rounded-md bg-gray-800 opacity-50;
+    @apply cursor-pointer h-2 mt-2 rounded-md bg-gray-400 opacity-50;
     transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
 
     &:hover{
-        @apply bg-gray-700 opacity-50;
+        @apply bg-gray-400 opacity-75;
     }
 
     &::-webkit-slider-thumb{

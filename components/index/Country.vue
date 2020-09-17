@@ -1,14 +1,22 @@
 <template>
-    <div v-click-outside="hide_menu" class="flex cursor-pointer bg-gray-800 rounded-l items-stretch justify-center border-r-2 border-primary" >
-        <button tabindex="2" class="flex items-center justify-center rounded-l py-1 px-4 focus:outline-none border border-transparent focus:border-teal-400" @click.prevent="open_menu()" @keydown.enter="menu_state ? ()=>{} : open_menu()" @keydown.prevent.up="up_one" @keydown.prevent.down="down_one">
-            <img loading="lazy" class="h-4 w-6 inline-block rounded-sm" :src="`/flags/${current_country}.webp`" :alt="`${current_country}`" :title="`${current_country.toUpperCase()}`">
+    <div v-click-outside="hide_menu" class="flex cursor-pointer bg-gray-400 rounded-l items-stretch justify-center border-r-2 border-primary" >
+        <button tabindex="2" class="flex items-center justify-center rounded-l py-1 px-4 focus:outline-none border border-transparent focus:border-blue-400" v-lazy-container="{ selector: 'img' }" @click.prevent="open_menu()" @keydown.enter="menu_state ? ()=>{} : open_menu()" @keydown.prevent.up="up_one" @keydown.prevent.down="down_one">
+            <picture>
+                <source :srcSet="require(`~/static/flags/${current_country}.webp`)" type="image/webp" />
+                <source :srcSet="require(`~/static/flags/${current_country}.webp?jpeg`)" type="image/jpeg" />
+                <img :data-src="require(`~/static/flags/${current_country}.webp`)" :data-loading="require(`~/static/image-loading.gif`)" class="h-4 w-6 inline-block rounded-sm"/>
+            </picture>
+            <!-- <img :data-src="require(`@/static/flags/${current_country}.webp`)"
+                :data-loading="require(`@/static/flags/${current_country}.webp?lqip`)"
+                class="h-4 w-6 inline-block rounded-sm" 
+                :alt="`${current_country}`" :title="`${current_country.toUpperCase()}`"> -->
         </button>
         <slide-y-down-transition>
             <div @blur="hide_menu" v-if="menu_state" class="mt-12 absolute custom_scroll flex flex-col w-56 bg-gray-800 border-2 border-gray-600 rounded h-48 overflow-y-scroll scrolling-touch top-0 left-0">
                 <div class="p-0 flex items-stretch justify-center w-full">
                     <input :autocomplete="random_alpha" id="search_country" @keydown.esc="search=''" @keydown.prevent.enter="select_first" tabindex="3" type="text" v-model="search" class="bg-gray-700 text-gray-200 focus:outline-none w-full shadow rounded-sm py-2 px-2" placeholder="Seach...">
                 </div>
-                <span tabindex="3" @keydown.prevent.enter="select(ct.alpha2Code)" v-for="(ct, i) in new_array" :key="i" class="py-1 px-2 text-sm w-full text-gray-300 hover:underline bg-gray-800 hover:bg-gray-700 focus:outline-none focus:text-gray-100 focus:bg-teal-500" @click="select(ct.alpha2Code, i)">
+                <span tabindex="3" @keydown.prevent.enter="select(ct.alpha2Code, i)" v-for="(ct, i) in new_array" :key="i" class="py-1 px-2 text-sm w-full text-gray-300 hover:underline bg-gray-800 hover:bg-gray-700 focus:outline-none focus:text-gray-100 focus:bg-blue-500" @click="select(ct.alpha2Code, i)">
                     {{ct.name}}
                 </span>
             </div>
@@ -61,28 +69,8 @@ export default {
             this.$emit('countrySelected', this.current_country)
         },
         select_first(){
-            this.select(this.new_array[0].alpha2Code)
+            this.select(this.new_array[0].alpha2Code, 0)
         },
-        up_one(){
-            if(this.countryData.length!==0){
-                if(typeof this.countryData !== 'undefined'){
-                    this.current_index--;
-                    console.log(this.current_index)
-                    let countryCodeUp = this.countryData[this.current_index].alpha2Code;
-                    this.select(countryCodeUp, this.current_index);
-                }
-            }
-        },
-        down_one(){
-            if(this.countryData.length!==0){
-                if(this.current_index<=this.countryData.length){
-                    this.current_index++;
-                    console.log(this.current_index)
-                    let countryCodeUp = this.countryData[this.current_index].alpha2Code;
-                    this.select(countryCodeUp, this.current_index);
-                }
-            }
-        }
     },
     computed:{
         random_alpha(){
@@ -95,6 +83,9 @@ export default {
             }
             return result;
         },
+        image_url(){
+            return `~/static/flags/${this.current_country}.webp?png`;
+        }
     },
     watch:{
         search(val){

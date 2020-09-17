@@ -1,17 +1,10 @@
 <template>
   <div>
-    <!-- <client-only>
-      <fade-transition>
-        <loading-amination v-if="loading"/>
-      </fade-transition>
-    </client-only> -->
-    <!-- <div :class="loading ? 'hidden' : 'visible'" v-if="!loading"> -->
     <div>
       <Header/>
       <fade-transition :duration="{enter: 900, leave: 600}">
         <nuxt />
       </fade-transition>
-      <SideBars></SideBars>
       <Footer/>
     </div>
   </div>
@@ -21,14 +14,13 @@
 import { FadeTransition } from 'vue2-transitions';
 import Header from '@/components/Header.vue';
 import Footer from '@/components/Footer.vue';
-import SideBars from '@/components/SideBars.vue';
+// import SideBars from '@/components/SideBars.vue';
 // import LoadingAmination from '@/components/LoadingAmination.vue';
 
 export default {
   components: {
     FadeTransition,
     Header,
-    SideBars,
     // LoadingAmination,
     Footer
   },
@@ -46,12 +38,12 @@ export default {
 </script>
 
 <style lang="scss">
-    html, body{
-      background-color: rgb(247, 250, 252);
-      width: 100%;
-      overflow-x: hidden;
-      scroll-behavior: smooth;
-    }
+  html, body{
+    background-color: rgb(247, 250, 252);
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
 
   *::selection {
     @apply text-white bg-blue-300;

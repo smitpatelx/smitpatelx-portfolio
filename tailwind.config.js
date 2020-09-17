@@ -16,7 +16,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'primary': '#0a192f',
+        // 'primary': '#0a192f',
+        'primary': '#f7fafc',
         'secondary': '#0d1e36',
       }
     }
@@ -24,5 +25,5 @@ module.exports = {
   variants: {
     
   },
-  plugins: []
+  plugins: [require('tailwindcss-markdown')]
 }

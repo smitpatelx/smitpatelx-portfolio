@@ -1,5 +1,5 @@
 require('dotenv').config()
-module.exports = {
+export default {
   mode: 'universal',
   env: {
     apiUrl: process.env.API_URL || 'http://localhost:3000'
@@ -19,7 +19,11 @@ module.exports = {
         content: 'I`m a Computer Programmer based in Winnipeg, MB. Specialized in building and designing websites and applications.'
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon/favicon.ico' },
+      { rel: 'stylesheet', type: 'font/woff2', href: '/Inter-roman-latin.woff2'},
+      { rel: 'stylesheet', type: 'font/woff2,', href: '/Inter-italic-latin.woff2'}
+    ],
   },
   /*
    ** Customize the progress-bar color
@@ -36,43 +40,46 @@ module.exports = {
     { src: '~/plugins/vue-scroll-reveal', ssr: false }
   ],
   /*
-   ** Nuxt.js dev-modules
-   */
+  ** Auto import components
+  ** See https://nuxtjs.org/api/configuration-components
+  */
+  components: true,
+  /*
+  ** Nuxt.js dev-modules
+  */
   buildModules: [
-    // Doc: https://github.com/nuxt-community/eslint-module
-    // '@nuxtjs/eslint-module',
-    // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/dotenv',
+    // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
     '@aceforth/nuxt-optimized-images',
-    'nuxt-purgecss',
   ],
   /*
-   ** Nuxt.js modules
-   */
+  ** Nuxt.js modules
+  */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv',
-    // '@aceforth/nuxt-optimized-images',
+    // Doc: https://github.com/nuxt/content
+    '@nuxt/content',
   ],
   optimizedImages: {
     optimizeImages: true
   },
   /*
-   ** Axios module configuration
-   ** See https://axios.nuxtjs.org/options
-   */
+  ** Axios module configuration
+  ** See https://axios.nuxtjs.org/options
+  */
   axios: {},
   /*
-   ** Build configuration
-   */
+  ** Content module configuration
+  ** See https://content.nuxtjs.org/configuration
+  */
+  content: {},
+  /*
+  ** Build configuration
+  ** See https://nuxtjs.org/api/configuration-build/
+  */
   build: {
-    /*
-     ** You can extend webpack config here
-     */
-    extend(config, ctx) {}
   }
 }
