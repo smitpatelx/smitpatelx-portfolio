@@ -17,7 +17,7 @@
                     <div v-scroll-reveal="{ delay: 300, mobile: false, origin: 'right', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 z-10 flex flex-wrap flex-col justify-start items-end py-5 md:min-h-full">
                         <h3 class="font-mono text-blue-400 text-sm text-right">Featured Project</h3>
                         <h4 class="font-sans text-gray-600 text-2xl text-right font-semibold tracking-wider">4unaturalistic</h4>
-                        <div class="text-sm md:text-base text-gray-600 md:text-gray-400 font-normal mt-6 justify-end px-5 py-4 text-left md:text-right ml-0 md:-ml-10 bg-white md:bg-blue-800 shadow-xl">
+                        <div class="text-sm md:text-base text-gray-600 md:text-gray-400 font-normal mt-6 justify-end px-5 py-4 text-left ml-0 md:-ml-10 bg-white md:bg-blue-800 shadow-xl">
                             This is a sales funnel website for a nateropathic doctor. Includes functionalities like blogging, appoinment booking and faq sections.
                         </div>
                         <div class="w-full flex flex-wrap px-2 pt-4 text-sm tracking-wide text-gray-600 justify-center items-center">
@@ -74,7 +74,7 @@
                     <div v-scroll-reveal="{ delay: 300, mobile: false, origin: 'right', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 z-10 flex flex-wrap flex-col justify-start items-end py-5 md:min-h-full">
                         <h3 class="font-mono text-blue-400 text-sm text-right">Featured Project</h3>
                         <h4 class="font-sans text-gray-600 text-2xl text-right mt-1 font-semibold tracking-wider">Avenest</h4>
-                        <div class="text-sm md:text-base text-gray-600 md:text-gray-400 font-normal mt-6 justify-end px-5 py-4 text-left md:text-right ml-0 md:-ml-10 bg-white md:bg-blue-800 shadow-xl">
+                        <div class="text-sm md:text-base text-gray-600 md:text-gray-400 font-normal mt-6 justify-end px-5 py-4 text-left ml-0 md:-ml-10 bg-white md:bg-blue-800 shadow-xl">
                             This is a real estate listing website. Includes functionalities like login, register, user management, moderation and API.
                         </div>
                         <div class="w-full flex flex-wrap px-2 pt-4 text-sm tracking-wide text-gray-600 justify-center items-center">
@@ -99,7 +99,7 @@
                     <div v-scroll-reveal="{ delay: 300, mobile: false, origin: 'left', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 z-10 flex flex-wrap flex-col justify-start items-start py-5 md:min-h-full">
                         <h3 class="font-mono text-blue-400 text-sm text-right">Featured Project</h3>
                         <h4 class="font-sans text-gray-600 text-2xl text-right mt-1 font-semibold tracking-wider">Snapi</h4>
-                        <div class="text-sm md:text-base text-gray-600 md:text-gray-400 font-normal mt-6 justify-end px-5 py-4 text-right md:text-left mr-0 md:-mr-10 bg-white md:bg-blue-800 shadow-xl">
+                        <div class="text-sm md:text-base text-gray-600 md:text-gray-400 font-normal mt-6 justify-end px-5 py-4 text-left mr-0 md:-mr-10 bg-white md:bg-blue-800 shadow-xl">
                             This is a SAS software website. Includes functionalities like product showcase, mega menu, login, register, subscribtion and many more. 
                         </div>
                         <div class="w-full flex flex-wrap px-2 pt-4 text-sm tracking-wide text-gray-600 justify-center items-center">
@@ -134,7 +134,7 @@
                     <div v-scroll-reveal="{ delay: 300, mobile: false, origin: 'right', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 z-10 flex flex-wrap flex-col justify-start items-end py-5 md:min-h-full">
                         <h3 class="font-mono text-blue-400 text-sm text-right">Featured Project</h3>
                         <h4 class="font-sans text-gray-600 text-2xl text-right mt-1 font-semibold tracking-wider">College Course Site</h4>
-                        <div class="text-sm md:text-base text-gray-600 md:text-gray-400 font-normal mt-6 justify-end px-5 py-4 text-left md:text-right ml-0 md:-ml-10 bg-white md:bg-blue-800 shadow-xl">
+                        <div class="text-sm md:text-base text-gray-600 md:text-gray-400 font-normal mt-6 justify-end px-5 py-4 text-left ml-0 md:-ml-10 bg-white md:bg-blue-800 shadow-xl">
                             This is an educational site build for web development course. Includes functionality like - attandance tracker, docs, resources and user management.
                         </div>
                         <div class="w-full flex flex-wrap px-2 pt-4 text-sm tracking-wide text-gray-600 justify-center items-center">

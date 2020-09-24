@@ -1,5 +1,6 @@
 ---
 title: Robust User Search
+author : Smit Patel
 description: A COMPREHENSIVE, EASY TO USE, STABLE AND WELL SUPPORTED WORDPRESS USER SEARCH PLUGIN.
 tags: ["Wordpress","Plugin","User Managment"]
 icon_url: apps/robust-user-search/icon.png

@@ -1,5 +1,6 @@
 ---
 title: Return To Shop
+author : Smit Patel
 description: Customize your return to shop button to redirect to different URL.
 tags: ["Wordpress","WooCommerce","WPML"]
 icon_url: apps/robust-user-search/icon.png
