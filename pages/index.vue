@@ -17,10 +17,10 @@
         </div>
       <div class="hidden lg:inline-block absolute top-auto right-0 pr-16 w-auto">
           <svg class="inline-block circles z-0" style="height:30rem;" viewBox="0 0 994 844" fill="none" >
-            <circle cx="497" cy="275" r="97.5" stroke="#19273B" stroke-width="15" />
-            <circle cx="536" cy="604" r="97.5" stroke="#19273B" stroke-width="5" />
-            <circle cx="546" cy="422" r="97.5" stroke="#19273B" stroke-width="10" />
-            <circle cx="398" cy="375" r="97.5" stroke="#19273B" stroke-width="5" />
+            <circle cx="497" cy="275" r="97.5" stroke="#718096" stroke-width="15" />
+            <circle cx="536" cy="604" r="97.5" stroke="#718096" stroke-width="5" />
+            <circle cx="546" cy="422" r="97.5" stroke="#718096" stroke-width="10" />
+            <circle cx="398" cy="375" r="97.5" stroke="#718096" stroke-width="5" />
           </svg>
       </div>
     </div>
