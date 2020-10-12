@@ -29,8 +29,8 @@
                         </ul>
                     </div>
                     <div v-if="current_company==1" class="w-full pl-4 mt-6 lg:mt-0">
-                        <p class="text-xl font-medium text-gray-600">Project Lead Developer<span class="pl-2 text-blue-400 whitespace-no-wrap">@ Blabbly</span></p>
-                        <p class="text-sm text-gray-500 font-mono mt-3">June 2020</p>
+                        <p class="text-xl font-medium text-gray-600">Director of Web Development<span class="pl-2 text-blue-400 whitespace-no-wrap">@ Blabbly</span></p>
+                        <p class="text-sm text-gray-500 font-mono mt-3">June 2020 - Present</p>
                         <ul class="text-gray-600 pt-6 text-sm">
                             <li>Perform web development tasks utilizing PHP/NodeJs Framework, Web Services, and SQL Server</li>
                             <li>Lead design and implementation of solutions for our corporate websites and microsites</li>
