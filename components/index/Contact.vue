@@ -1,42 +1,42 @@
 <template>
-    <div class="w-full min-h-screen flex flex-wrap justify-center items-center mt-5 lg:mt-0 p-4 lg:p-32 mb-32" id="contact">
+    <section class="w-full min-h-screen flex flex-wrap justify-center items-center mt-5 lg:mt-0 p-4 lg:p-32 mb-32" id="contact">
         <div class="flex flex-wrap justify-center items-center">
-            <h2 v-scroll-reveal="{ delay: 300, mobile: false, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full text-gray-700 text-3xl md:text-4xl font-bold leading-tight text-center">
+            <h2 class="w-full text-gray-700 text-3xl md:text-4xl font-bold leading-tight text-center">
                 <span class="mr-3 text-blue-600 text-base lg:text-2xl font-medium font-mono leading-tight self-end">04.</span>
                 Lets get in touch
             </h2>
-            <form method="post" @submit.prevent="formSubmission" class="flex flex-wrap flex-col mt-8 max-w-6xl px-6" v-scroll-reveal="{ delay: 350, mobile: false, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}">
+            <form method="post" @submit.prevent="formSubmission" class="flex flex-wrap flex-col mt-8 w-full maxw-50 px-6">
                 <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 my-2">
                     <div class="flex flex-wrap flex-col">
                         <label for="email" class="font-mono text-base text-blue-600 mb-2 w-full">Email</label>
-                        <input tabindex="1" required class="w-full placeholder-gray-600 text-white py-2 px-3 rounded bg-gray-400 text-lg focus:bg-gray-500 focus:outline-none border-2 border-transparent focus:border-blue-500" minlength="6" maxlength="50" type="email" name="email" id="email" v-model="email" placeholder="xyz@gmail.com">
+                        <input tabindex="1" required class="w-full form-input" minlength="6" maxlength="50" type="email" name="email" id="email" v-model="email" placeholder="xyz@gmail.com">
                     </div>
-                    <div class="flex flex-wrap flex-col w-full">
+                    <div class="flex flex-wrap flex-col">
                         <label for="phone" class="font-mono text-base text-blue-600 mb-2 w-full">Phone</label>
-                        <div class="flex flex-wrap flex-row items-stretch relative w-full">
-                            <Country class="flex w-20" v-on:countrySelected="onCountrySelect"/>
-                            <input tabindex="4" required class="w-auto flex placeholder-gray-600 text-white py-2 px-3 rounded-r bg-gray-400 text-lg focus:bg-gray-500 focus:outline-none border-2 border-transparent focus:border-blue-500" type="tel" pattern="[0-9]{10}" name="phone" id="phone" v-model="phone" placeholder="000-000-0000">
+                        <div class="grid grid-cols-8 relative w-full gap-x-2">
+                            <Country class="flex flex-col items-stretch justify-center col-span-2" v-on:countrySelected="onCountrySelect"/>
+                            <input tabindex="4" required class="inline-block col-span-6 form-input" type="tel" pattern="[0-9]{10}" maxlength="10" name="phone" id="phone" v-model="phone" placeholder="000-000-0000">
                         </div>
                     </div>
                 </div>
                 <div class="w-full grid grid-cols-2 gap-4 my-2">
                     <div class="flex flex-wrap flex-col">
                         <label for="first_name" class="font-mono text-base text-blue-600 mb-2 w-full">First Name</label>
-                        <input tabindex="5" required class="w-full placeholder-gray-600 text-white py-2 px-3 rounded bg-gray-400 text-lg focus:bg-gray-500 focus:outline-none border-2 border-transparent focus:border-blue-500" minlength="2" maxlength="15" type="text" name="first_name" id="first_name" v-model="first_name" placeholder="Smit">
+                        <input tabindex="5" required class="w-full form-input" minlength="2" maxlength="15" type="text" name="first_name" id="first_name" v-model="first_name" placeholder="Smit">
                     </div>
                     <div class="flex flex-wrap flex-col">
                         <label for="last_name" class="font-mono text-base text-blue-600 mb-2">Last Name</label>
-                        <input tabindex="6" required class="w-full placeholder-gray-600 text-white py-2 px-3 rounded bg-gray-400 text-lg focus:bg-gray-500 focus:outline-none border-2 border-transparent focus:border-blue-500" minlength="2" maxlength="15" type="text" name="last_name" id="last_name" v-model="last_name" placeholder="Patel">
+                        <input tabindex="6" required class="w-full form-input" minlength="2" maxlength="15" type="text" name="last_name" id="last_name" v-model="last_name" placeholder="Patel">
                     </div>
                 </div>
                 <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-4 my-2">
                     <div class="flex flex-wrap flex-col">
                         <label for="business_name" class="font-mono text-base text-blue-600 mb-2">Business Name</label>
-                        <input tabindex="7" required class="w-full placeholder-gray-600 text-white py-2 px-3 rounded bg-gray-400 text-lg focus:bg-gray-500 focus:outline-none border-2 border-transparent focus:border-blue-500" minlength="5" maxlength="30" type="text" name="business_name" id="business_name" v-model="business_name" placeholder="Google LLC.">
+                        <input tabindex="7" required class="w-full form-input" minlength="5" maxlength="30" type="text" name="business_name" id="business_name" v-model="business_name" placeholder="Google LLC.">
                     </div>
                     <div class="flex flex-wrap flex-col">
                         <label for="no_of_employee" class="font-mono text-base text-blue-600 mb-2">No. of Employee</label>
-                        <select tabindex="8" required class="w-full custom_select placeholder-gray-600 text-white py-2 px-3 rounded bg-gray-400 text-lg focus:bg-gray-500 focus:outline-none border-2 border-transparent focus:border-blue-500" minlength="5" maxlength="30" type="text" name="no_of_employee" id="no_of_employee" v-model="no_of_employee">
+                        <select tabindex="8" required class="w-full custom_select form-input" minlength="5" maxlength="30" type="text" name="no_of_employee" id="no_of_employee" v-model="no_of_employee">
                             <option value="" default disabled>Select No. of Employee</option>
                             <option value="2">upto 2</option>
                             <option value="10">upto 10</option>
@@ -57,7 +57,7 @@
                 </div>
                 <div class="w-full flex flex-wrap flex-col mt-4 mb-2 pr-2" >
                     <label for="message" class="font-mono text-base text-blue-600 mb-2">Additional Message</label>
-                    <textarea tabindex="10" class="placeholder-gray-600 text-white py-2 px-3 rounded bg-gray-400 text-lg focus:bg-gray-500 focus:outline-none border-2 border-transparent focus:border-blue-500" rows="5" maxlength="2000" type="text" name="message" id="message" v-model="message" placeholder="Start typing ..."/>
+                    <textarea tabindex="10" class="form-input" rows="5" maxlength="2000" type="text" name="message" id="message" v-model="message" placeholder="Start typing ..."/>
                 </div>
                 <div class="w-full flex flex-wrap flex-row my-2 pr-2 pt-6 justify-between" >
                     <button tabindex="11" class="mb-10 focus:outline-none focus:shadow-outline form_button" type="submit">
@@ -71,7 +71,7 @@
                 </div>
             </form>
         </div>
-    </div>
+    </section>
 </template>
 <script>
 import { CollapseTransition } from 'vue2-transitions'
@@ -172,6 +172,21 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.form-input{
+    @apply  text-blue-800 py-2 px-3 rounded bg-gray-300 antialiased text-lg  border-2 border-transparent;
+
+    &:focus{
+        @apply bg-gray-500 text-white outline-none border-blue-500;
+
+        &::placeholder{
+            @apply text-white;
+        }
+    }
+
+    &::placeholder{
+        @apply text-gray-700;
+    }
+}
 
 .custom_select{
     -moz-appearance: none;
@@ -238,6 +253,15 @@ export default {
 }
 
 .maxw-50{
-    max-width: 50%;
+    max-width: 100%;
+
+    @media (min-width: 640px) { 
+        max-width: 65%;
+    }
+
+    @media (min-width: 1024px) { 
+        max-width: 60%;
+    }
+
 }
 </style>

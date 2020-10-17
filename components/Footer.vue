@@ -21,7 +21,8 @@ export default {
     },
     methods:{
         scrollUp(){
-            window.scrollTo(0,0);
+            // window.scrollTo(0,0);
+            window.scrollTo(0,0,0, undefined, true);
         },
         handleScroll(e) {
             let scrollPos = window.scrollY

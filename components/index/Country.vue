@@ -1,10 +1,10 @@
 <template>
-    <div v-click-outside="hide_menu" class="flex cursor-pointer bg-gray-400 rounded-l items-stretch justify-center border-r-2 border-primary" >
-        <button tabindex="2" class="flex items-center justify-center rounded-l py-1 px-4 focus:outline-none border border-transparent focus:border-blue-400" v-lazy-container="{ selector: 'img' }" @click.prevent="open_menu()" @keydown.enter="menu_state ? ()=>{} : open_menu()" @keydown.prevent.up="up_one" @keydown.prevent.down="down_one">
+    <div v-click-outside="hide_menu" class="flex cursor-pointer bg-gray-300 rounded items-stretch justify-center h-full" >
+        <button tabindex="2" class="flex items-center justify-center rounded py-1 px-4 focus:outline-none" v-lazy-container="{ selector: 'img' }" @click.prevent="open_menu()" @keydown.enter="menu_state ? ()=>{} : open_menu()" @keydown.prevent.up="up_one" @keydown.prevent.down="down_one">
             <picture>
                 <source :srcSet="require(`~/static/flags/${current_country}.webp`)" type="image/webp" />
                 <source :srcSet="require(`~/static/flags/${current_country}.webp?jpeg`)" type="image/jpeg" />
-                <img :data-src="require(`~/static/flags/${current_country}.webp`)" :data-loading="require(`~/static/image-loading.gif`)" class="h-4 w-6 inline-block rounded-sm"/>
+                <img :data-src="require(`~/static/flags/${current_country}.webp`)" :data-loading="require(`~/static/image-loading.gif`)" class="h-5 w-7 inline-block rounded-sm"/>
             </picture>
         </button>
         <slide-y-down-transition>
