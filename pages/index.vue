@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="w-full flex flex-wrap justify-center items-center pt-16 pb-10 lg:py-24 container mx-auto px-10 lg:px-20 relative antialiased">
+  <div class="overflow-hidden">
+    <div class="w-full flex flex-wrap justify-center items-center pt-16 pb-10 lg:py-24 container mx-auto px-10 lg:px-20 relative antialiased relative">
       <!-- <div class="w-2/3 flex flex-wrap"> -->
         <p v-scroll-reveal="{ delay: 800, mobile: false, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="text-lg lg:text-xl font-mono text-blue-400 w-full z-10">Hello, I'm</p>
         <h1 v-scroll-reveal="{ delay: 1000, mobile: false, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="text-8xl font-semibold text-gray-700 w-full z-10 leading-tight">Smit Patel.</h1>
@@ -15,14 +15,13 @@
             <svg class="fill-current w-8 h-6 inline-block ml-1" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.2929 5.2929c.3905-.3905 1.0237-.3905 1.4142 0l6 6c.3905.3905.3905 1.0237 0 1.4142l-6 6c-.3905.3905-1.0237.3905-1.4142 0-.3905-.3905-.3905-1.0237 0-1.4142L13.5858 12l-5.293-5.2929c-.3904-.3905-.3904-1.0237 0-1.4142z"/></svg>
           </a>
         </div>
-      <div class="hidden lg:inline-block absolute top-auto right-0 pr-16 w-auto">
-          <svg class="inline-block circles z-0" style="height:30rem;" viewBox="0 0 994 844" fill="none" >
-            <circle cx="497" cy="275" r="97.5" stroke="#718096" stroke-width="15" />
-            <circle cx="536" cy="604" r="97.5" stroke="#718096" stroke-width="5" />
-            <circle cx="546" cy="422" r="97.5" stroke="#718096" stroke-width="10" />
-            <circle cx="398" cy="375" r="97.5" stroke="#718096" stroke-width="5" />
-          </svg>
-      </div>
+        <div class="absolute w-full md:1-/3 lg:w-1/2 right-0 object-cover">
+            <picture class="w-full object-cover z-0">
+                <source :srcSet="require(`~/static/cubes-2-min.png?webp`)" type="image/webp" />
+                <source :srcSet="require(`~/static/cubes-2-min.png`)" type="image/png" />
+                <img :data-src="require(`~/static/cubes-2-min.png?webp`)" :data-loading="require(`~/static/cubes-2-min.png?lqip`)"/>
+            </picture>
+        </div>
     </div>
     <div class="flex flex-wrap flex-col justify-center items-center">
       <AboutMe/>

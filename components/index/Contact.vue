@@ -14,8 +14,8 @@
                     <div class="flex flex-wrap flex-col w-full">
                         <label for="phone" class="font-mono text-base text-blue-600 mb-2 w-full">Phone</label>
                         <div class="flex flex-wrap flex-row items-stretch relative w-full">
-                            <Country class="flex flex-grow-0" v-on:countrySelected="onCountrySelect"/>
-                            <input tabindex="4" required class="flex-1 flex w-32 placeholder-gray-600 text-white py-2 px-3 rounded-r bg-gray-400 text-lg focus:bg-gray-500 focus:outline-none border-2 border-transparent focus:border-blue-500" type="tel" pattern="[0-9]{10}" name="phone" id="phone" v-model="phone" placeholder="000-000-0000">
+                            <Country class="flex w-20" v-on:countrySelected="onCountrySelect"/>
+                            <input tabindex="4" required class="w-auto flex placeholder-gray-600 text-white py-2 px-3 rounded-r bg-gray-400 text-lg focus:bg-gray-500 focus:outline-none border-2 border-transparent focus:border-blue-500" type="tel" pattern="[0-9]{10}" name="phone" id="phone" v-model="phone" placeholder="000-000-0000">
                         </div>
                     </div>
                 </div>

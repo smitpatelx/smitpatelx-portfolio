@@ -1,5 +1,5 @@
 <template>
-  <div class="px-4 lg:px-12 select-none">
+  <div class="px-4 lg:px-12 select-none z-30">
     <div v-click-outside="hideIt" class="w-full flex-wrap justify-between items-center flex relative">
       <div class="w-full flex-wrap justify-between items-center flex">
         <nuxt-link v-scroll-reveal="{ delay: 0, mobile: false, origin: 'top', easing: 'ease-in', distance: '40px'}" to="/" class="focus:outline-none py-3">

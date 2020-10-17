@@ -6,7 +6,14 @@
       </fade-transition>
     </client-only> -->
     <!-- <div :class="loading ? 'hidden' : 'visible'" v-if="!loading"> -->
-    <div>
+    <div class="filter-1">
+      <div class="absolute bg-cover bg-center top-0 z-0">
+        <!-- <picture class="w-full z-0">
+            <source :srcSet="require(`~/static/cubes-1.jpg?webp`)" type="image/webp" />
+            <source :srcSet="require(`~/static/cubes-1.jpg`)" type="image/png" />
+            <img :data-src="require(`~/static/cubes-1.jpg?webp`)" :data-loading="require(`~/static/cubes-1.jpg?lqip`)"/>
+        </picture> -->
+      </div>
       <Header/>
       <fade-transition :duration="{enter: 900, leave: 600}">
         <nuxt />
@@ -55,5 +62,27 @@ export default {
 
   *::selection {
     @apply text-white bg-blue-300;
+  }
+
+  .filter-1{
+    filter: brightness(100%);
+    opacity: 1;
+    // background: linear-gradient(180deg, rgba(255, 255, 255, 0.527) 0%, rgba(247,250,252,1) 100%), url('/cubes-1-min.png');
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+
+    &::before{
+      content: '';
+      width: 100%;
+      width: 80vh;
+      display: block;
+      position: absolute;
+      top: 0;
+      z-index: 10;
+      background: rgb(2,0,36);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.376) 0%, rgba(247,250,252,1) 100%);
+    }
   }
 </style>
