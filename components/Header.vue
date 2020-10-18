@@ -5,9 +5,9 @@
         <nuxt-link v-scroll-reveal="{ delay: 0, mobile: false, origin: 'top', easing: 'ease-in', distance: '40px'}" to="/" class="focus:outline-none py-3">
           <img src="/smitpatelx/Logo_1.svg" class="h-24 w-24"/>
         </nuxt-link>
-        <div class="hidden lg:flex flex-wrap justify-center items-center">
-          <nuxt-link v-scroll-reveal="{ delay: i*100, mobile: false, origin: 'top', easing: 'ease-in', distance: '40px' }" v-for="(data, i) in nav_links" :key="i" :to="`/${data.href}`" exact class="focus:underline focus:outline-none text-gray-600 text-base hover:text-blue-500 px-4 py-2">
-            <span class="text-blue-500 text-sm mr-2 font-mono">0{{i+1}}.</span>
+        <div class="hidden lg:flex flex-wrap justify-center items-center relative">
+          <nuxt-link v-scroll-reveal="{ delay: i*100, mobile: false, origin: 'top', easing: 'ease-in', distance: '40px' }" v-for="(data, i) in nav_links" :key="i" :to="`/${data.href}`" exact class="focus:outline-none text-gray-600 text-base mx-4 my-2 hover:back-color">
+            <!-- <span class="text-blue-500 text-sm mr-2 font-mono">0{{i+1}}.</span> -->
             {{data.name}}
           </nuxt-link>
           <a href="/resume-smit-patel.pdf" target="_blank" v-scroll-reveal="{ delay: 500, mobile: false, origin: 'top', easing: 'ease-in', distance: '40px'}" class="focus:outline-none focus:shadow-outline resume_button flex flex-wrap justify-center items-center ml-6">
@@ -92,10 +92,34 @@ export default {
 }
 </script>
 <style lang="scss">
+.hover\:back-color{
+  z-index: 2;
+
+  &::after{
+    content: '';
+    width: 0%;
+    background: linear-gradient(90deg, rgba(9, 138, 243, 0.18) 0%, rgba(9, 138, 243, 0.438) 100%);
+    height: 0.2rem;
+    display: block;
+    position: absolute;
+    transition: all 0.3s ease-in;
+    margin-top: 0.1rem;
+    z-index: 0;
+  }
+
+  &:hover, &:focus{
+    &::after{
+      width: 100%;
+      transition: all 0.4s ease-in;
+    }
+  }
+}
+
 .bg-blur{
   background: rgba(0, 0, 0, 0.185);
   backdrop-filter: blur(5px);
-  filter: brightness(70%);
+  -webkit-backdrop-filter:blur(5px);
+  filter: brightness(60%);
 }
 
 .resume_button{

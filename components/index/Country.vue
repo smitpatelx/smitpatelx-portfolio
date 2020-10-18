@@ -1,10 +1,10 @@
 <template>
-    <div v-click-outside="hide_menu" class="flex cursor-pointer bg-gray-300 rounded items-stretch justify-center h-full" >
+    <div v-click-outside="hide_menu" class="flex cursor-pointer bg-gray-300 rounded items-stretch justify-center" >
         <button tabindex="2" class="flex items-center justify-center rounded py-1 px-4 focus:outline-none" v-lazy-container="{ selector: 'img' }" @click.prevent="open_menu()" @keydown.enter="menu_state ? ()=>{} : open_menu()" @keydown.prevent.up="up_one" @keydown.prevent.down="down_one">
-            <picture>
+            <picture class="inline-block rounded-sm">
                 <source :srcSet="require(`~/static/flags/${current_country}.webp`)" type="image/webp" />
                 <source :srcSet="require(`~/static/flags/${current_country}.webp?jpeg`)" type="image/jpeg" />
-                <img :data-src="require(`~/static/flags/${current_country}.webp`)" :data-loading="require(`~/static/image-loading.gif`)" class="h-5 w-7 inline-block rounded-sm"/>
+                <img class="h-5 w-8 inline-block rounded-sm" :data-src="require(`~/static/flags/${current_country}.webp`)" :data-loading="require(`~/static/image-loading.gif`)" />
             </picture>
         </button>
         <slide-y-down-transition>

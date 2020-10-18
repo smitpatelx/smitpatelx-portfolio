@@ -9,7 +9,7 @@
                 <span class="flex-auto bg-gray-600 self-center ml-3" style="height:0.5px;"></span>
             </div>
             <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div v-scroll-reveal="{ delay: i*100, mobile: false, origin: 'top', easing: 'ease-in', distance: '40px' }" v-for="(app, i) in apps" :key="i" class="w-full rounded-lg duration-300 transition-all flex flex-col items-stretch justify-start shadow-xl bg-white">
+                <div v-scroll-reveal="{ mobile: false, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '180px'}" v-for="(app, i) in apps" :key="i" class="w-full rounded-lg duration-300 transition-all flex flex-col items-stretch justify-start shadow-xl bg-white">
                     <div class="w-full self-stretch flex flex-wrap items-center justify-center py-5 rounded-t-md md:rounded-t-lg card-img" v-lazy-container="{ selector: 'img' }">
                         <img :data-src="`${app.path}/display.svg`"
                             :data-loading="`${app.path}/display.svg?lqip`"

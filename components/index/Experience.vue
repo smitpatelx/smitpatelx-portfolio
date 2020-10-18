@@ -1,7 +1,7 @@
 <template>
     <section class="w-full min-h-screen flex flex-wrap justify-center items-center mt-10 lg:mt-0 p-10 lg:p-32 mb-10" id="experience">
         <div class="max-w-2xl flex flex-wrap justify-start items-center cursor-default">
-            <h2 class="relative w-full text-left flex flex-wrap justify-start">
+            <h2 class="relative w-full text-left flex flex-wrap justify-start mb-10">
                 <span class="mr-3 text-blue-400 text-base lg:text-2xl font-medium font-mono leading-tight self-end">02.</span>
                 <span class="text-gray-700 text-xl lg:text-3xl font-bold leading-tight self-center">Experience</span>
                 <span class="flex-auto bg-gray-600 self-center ml-3" style="height:0.5px;"></span>
@@ -18,6 +18,7 @@
                         <p class="text-xl font-medium text-gray-600">Full-stack Developer <span class="pl-2 text-blue-400 whitespace-no-wrap">@ Netdevv</span></p>
                         <p class="text-sm text-gray-500 font-mono mt-3">Oct 2017 – Apr 2020</p>
                         <ul class="text-gray-600 pt-6 text-sm">
+                            <!-- v-scroll-reveal="{ delay: (i*50)+400, mobile: false, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" -->
                             <li>Building Backend API using Node.js, PHP, ASP.NET, JAVA to serve 10,000+ requests and server content on front-end.</li>
                             <li>Setup containers on Debian based systems to host Nginx and Apache servers. </li>
                             <li>Improve security of websites using LetsEncrypt’s Certbot on linux and configure certificates for nginx and apache.</li>
