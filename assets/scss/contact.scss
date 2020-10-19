@@ -5,7 +5,7 @@
 }
 
 .form-input{
-    @apply  text-blue-800 py-2 px-3 rounded bg-gray-300 antialiased text-lg  border-2 border-transparent transition-all duration-300;
+    @apply  text-blue-800 py-2 px-3 rounded bg-gray-300 antialiased text-lg font-light  border-2 border-transparent transition-all duration-300;
 
     &:focus{
         @apply bg-gray-500 text-white outline-none shadow-outline transition-all duration-300;
@@ -16,7 +16,7 @@
     }
 
     &::placeholder{
-        @apply text-gray-600 transition-all duration-300;
+        @apply text-gray-600 transition-all duration-300 font-light;
     }
 }
 

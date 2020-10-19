@@ -16,7 +16,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['Inter var', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'],
+        'sans': ['sohne-var', 'Helvetica Neue', 'Arial', 'sans-serif'],
+      },
+      fontWeight: {
+        secondary:425,
       },
       colors: {
         // 'primary': '#0a192f',
