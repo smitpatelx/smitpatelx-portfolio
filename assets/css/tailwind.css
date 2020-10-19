@@ -7,3 +7,16 @@
 img[lazy='loading'] {
     filter: blur(15px);
 }
+
+.slide-leave-active,
+.slide-enter-active {
+  transition: 0.3s ease-in-out;
+}
+.slide-enter {
+  transform: translate(0, 25%);
+  opacity: 0;
+}
+.slide-leave-to {
+  transform: translate(0, 25%);
+  opacity: 0;
+}

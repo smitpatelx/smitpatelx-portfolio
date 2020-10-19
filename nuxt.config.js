@@ -49,6 +49,7 @@ export default {
   */
   buildModules: [
     '@nuxtjs/dotenv',
+    '@nuxtjs/style-resources',
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
     '@aceforth/nuxt-optimized-images',
@@ -81,5 +82,6 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
+    extractCSS: true,
   }
 }

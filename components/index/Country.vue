@@ -7,11 +7,11 @@
                 <img class="h-5 w-8 inline-block rounded-sm" :data-src="require(`~/static/flags/${current_country}.webp`)" :data-loading="require(`~/static/image-loading.gif`)" />
             </picture>
         </button>
-        <slide-y-down-transition>
+        <transition name="slide">
             <div @blur="hide_menu" v-if="menu_state" class="mt-12 shadow-lg absolute custom_scroll flex flex-col w-64 bg-gray-200 border border-gray-400 rounded-md top-0 left-0">
                 <div class="relative w-full">
                     <div class="p-0 flex items-stretch justify-center w-full sticky top-0 left-0">
-                        <input :autocomplete="random_alpha" id="search_country" @keydown.esc="search=''" @keydown.prevent.enter="select_first" tabindex="3" type="text" v-model="search" class="bg-gray-400 text-gray-800 focus:outline-none w-full rounded-t-md py-2 px-4 placeholder-gray-700 text-base mb-1" placeholder="Seach...">
+                        <input @input="e => search = e.target.value" :autocomplete="random_alpha" id="search_country" @keydown.esc="search=''" @keydown.prevent.enter="select_first" tabindex="3" type="text" :value="search" class="bg-gray-400 text-gray-800 focus:outline-none w-full rounded-t-md py-2 px-4 placeholder-gray-700 text-base mb-1" placeholder="Seach...">
                     </div>
                 </div>
                 <div class="pt-1 px-1 flex flex-row flex-wrap items-start justify-start content-start h-56 overflow-y-scroll overflow-x-hidden scrolling-touch">
@@ -20,18 +20,14 @@
                     </span>
                 </div>
             </div>
-        </slide-y-down-transition>
+        </transition>
     </div>
 </template>
 <script>
-import { SlideYDownTransition } from 'vue2-transitions'
 import ClickOutside from 'vue-click-outside'
 import focusOutside from 'vue-focus-outside'
 
 export default {
-    components:{
-        SlideYDownTransition
-    },
     data(){
         return{
             current_country: 'ca',
@@ -73,6 +69,18 @@ export default {
         select_first(){
             this.select(this.new_array[0].alpha2Code, 0)
         },
+        search_data(e){
+            let val = e.target.value;
+            let pattern=new RegExp(val.toLowerCase(),"g")
+            let search_arr = this.countryData.filter(function(arr,index){
+                if(arr.name.toLowerCase().match(pattern) || arr.alpha2Code.toLowerCase().match(pattern)){
+                    return true;
+                }else{
+                    return false;
+                }   
+            });
+            this.new_array = search_arr;
+        }
     },
     computed:{
         random_alpha(){
@@ -91,7 +99,7 @@ export default {
     },
     watch:{
         search(val){
-            let pattern=new RegExp(this.search.toLowerCase(),"g")
+            let pattern=new RegExp(val.toLowerCase(),"g")
             let search_arr = this.countryData.filter(function(arr,index){
                 if(arr.name.toLowerCase().match(pattern) || arr.alpha2Code.toLowerCase().match(pattern)){
                     return true;
@@ -109,26 +117,5 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-    .custom_scroll{
-        &::-webkit-scrollbar-track
-        {
-            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-            border-radius: 0px;
-            background-color: rgb(42, 42, 42);
-        }
-
-        &::-webkit-scrollbar
-        {
-            width: 12px;
-            background-color: #F5F5F5;
-            display: none;
-        }
-
-        &::-webkit-scrollbar-thumb
-        {
-            border-radius: 10px;
-            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-            background-color: #31bbce;
-        }
-    }
+@import url('@/assets/scss/country.scss');
 </style>

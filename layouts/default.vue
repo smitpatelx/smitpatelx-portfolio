@@ -1,12 +1,12 @@
 <template>
   <div>
-    <client-only>
-      <!-- <fade-transition :duration="1200">
+    <!-- <client-only>
+      <fade-transition :duration="1200">
         <loading-amination v-if="loading"/>
-      </fade-transition> -->
-    </client-only>
-    <div :class="loading ? 'hidden' : 'block'" v-if="!loading">
-    <!-- <div> -->
+      </fade-transition>
+    </client-only> -->
+    <!-- <div :class="loading ? 'hidden' : 'block'" v-if="!loading"> -->
+    <div>
       <Header/>
       <SideBars></SideBars>
       <fade-transition :duration="{enter: 900, leave: 600}">
