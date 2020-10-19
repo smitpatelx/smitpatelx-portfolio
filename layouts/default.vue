@@ -1,9 +1,9 @@
 <template>
   <div>
     <client-only>
-      <fade-transition :duration="1200">
+      <!-- <fade-transition :duration="1200">
         <loading-amination v-if="loading"/>
-      </fade-transition>
+      </fade-transition> -->
     </client-only>
     <div :class="loading ? 'hidden' : 'block'" v-if="!loading">
     <!-- <div> -->

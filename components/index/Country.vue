@@ -1,5 +1,5 @@
 <template>
-    <div v-click-outside="hide_menu" class="flex cursor-pointer bg-gray-300 rounded items-stretch justify-center" >
+    <div v-click-outside="hide_menu" v-focus-outside="hide_menu" class="flex cursor-pointer bg-gray-300 rounded items-stretch justify-center z-50" >
         <button tabindex="2" class="flex items-center justify-center rounded py-1 px-4 focus:outline-none" v-lazy-container="{ selector: 'img' }" @click.prevent="open_menu()" @keydown.enter="menu_state ? ()=>{} : open_menu()" @keydown.prevent.up="up_one" @keydown.prevent.down="down_one">
             <picture class="inline-block rounded-sm">
                 <source :srcSet="require(`~/static/flags/${current_country}.webp`)" type="image/webp" />
@@ -8,13 +8,17 @@
             </picture>
         </button>
         <slide-y-down-transition>
-            <div @blur="hide_menu" v-if="menu_state" class="mt-12 absolute custom_scroll flex flex-col w-56 bg-gray-800 border-2 border-gray-600 rounded h-48 overflow-y-scroll scrolling-touch top-0 left-0">
-                <div class="p-0 flex items-stretch justify-center w-full">
-                    <input :autocomplete="random_alpha" id="search_country" @keydown.esc="search=''" @keydown.prevent.enter="select_first" tabindex="3" type="text" v-model="search" class="bg-gray-700 text-gray-200 focus:outline-none w-full shadow rounded-sm py-2 px-2" placeholder="Seach...">
+            <div @blur="hide_menu" v-if="menu_state" class="mt-12 shadow-lg absolute custom_scroll flex flex-col w-64 bg-gray-200 border border-gray-400 rounded-md top-0 left-0">
+                <div class="relative w-full">
+                    <div class="p-0 flex items-stretch justify-center w-full sticky top-0 left-0">
+                        <input :autocomplete="random_alpha" id="search_country" @keydown.esc="search=''" @keydown.prevent.enter="select_first" tabindex="3" type="text" v-model="search" class="bg-gray-400 text-gray-800 focus:outline-none w-full rounded-t-md py-2 px-4 placeholder-gray-700 text-base mb-1" placeholder="Seach...">
+                    </div>
                 </div>
-                <span tabindex="3" @keydown.prevent.enter="select(ct.alpha2Code, i)" v-for="(ct, i) in new_array" :key="i" class="py-1 px-2 text-sm w-full text-gray-300 hover:underline bg-gray-800 hover:bg-gray-700 focus:outline-none focus:text-gray-100 focus:bg-blue-500" @click="select(ct.alpha2Code, i)">
-                    {{ct.name}}
-                </span>
+                <div class="pt-1 px-1 flex flex-row flex-wrap items-start justify-start content-start h-56 overflow-y-scroll overflow-x-hidden scrolling-touch">
+                    <span tabindex="3" @keydown.prevent.enter="select(ct.alpha2Code, i)" v-for="(ct, i) in new_array" :key="i" class="rounded-md py-2 px-3 text-base w-full text-gray-800 focus:underline bg-gray-200 hover:bg-white focus:outline-none focus:text-gray-800" @click="select(ct.alpha2Code, i)">
+                        {{ct.name}}
+                    </span>
+                </div>
             </div>
         </slide-y-down-transition>
     </div>
@@ -22,6 +26,8 @@
 <script>
 import { SlideYDownTransition } from 'vue2-transitions'
 import ClickOutside from 'vue-click-outside'
+import focusOutside from 'vue-focus-outside'
+
 export default {
     components:{
         SlideYDownTransition
@@ -97,7 +103,8 @@ export default {
         }
     },
     directives: {
-        ClickOutside
+        ClickOutside,
+        focusOutside
     }
 }
 </script>

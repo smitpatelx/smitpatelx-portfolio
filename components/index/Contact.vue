@@ -9,34 +9,35 @@
                 <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 my-2">
                     <div class="flex flex-wrap flex-col">
                         <label for="email" class="font-mono text-base text-blue-600 mb-2 w-full">Email</label>
-                        <input tabindex="1" required class="w-full form-input" minlength="6" maxlength="50" type="email" name="email" id="email" v-model="email" placeholder="xyz@gmail.com">
+                        <input tabindex="1" required class="w-full form-input" minlength="6" maxlength="50" type="email" name="email" id="email" v-model="email" placeholder="eg. xyz@gmail.com">
                     </div>
                     <div class="flex flex-wrap flex-col">
                         <label for="phone" class="font-mono text-base text-blue-600 mb-2 w-full">Phone</label>
                         <div class="grid grid-cols-8 relative w-full gap-x-2">
                             <Country class="flex flex-col items-stretch justify-center col-span-2 focus-within:shadow-outline" v-on:countrySelected="onCountrySelect"/>
-                            <input tabindex="4" required class="inline-block col-span-6 form-input" type="tel" pattern="[0-9]{10}" maxlength="10" name="phone" id="phone" v-model="phone" placeholder="000-000-0000">
+                            <input tabindex="4" required class="inline-block col-span-6 form-input" type="tel" pattern="[0-9]{10}" maxlength="10" name="phone" id="phone" v-model="phone" placeholder="eg. 000-000-0000">
                         </div>
                     </div>
                 </div>
                 <div class="w-full grid grid-cols-2 gap-4 my-2">
                     <div class="flex flex-wrap flex-col">
                         <label for="first_name" class="font-mono text-base text-blue-600 mb-2 w-full">First Name</label>
-                        <input tabindex="5" required class="w-full form-input" minlength="2" maxlength="15" type="text" name="first_name" id="first_name" v-model="first_name" placeholder="Smit">
+                        <input tabindex="5" required class="w-full form-input" minlength="2" maxlength="15" type="text" name="first_name" id="first_name" v-model="first_name" placeholder="eg. Smit">
                     </div>
                     <div class="flex flex-wrap flex-col">
                         <label for="last_name" class="font-mono text-base text-blue-600 mb-2">Last Name</label>
-                        <input tabindex="6" required class="w-full form-input" minlength="2" maxlength="15" type="text" name="last_name" id="last_name" v-model="last_name" placeholder="Patel">
+                        <input tabindex="6" required class="w-full form-input" minlength="2" maxlength="15" type="text" name="last_name" id="last_name" v-model="last_name" placeholder="eg. Patel">
                     </div>
                 </div>
                 <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-4 my-2">
                     <div class="flex flex-wrap flex-col">
                         <label for="business_name" class="font-mono text-base text-blue-600 mb-2">Business Name</label>
-                        <input tabindex="7" required class="w-full form-input" minlength="5" maxlength="30" type="text" name="business_name" id="business_name" v-model="business_name" placeholder="Google LLC.">
+                        <input tabindex="7" required class="w-full form-input" minlength="5" maxlength="30" type="text" name="business_name" id="business_name" v-model="business_name" placeholder="eg. Google LLC.">
                     </div>
-                    <div class="flex flex-wrap flex-col">
+                    <div class="flex flex-wrap flex-col relative">
                         <label for="no_of_employee" class="font-mono text-base text-blue-600 mb-2">No. of Employee</label>
-                        <select tabindex="8" required class="w-full custom_select form-input" minlength="5" maxlength="30" type="text" name="no_of_employee" id="no_of_employee" v-model="no_of_employee">
+                        <s-select :tabindex="8" :options="employee_options"></s-select>
+                        <!-- <select tabindex="8" required class="w-full custom_select form-input" minlength="5" maxlength="30" type="text" name="no_of_employee" id="no_of_employee" v-model="no_of_employee">
                             <option value="" default disabled>Select No. of Employee</option>
                             <option value="2">upto 2</option>
                             <option value="10">upto 10</option>
@@ -45,7 +46,7 @@
                             <option value="500">upto 500</option>
                             <option value="1000">upto 1000</option>
                             <option value="1000plus">1000+</option>
-                        </select>
+                        </select> -->
                     </div>
                 </div>
                 <div class="w-full flex flex-wrap flex-col my-2" >
@@ -76,10 +77,13 @@
 <script>
 import { CollapseTransition } from 'vue2-transitions'
 import Country from '@/components/index/Country.vue'
+import SSelect from '@/components/library/SSelect.vue'
+
 export default {
     components:{
         Country,
-        CollapseTransition
+        CollapseTransition,
+        SSelect
     },
     data(){
         return {
@@ -92,7 +96,16 @@ export default {
             no_of_employee:'',
             phone:'',
             country:'ca',
-            ip_address:''
+            ip_address:'',
+            employee_options:[
+                {val:'2', text:'Upto 2'},
+                {val:'10', text:'Upto 10'},
+                {val:'50', text:'Upto 50'},
+                {val:'100', text:'Upto 100'},
+                {val:'500', text:'Upto 500'},
+                {val:'1000', text:'Upto 1000'},
+                {val:'1000plus', text:'1000+'},
+            ]
         }
     },
     computed:{
@@ -190,7 +203,7 @@ export default {
     }
 
     &::placeholder{
-        @apply text-gray-700 transition-all duration-300;
+        @apply text-gray-600 transition-all duration-300;
     }
 }
 
@@ -235,25 +248,25 @@ export default {
         @apply bg-gray-400 opacity-75;
     }
 
-    &::-webkit-slider-thumb{
+    &::-webkit-slider-thumb, &::-moz-range-thumb {
         -webkit-appearance: none;
         appearance: none;
         width: 26px;
         height: 26px;
-        // border-radius: 50%;
+        border: none;
         background:rgba(255, 255, 255, 0) url('/assets/idea_light_bulb.png');
         opacity: 1;
         background-origin: cover;
         background-size: 103%;
         background-repeat: no-repeat;
-        // background-blend-mode: multiply;
         background-position: center;
         cursor: pointer;
         z-index: 20;
+        border-radius: 50%;
     }
 
-    &:hover::-webkit-slider-thumb{
-        transform: scale(1.2);
+    &:hover::-webkit-slider-thumb, &:hover::-moz-range-thumb, &:focus::-webkit-slider-thumb, &:focus::-moz-range-thumb{
+        transform: scale(1.3);
     }
     
 }
@@ -262,10 +275,14 @@ export default {
     max-width: 100%;
 
     @media (min-width: 640px) { 
-        max-width: 65%;
+        max-width: 75%;
     }
 
     @media (min-width: 1024px) { 
+        max-width: 80%;
+    }
+
+    @media (min-width: 1200px) { 
         max-width: 60%;
     }
 
