@@ -4,10 +4,12 @@
 /* purgecss end ignore */
 @import 'tailwindcss/utilities';
 
+/* Image lazy loading filter */
 img[lazy='loading'] {
     filter: blur(15px);
 }
 
+/* Vue Transition - Slide Up */
 .slide-leave-active,
 .slide-enter-active {
   transition: 0.3s ease-in-out;
@@ -20,3 +22,5 @@ img[lazy='loading'] {
   transform: translate(0, 25%);
   opacity: 0;
 }
+
+/* Font-Face */

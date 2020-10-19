@@ -21,8 +21,6 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon/favicon.ico' },
-      { rel: 'stylesheet', type: 'font/woff2', href: '/Inter-roman-latin.woff2'},
-      { rel: 'stylesheet', type: 'font/woff2,', href: '/Inter-italic-latin.woff2'}
     ],
   },
   /*

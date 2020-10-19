@@ -136,9 +136,9 @@ export default {
 }
 
 @font-face {
-    font-family: "Inter";
-    src: url(/Inter-roman-latin.woff2) format("woff2"),
-        url(/Inter-italic-latin.woff2) format("woff2");
+  font-family: "Inter var";
+  src: url('/Inter-roman-latin.woff2') format("woff2"),;
+  font-weight: 400, 500, 600;
 }
 
 </style>
