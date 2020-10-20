@@ -36,7 +36,7 @@
                     </div>
                     <div class="flex flex-wrap flex-col relative">
                         <label for="no_of_employee" class="font-mono text-base text-blue-600 mb-2">No. of Employee</label>
-                        <s-select :tabindex="8" :options="employee_options"></s-select>
+                        <s-select :tabindex="8" :options="employee_options" v-on:s-modal="set_no_of_employee"></s-select>
                         <!-- <select tabindex="8" required class="w-full custom_select form-input" minlength="5" maxlength="30" type="text" name="no_of_employee" id="no_of_employee" v-model="no_of_employee">
                             <option value="" default disabled>Select No. of Employee</option>
                             <option value="2">upto 2</option>
@@ -72,18 +72,21 @@
                 </div>
             </form>
         </div>
+        <s-notify ref="sNotify"></s-notify>
     </section>
 </template>
 <script>
 import { CollapseTransition } from 'vue2-transitions'
 import Country from '@/components/index/Country.vue'
 import SSelect from '@/components/library/SSelect.vue'
+import SNotify from '@/components/library/SNotify.vue'
 
 export default {
     components:{
         Country,
         CollapseTransition,
-        SSelect
+        SSelect,
+        SNotify
     },
     data(){
         return {
@@ -127,15 +130,12 @@ export default {
         return context.env
     },
     methods: {
-        formSubmission(){
-            if(this.ip_address == ""){
-                this.getIp();
-            } {
-                this.submit();
-            }
+        async formSubmission(e){
+            e.preventDefault();
+            await this.getIp();
         },
         async submit(){
-            await this.$axios.$post(`${process.env.API_URL}/api/v1/contact`,
+            await this.$axios.$post(`${process.env.BASE_URL}/api/v1/contact`,
             {
                 first_name: this.first_name,
                 last_name: this.last_name,
@@ -149,12 +149,15 @@ export default {
                 ip_address: this.ip_address
             })
             .then(res=>{
-                alert('Thank you for contacting me!')
+                this.$refs.sNotify.success('Thank you for contacting me!')
                 this.reset();
             })
             .catch(err=>{
-                console.error(err)
+                this.$refs.sNotify.error('Please try again later. Code: c-1')
             })
+        },
+        set_no_of_employee(val){
+            this.no_of_employee=val;
         },
         reset(){
             this.email=''
@@ -176,11 +179,14 @@ export default {
                 this.ip_address = res.ip;
                 this.submit()
             }).catch(error=>{
-                console.log('Error getting ip: ',error);
+                this.$refs.sNotify.error('Please turn off ads tracker.')
             });
         }
     },
-    created() {
+    mounted() {
+        setTimeout(()=>{
+            this.$refs.sNotify.success('Thank you for contacting me!')
+        },1000);
     },
 }
 </script>

@@ -98,19 +98,19 @@ export default {
   &::after{
     content: '';
     width: 0%;
-    background: linear-gradient(90deg, rgba(9, 138, 243, 0.18) 0%, rgba(9, 138, 243, 0.438) 100%);
-    height: 0.2rem;
+    background: linear-gradient(90deg, rgba(49, 130, 206, 1) 0%, rgba(49, 130, 206, 1) 100%);
+    height: 0.1rem;
     display: block;
     position: absolute;
-    transition: all 0.3s ease-in;
-    margin-top: 0.1rem;
+    transition: all 0.3s ease-out;
+    transform: translateY(-0.2rem);
     z-index: 0;
   }
 
   &:hover, &:focus{
     &::after{
       width: 100%;
-      transition: all 0.4s ease-in;
+      transition: all 0.2s ease-in;
     }
   }
 }

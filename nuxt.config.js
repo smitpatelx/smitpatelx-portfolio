@@ -35,7 +35,9 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    { src: '~/plugins/vue-scroll-reveal', ssr: false }
+    { src: '~/plugins/vue-scroll-reveal', ssr: false },
+    { src: '~/plugins/vue-notification', ssr: false },
+    { src: '~/plugins/vuelidate', ssr: false },
   ],
   /*
   ** Auto import components
