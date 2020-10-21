@@ -35,6 +35,10 @@ export default {
    *
    */
   pwa:{
+    icon:{
+      source: '[srcDir]/[staticDir]/favicon.png',
+      fileName: 'favicon.png'
+    },
     meta: {
       mobileApp: true,
       mobileAppIOS: true,
@@ -48,7 +52,7 @@ export default {
       name: 'Smit Patel',
       short_name: 'SPX',
       description: 'I`m a Computer Programmer based in Winnipeg, MB. Specialized in building and designing websites and applications.',
-      icons: ['icon.png'],
+      icons: ['favicon.png'],
     },
   },
   /*
