@@ -81,7 +81,7 @@ export default {
         @apply fixed top-0 grid grid-cols-1 gap-y-1;
         right: 0%;
         margin: 0;
-        z-index: 20;
+        z-index: 50;
 
         @media (min-width: 720px) {
             & {

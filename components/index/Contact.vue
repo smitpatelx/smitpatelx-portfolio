@@ -37,22 +37,12 @@
                     <div class="flex flex-wrap flex-col relative">
                         <label for="no_of_employee" class="font-mono text-base text-blue-600 mb-2">No. of Employee</label>
                         <s-select :tabindex="8" :options="employee_options" v-on:s-modal="set_no_of_employee"></s-select>
-                        <!-- <select tabindex="8" required class="w-full custom_select form-input" minlength="5" maxlength="30" type="text" name="no_of_employee" id="no_of_employee" v-model="no_of_employee">
-                            <option value="" default disabled>Select No. of Employee</option>
-                            <option value="2">upto 2</option>
-                            <option value="10">upto 10</option>
-                            <option value="50">upto 50</option>
-                            <option value="100">upto 100</option>
-                            <option value="500">upto 500</option>
-                            <option value="1000">upto 1000</option>
-                            <option value="1000plus">1000+</option>
-                        </select> -->
                     </div>
                 </div>
                 <div class="w-full flex flex-wrap flex-col my-2" >
                     <label for="est_budget" class="font-mono text-base text-blue-600 mb-2 flex">Estimated budget: <span class="text-lg ml-1">{{est_budget_f}}</span></label>
                     <div class="w-full flex flex-wrap flex-col relative">
-                        <input tabindex="9" required step="500" class="focus:outline-none z-40" min="3000" max="200000" value="`${est_budget}`" type="range" name="est_budget" id="est_budget" v-model="est_budget">
+                        <input tabindex="9" required step="500" class="focus:outline-none z-10" min="3000" max="200000" type="range" name="est_budget" id="est_budget" v-model="est_budget">
                         <div class="slider_progress absolute h-2 w-1/2 z-0 rounded mt-2" :style="`width:${(est_budget*100/200000)-1}%`"></div>
                     </div>
                 </div>
@@ -77,7 +67,7 @@
 </template>
 <script>
 import { CollapseTransition } from 'vue2-transitions'
-import Country from '@/components/index/Country.vue'
+import Country from '@/components/library/Country.vue'
 import SSelect from '@/components/library/SSelect.vue'
 import SNotify from '@/components/library/SNotify.vue'
 

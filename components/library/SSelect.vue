@@ -4,7 +4,11 @@
         </button>
         <transition name="slide">
             <div class="form-drop-down" v-if="show">
-                <span tabindex="9" v-for="(option, i) in options" :key="i" :ref="'select_'+i" @keydown.prevent.38="up_one(i)" @keydown.prevent.40="down_one(i)" @keydown.enter="select(option, i)" @click="select(option, i)">{{option.text}}</span>
+                <span tabindex="9" v-for="(option, i) in options" :key="i" :ref="'select_'+i" 
+                    @keydown.prevent.38="up_one(i)" @keydown.prevent.40="down_one(i)" 
+                    @keydown.enter="select(option, i)" @click="select(option, i)" >
+                    {{option.text}}
+                </span>
             </div>
         </transition>
     </div>
