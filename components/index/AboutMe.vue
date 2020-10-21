@@ -27,7 +27,6 @@
         <div class="flex w-full lg:w-1/2 py-8 md:p-16">
             <div  class="w-full flex flex-wrap justify-center items-center relative mt-10 lg:mt-0">
                 <picture class="w-2/3 z-10 rounded-lg shadow-lg">
-                    <source :srcSet="require(`~/static/SMIT-GRAY-SCALED.jpg?webp`)" type="image/webp" />
                     <source :srcSet="require(`~/static/SMIT-GRAY-SCALED.jpg`)" type="image/png" />
                     <img :data-src="require(`~/static/SMIT-GRAY-SCALED.jpg?webp`)" :data-loading="require(`~/static/SMIT-GRAY-SCALED.jpg?lqip`)" class="rounded-lg"/>
                 </picture>

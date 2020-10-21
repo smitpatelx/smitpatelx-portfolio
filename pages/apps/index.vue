@@ -10,10 +10,14 @@
             </div>
             <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div v-scroll-reveal="{ mobile: false, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '180px'}" v-for="(app, i) in apps" :key="i" class="w-full rounded-lg duration-300 transition-all flex flex-col items-stretch justify-start shadow-xl bg-white">
-                    <div class="w-full self-stretch flex flex-wrap items-center justify-center py-5 rounded-t-md md:rounded-t-lg card-img" v-lazy-container="{ selector: 'img' }">
-                        <img :data-src="`${app.path}/display.svg`"
-                            :data-loading="`${app.path}/display.svg?lqip`"
-                            class="w-40 flex rounded-t-md md:rounded-t-lg" :alt="app.title">
+                    <div class="w-full self-stretch flex flex-wrap items-center justify-center py-5 rounded-t-md md:rounded-t-lg card-img" v-lazy-container="{ selector: 'picture' }">
+                        <picture class="w-40 flex rounded-t-md md:rounded-t-lg">
+                            <source :srcSet="require(`~/static${app.path}/display.svg`)" type="image/svg+xml" />
+                            <source :srcSet="require(`~/static${app.path}/display.svg?png`)" type="image/png" />
+                            <img :data-src="`~/static${app.path}/display.svg`"
+                                :data-loading="`~/static${app.path}/display.svg?lqip`"
+                                class="w-40 flex rounded-t-md md:rounded-t-lg" :alt="app.title">
+                        </picture>
                     </div>
                     <div class="px-8 pb-4 rounded-b-md md:rounded-b-lg w-full felx-1 felx items-stretch justify-start">
                         <div class="w-full flex flex-wrap justify-between items-center text-lg text-gray-600 font-light py-3">

@@ -1,10 +1,9 @@
 <template>
     <div v-click-outside="hide_menu" v-focus-outside="hide_menu" class="flex cursor-pointer bg-gray-300 rounded items-stretch justify-center z-20" >
-        <button tabindex="2" class="flex items-center justify-center rounded py-1 px-4 focus:outline-none" v-lazy-container="{ selector: 'img' }" @click.prevent="open_menu()" @keydown.enter="menu_state ? ()=>{} : open_menu()" @keydown.38="up_one" @keydown.40="down_one">
+        <button tabindex="2" class="flex items-center justify-center rounded py-1 px-4 focus:outline-none" v-lazy-container="{ selector: 'picture' }" @click.prevent="open_menu()" @keydown.enter="menu_state ? ()=>{} : open_menu()" @keydown.38="up_one" @keydown.40="down_one">
             <picture class="inline-block rounded-sm">
-                <source :srcSet="require(`~/static/flags/${current_country}.webp`)" type="image/webp" />
-                <source :srcSet="require(`~/static/flags/${current_country}.webp?jpeg`)" type="image/jpeg" />
-                <img class="h-5 w-8 inline-block rounded-sm" :data-src="require(`~/static/flags/${current_country}.webp`)" :data-loading="require(`~/static/image-loading.gif`)" />
+                <source :srcSet="require(`~/static/flags/${current_country}.svg?png`)" type="image/png" />
+                <img class="h-5 w-8 inline-block rounded-sm" :data-src="require(`~/static/flags/${current_country}.svg`)" :data-loading="require(`~/static/image-loading.gif`)" />
             </picture>
         </button>
         <transition name="slide">

@@ -17,7 +17,6 @@
         </div>
         <div class="absolute w-full md:1-/3 lg:w-1/2 right-0 object-cover cube-hero-section">
             <picture class="w-full object-cover z-0">
-                <source :srcSet="require(`~/static/cubes-2-min.png?webp`)" type="image/webp" />
                 <source :srcSet="require(`~/static/cubes-2-min.png`)" type="image/png" />
                 <img :data-src="require(`~/static/cubes-2-min.png?webp`)" :data-loading="require(`~/static/cubes-2-min.png?lqip`)"/>
             </picture>
