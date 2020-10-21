@@ -26,7 +26,7 @@
               <button class="pb-3 flex flex-wrap justify-end items-center focus:outline-none select-none" @click="menu=!menu">
                 <svg class="w-8 h-8 fill-current text-blue-500 inline-block select-none" viewBox="0 0 24 24"><path d="M18.3 5.71a.996.996 0 00-1.41 0L12 10.59 7.11 5.7a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41L10.59 12 5.7 16.89c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 13.41l4.89 4.89c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z" /></svg>
               </button>
-              <nuxt-link v-for="(data, i) in nav_links" :key="i" :to="`/${data.href}`" exact class="select-none focus:underline focus:outline-none text-base font-medium bg-transparent hover:bg-blue-600 text-blue-700 hover:text-white rounded-lg px-4 py-2 felx flex-wrap items-center justify-center">
+              <nuxt-link v-for="(data, i) in nav_links" :key="i" :to="`/${data.href}`" exact class="select-none focus:outline-none text-base font-medium bg-transparent hover:bg-blue-600 text-blue-700 hover:text-white rounded-lg px-4 py-2 felx flex-wrap items-center justify-center">
                 {{data.name}}
               </nuxt-link>
             </div>
@@ -38,7 +38,7 @@
         </div>
       </slide-x-right-transition>
       <fade-transition>
-        <div :key="1" class="z-30 fixed w-full py-12 px-4 bg-blur top-0 right-0 lg:hidden h-screen" v-if="menu">
+        <div @click="hideIt" :key="1" class="z-30 fixed w-full py-12 px-4 bg-blur top-0 right-0 lg:hidden h-screen" v-if="menu">
         </div>
       </fade-transition>
     </div>
