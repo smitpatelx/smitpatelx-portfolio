@@ -32,6 +32,26 @@ export default {
    */
   css: [],
   /*
+   *
+   */
+  pwa:{
+    meta: {
+      mobileApp: true,
+      mobileAppIOS: true,
+      name: 'SPX',
+      author: 'Smit Patel',
+      description: 'I`m a Computer Programmer based in Winnipeg, MB. Specialized in building and designing websites and applications.',
+      theme_color: '#4299e1',
+      nativeUI: true,
+    },
+    manifest: {
+      name: 'Smit Patel',
+      short_name: 'SPX',
+      description: 'I`m a Computer Programmer based in Winnipeg, MB. Specialized in building and designing websites and applications.',
+      icons: ['icon.png'],
+    },
+  },
+  /*
    ** Plugins to load before mounting the App
    */
   plugins: [
@@ -53,6 +73,7 @@ export default {
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
     '@aceforth/nuxt-optimized-images',
+    '@nuxtjs/pwa',
   ],
   /*
   ** Nuxt.js modules
