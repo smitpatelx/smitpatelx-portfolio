@@ -153,7 +153,7 @@ export default {
                 this.reset();
             })
             .catch(err=>{
-                this.$refs.sNotify.error('Please try again later. Code: c-1')
+                this.$refs.sNotify.error('End server connection problem. Please try again later.')
             })
         },
         set_no_of_employee(val){
@@ -179,15 +179,10 @@ export default {
                 this.ip_address = res.ip;
                 this.submit()
             }).catch(error=>{
-                this.$refs.sNotify.error('Please turn off ads tracker.')
+                this.$refs.sNotify.error('Please turn off ad blocker and try again.')
             });
         }
-    },
-    mounted() {
-        setTimeout(()=>{
-            this.$refs.sNotify.success('Thank you for contacting me!')
-        },1000);
-    },
+    }
 }
 </script>
 <style lang="scss" scoped>

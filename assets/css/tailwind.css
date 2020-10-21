@@ -23,16 +23,3 @@ img[lazy='loading'] {
   opacity: 0;
 }
 
-/* Vue Transition - Notify */
-.notify-leave-active,
-.notify-enter-active {
-  transition: 0.3s ease-in-out;
-}
-.notify-enter {
-  transform: translateY(25%), translateX(0%);
-  opacity: 0;
-}
-.notify-leave-to {
-  transform: translateY(0%), translateX(25%);
-  opacity: 0;
-}

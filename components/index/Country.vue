@@ -1,5 +1,5 @@
 <template>
-    <div v-click-outside="hide_menu" v-focus-outside="hide_menu" class="flex cursor-pointer bg-gray-300 rounded items-stretch justify-center z-50" >
+    <div v-click-outside="hide_menu" v-focus-outside="hide_menu" class="flex cursor-pointer bg-gray-300 rounded items-stretch justify-center z-10" >
         <button tabindex="2" class="flex items-center justify-center rounded py-1 px-4 focus:outline-none" v-lazy-container="{ selector: 'img' }" @click.prevent="open_menu()" @keydown.enter="menu_state ? ()=>{} : open_menu()" @keydown.38="up_one" @keydown.40="down_one">
             <picture class="inline-block rounded-sm">
                 <source :srcSet="require(`~/static/flags/${current_country}.webp`)" type="image/webp" />
