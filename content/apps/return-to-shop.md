@@ -19,10 +19,15 @@ download_url: https://github.com/smitpatelx/return-to-shop
 > This plugin doesn't collect any information regrading any user or any other data from your site. All the source code can be found on github if you want to dig into how this plugin is designed.
 
 # Screenshots
-
-<spx-image src="~/static/apps/robust-user-search/main-page.png"></spx-image>
-<spx-image src="~/static/apps/robust-user-search/edit-components.png"></spx-image>
-<spx-image src="~/static/apps/robust-user-search/settings-page.png"></spx-image>
+<!-- 
+<div class="flex flex-wrap justify-center items-center py-6">
+ <img src="/apps/robust-user-search/main-page.png"
+          class="min:h-10 min:w-10 w-auto h-24rem my-4 self-center inline-block rounded-none md:rounded-lg shadow-lg" alt="Main Page Screen Shot">
+ <img src="/apps/robust-user-search/edit-component.png"
+          class="min:h-10 min:w-10 w-auto h-24rem my-4 self-center inline-block rounded-none md:rounded-lg shadow-lg" alt="Live Editing Screen Shot">
+ <img src="/apps/robust-user-search/settings-page.png"
+          class="min:h-10 min:w-10 w-auto h-24rem my-4 self-center inline-block rounded-none md:rounded-lg shadow-lg" alt="Settings Page Screen Shot">
+<div> -->
 
 
 > A COMPREHENSIVE, EASY TO USE, STABLE AND WELL SUPPORTED WORDPRESS USER SEARCH PLUGIN.

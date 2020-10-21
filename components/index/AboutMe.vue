@@ -26,10 +26,7 @@
         </div>
         <div class="flex w-full lg:w-1/2 py-8 md:p-16">
             <div  class="w-full flex flex-wrap justify-center items-center relative mt-10 lg:mt-0">
-                <picture class="w-2/3 z-10 rounded-lg shadow-lg">
-                    <source :srcSet="require(`~/static/SMIT-GRAY-SCALED.jpg`)" type="image/png" />
-                    <img :data-src="require(`~/static/SMIT-GRAY-SCALED.jpg?webp`)" :data-loading="require(`~/static/SMIT-GRAY-SCALED.jpg?lqip`)" class="rounded-lg"/>
-                </picture>
+                <img :data-src="require(`~/static/SMIT-GRAY-SCALED.jpg`)" :data-loading="require(`~/static/SMIT-GRAY-SCALED.jpg?lqip`)" class="w-2/3 z-10 rounded-lg shadow-lg"/>
                 <div class="w-2/3 absolute top-0 right-0 z-0 border-2 border-blue-500 bg-transparent h-full mt-8 mr-12 md:mr-16 rounded-lg"></div>
             </div>
         </div>

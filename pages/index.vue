@@ -15,11 +15,8 @@
             <svg class="fill-current w-8 h-6 inline-block ml-1" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.2929 5.2929c.3905-.3905 1.0237-.3905 1.4142 0l6 6c.3905.3905.3905 1.0237 0 1.4142l-6 6c-.3905.3905-1.0237.3905-1.4142 0-.3905-.3905-.3905-1.0237 0-1.4142L13.5858 12l-5.293-5.2929c-.3904-.3905-.3904-1.0237 0-1.4142z"/></svg>
           </a>
         </div>
-        <div class="absolute w-full md:1-/3 lg:w-1/2 right-0 object-cover cube-hero-section">
-            <picture class="w-full object-cover z-0">
-                <source :srcSet="require(`~/static/cubes-2-min.png`)" type="image/png" />
-                <img :data-src="require(`~/static/cubes-2-min.png?webp`)" :data-loading="require(`~/static/cubes-2-min.png?lqip`)"/>
-            </picture>
+        <div class="absolute w-full md:1-/3 lg:w-1/2 right-0 object-cover cube-hero-section" v-lazy-container="{ selector: 'img' }">
+          <img class="w-full object-cover z-0" :data-src="require(`~/static/cubes-2-min.png`)" :data-loading="require(`~/static/cubes-2-min.png?lqip`)"/>
         </div>
     </div>
     <div class="flex flex-wrap flex-col justify-center items-center">
