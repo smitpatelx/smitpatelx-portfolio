@@ -1,6 +1,6 @@
 require('dotenv').config()
 export default {
-  mode: 'universal',
+  target: 'static',
   env: {
     apiUrl: process.env.API_URL || 'http://localhost:3000'
   },
