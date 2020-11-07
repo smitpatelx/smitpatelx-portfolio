@@ -1,17 +1,17 @@
 ---
 title: Robust User Search
 author : Smit Patel
-description: A COMPREHENSIVE, EASY TO USE, STABLE AND WELL SUPPORTED WORDPRESS USER SEARCH PLUGIN.
+description: A comprehensive, easy to use, stable and well supported wordpress user search plugin.
 tags: ["Wordpress","Plugin","User Managment"]
 icon_url: apps/robust-user-search/icon.png
 banner_url: apps/robust-user-search/banner.png
 reseaseDate: 10 September 2020
-Contributors: smitpatelx
-Donate link: https://apps.smitpatelx.com/donate
-Requires_at_least: 5.2
-Tested_up_to: 5.5.1
-Stable_tag: 1.0.4
-License: GPL-v2-only
+contributors: Smit Patel
+donate_link: https://apps.smitpatelx.com/donate
+requires_at_least: 5.2
+tested_up_to: 5.5.3
+stable_tag: 1.0.5
+license: GPL-v2-only
 download_url: https://wordpress.org/plugins/robust-user-search/
 ---
 
@@ -21,12 +21,20 @@ download_url: https://wordpress.org/plugins/robust-user-search/
 
 # Screenshots
 
- <img src="/apps/robust-user-search/main-page.png"
-          class="min:h-10 min:w-10 w-auto h-24rem my-4 self-center inline-block rounded-none md:rounded-lg shadow-lg" alt="Main Page Screen Shot">
- <img src="/apps/robust-user-search/edit-component.png"
-          class="min:h-10 min:w-10 w-auto h-24rem my-4 self-center inline-block rounded-none md:rounded-lg shadow-lg" alt="Live Editing Screen Shot">
- <img src="/apps/robust-user-search/settings-page.png"
-          class="min:h-10 min:w-10 w-auto h-24rem my-4 self-center inline-block rounded-none md:rounded-lg shadow-lg" alt="Settings Page Screen Shot">
+<scrolling-images :images="[
+    {
+        src: '/apps/robust-user-search/main-page.png',
+        name: 'Main Page'
+    },
+    {
+        src: '/apps/robust-user-search/edit-component.png',
+        name: 'Live Editing'
+    },
+    {
+        src: '/apps/robust-user-search/settings-page.png',
+        name: 'Settings Page'
+    },
+]"></scrolling-images>
 
 > A COMPREHENSIVE, EASY TO USE, STABLE AND WELL SUPPORTED WORDPRESS USER SEARCH PLUGIN.
 

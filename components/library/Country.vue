@@ -1,7 +1,7 @@
 <template>
     <div v-click-outside="hide_menu" v-focus-outside="hide_menu" class="flex cursor-pointer bg-gray-300 rounded items-stretch justify-center z-20" >
         <button tabindex="2" class="flex items-center justify-center rounded py-1 px-4 focus:outline-none" v-lazy-container="{ selector: 'img' }" @click.prevent="open_menu()" @keydown.enter="menu_state ? ()=>{} : open_menu()" @keydown.38="up_one" @keydown.40="down_one">
-            <img class="h-5 w-8 inline-block rounded-sm" :data-src="require(`~/static/flags/${current_country}.svg`)" :data-loading="require(`~/static/image-loading.gif`)" />
+            <img class="h-5 w-8 inline-block rounded-sm" :data-src="require(`~/static/flags/${current_country}.svg`)" data-loading="/image-loading.gif" />
         </button>
         <transition name="slide">
             <div @blur="hide_menu" v-if="menu_state" class="mt-12 shadow-lg absolute custom_scroll flex flex-col w-64 bg-gray-200 border border-gray-400 rounded-md top-0 left-0">

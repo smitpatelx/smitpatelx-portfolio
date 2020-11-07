@@ -5,12 +5,12 @@ description: Customize your return to shop button to redirect to different URL.
 tags: ["Wordpress","WooCommerce","WPML"]
 icon_url: apps/robust-user-search/icon.png
 reseaseDate: 10 September 2020
-Contributors: smitpatelx
-Donate link: https://apps.smitpatelx.com/donate
-Requires_at_least: 5.2
-Tested_up_to: 5.5.1
-Stable_tag: 1.0.4
-License: GPLv2
+contributors: smitpatelx
+donate_link: https://apps.smitpatelx.com/donate
+requires_at_least: 5.2
+tested_up_to: 5.5.3
+stable_tag: 1.0.1
+license: GPL-v2-only
 download_url: https://github.com/smitpatelx/return-to-shop
 ---
 
@@ -19,16 +19,17 @@ download_url: https://github.com/smitpatelx/return-to-shop
 > This plugin doesn't collect any information regrading any user or any other data from your site. All the source code can be found on github if you want to dig into how this plugin is designed.
 
 # Screenshots
-<!-- 
-<div class="flex flex-wrap justify-center items-center py-6">
- <img src="/apps/robust-user-search/main-page.png"
-          class="min:h-10 min:w-10 w-auto h-24rem my-4 self-center inline-block rounded-none md:rounded-lg shadow-lg" alt="Main Page Screen Shot">
- <img src="/apps/robust-user-search/edit-component.png"
-          class="min:h-10 min:w-10 w-auto h-24rem my-4 self-center inline-block rounded-none md:rounded-lg shadow-lg" alt="Live Editing Screen Shot">
- <img src="/apps/robust-user-search/settings-page.png"
-          class="min:h-10 min:w-10 w-auto h-24rem my-4 self-center inline-block rounded-none md:rounded-lg shadow-lg" alt="Settings Page Screen Shot">
-<div> -->
 
+<scrolling-images :images="[
+    {
+        src: '/apps/return-to-shop/config.png',
+        name: 'Config Page'
+    },
+    {
+        src: '/apps/return-to-shop/navigation.png',
+        name: 'Woocommerce Submenu'
+    }
+]"></scrolling-images>
 
 > A COMPREHENSIVE, EASY TO USE, STABLE AND WELL SUPPORTED WORDPRESS USER SEARCH PLUGIN.
 

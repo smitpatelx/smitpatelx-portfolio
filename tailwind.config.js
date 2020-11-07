@@ -25,11 +25,14 @@ module.exports = {
         // 'primary': '#0a192f',
         'primary': '#f7fafc',
         'secondary': '#0d1e36',
+      },
+      outline: {
+        blue: '2px solid #f7fafc',
       }
     }
   },
   variants: {
-    
+    outline: ['responsive', 'focus'],
   },
   plugins: [require('tailwindcss-markdown')]
 }

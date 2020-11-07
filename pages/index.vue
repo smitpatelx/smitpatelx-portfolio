@@ -29,14 +29,13 @@
 </template>
 
 <script>
-
 export default {
   scrollToTop: false,
   components:{
-    AboutMe: () => import(/* webpackPrefetch: true */ '@/components/index/AboutMe.vue'),
-    Experience: () => import(/* webpackPrefetch: true */ '@/components/index/Experience.vue'),
-    Work: () => import(/* webpackPrefetch: true */ '@/components/index/Work.vue'),
-    Contact: () => import(/* webpackPrefetch: true */ '@/components/index/Contact.vue'),
+    AboutMe: () => import('@/components/index/AboutMe.vue'),
+    Experience: () => import('@/components/index/Experience.vue'),
+    Work: () => import('@/components/index/Work.vue'),
+    Contact: () => import('@/components/index/Contact.vue'),
     timeout: 3000
   },
   data(){
