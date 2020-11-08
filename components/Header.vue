@@ -2,15 +2,15 @@
   <div class="px-4 lg:px-12 select-none z-30">
     <div v-click-outside="hideIt" class="w-full flex-wrap justify-between items-center flex relative">
       <div class="w-full flex-wrap justify-between items-center flex">
-        <nuxt-link v-scroll-reveal="{ delay: 0, mobile: false, origin: 'top', easing: 'ease-in', distance: '40px'}" to="/" class="focus:outline-none py-3">
+        <nuxt-link v-scroll-reveal="{ delay: 0, mobile: true, origin: 'top', easing: 'ease-in', distance: '40px'}" to="/" class="focus:outline-none py-3">
           <img src="/smitpatelx/Logo_1.svg" class="h-24 w-24"/>
         </nuxt-link>
         <div class="hidden lg:flex flex-wrap justify-center items-center relative">
-          <nuxt-link v-scroll-reveal="{ delay: i*100, mobile: false, origin: 'top', easing: 'ease-in', distance: '40px' }" v-for="(data, i) in nav_links" :key="i" :to="`/${data.href}`" exact class="focus:outline-none text-gray-600 text-base mx-4 my-2 hover:back-color">
+          <nuxt-link v-scroll-reveal="{ delay: i*100, mobile: true, origin: 'top', easing: 'ease-in', distance: '40px' }" v-for="(data, i) in nav_links" :key="i" :to="`/${data.href}`" exact class="focus:outline-none text-gray-600 text-base mx-4 my-2 hover:back-color">
             <!-- <span class="text-blue-500 text-sm mr-2 font-mono">0{{i+1}}.</span> -->
             {{data.name}}
           </nuxt-link>
-          <a href="/resume-smit-patel.pdf" target="_blank" v-scroll-reveal="{ delay: 500, mobile: false, origin: 'top', easing: 'ease-in', distance: '40px'}" class="focus:outline-none focus:shadow-outline resume_button flex flex-wrap justify-center items-center ml-6">
+          <a href="/resume-smit-patel.pdf" target="_blank" v-scroll-reveal="{ delay: 500, mobile: true, origin: 'top', easing: 'ease-in', distance: '40px'}" class="focus:outline-none focus:shadow-outline resume_button flex flex-wrap justify-center items-center ml-6">
             <span>Resume</span>
             <svg class="w-5 h-5 fill-current text-blue-500 inline-block ml-3" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.8787 1.8787A3 3 0 016 1h8a1 1 0 01.7071.2929l6 6C20.8946 7.4804 21 7.7348 21 8v12a3 3 0 01-3 3H6a3 3 0 01-3-3V4a3 3 0 01.8787-2.1213zM6 3a1 1 0 00-1 1v16a1 1 0 001 1h12a1.0001 1.0001 0 001-1V8.4142L13.5858 3H6z" /><path fill-rule="evenodd" clip-rule="evenodd" d="M14 1c.5523 0 1 .4477 1 1v5h5c.5523 0 1 .4477 1 1s-.4477 1-1 1h-6c-.5523 0-1-.4477-1-1V2c0-.5523.4477-1 1-1zM7 13c0-.5523.4477-1 1-1h8c.5523 0 1 .4477 1 1s-.4477 1-1 1H8c-.5523 0-1-.4477-1-1zM7 17c0-.5523.4477-1 1-1h8c.5523 0 1 .4477 1 1s-.4477 1-1 1H8c-.5523 0-1-.4477-1-1zM7 9c0-.5523.4477-1 1-1h2c.5523 0 1 .4477 1 1s-.4477 1-1 1H8c-.5523 0-1-.4477-1-1z" /></svg>
           </a>

@@ -18,7 +18,7 @@
                         <p class="text-xl font-medium text-gray-600">Full-stack Developer <span class="pl-2 text-blue-400 whitespace-no-wrap">@ Netdevv</span></p>
                         <p class="text-base font-secondary text-gray-500 font-mono mt-3">Oct 2017 – Apr 2020</p>
                         <ul class="text-gray-600 pt-6 text-base font-light">
-                            <!-- v-scroll-reveal="{ delay: (i*50)+400, mobile: false, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" -->
+                            <!-- v-scroll-reveal="{ delay: (i*50)+400, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" -->
                             <li>Building Backend API using Node.js, PHP, ASP.NET, JAVA to serve 10,000+ requests and server content on front-end.</li>
                             <li>Setup containers on Debian based systems to host Nginx and Apache servers. </li>
                             <li>Improve security of websites using LetsEncrypt’s Certbot on linux and configure certificates for nginx and apache.</li>

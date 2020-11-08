@@ -1,19 +1,7 @@
 <template>
-    <div class="w-full flex flex-col md:flex-row flex-wrap items-stretch justify-center py-4">
-        <div class="px-6 lg:px-10 pb-10 flex flex-wrap relative items-start justify-center">
-            <div class="w-full h-16 flex flex-wrap items-start justify-center mb-4 px-4">
-                <span class="font-bold text-4xl text-blue-600" v-scroll-reveal="{ mobile: true, origin: 'top', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}">Apps</span>
-            </div>
-            <div class="w-auto pb-8 block md:inline-block">
-                <ul class="w-full flex flex-wrap flex-col justify-center list-style-1 text-gray-700">
-                    <li v-scroll-reveal="{ delay: 700, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}"><svg class="text-gray-900 inline-block w-6 h-6 fill-current mr-2" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M20.7071 5.29289c.3905.39053.3905 1.02369 0 1.41422L9.70711 17.7071c-.39053.3905-1.02369.3905-1.41422 0l-5-5c-.39052-.3905-.39052-1.0237 0-1.4142.39053-.3905 1.02369-.3905 1.41422 0L9 15.5858 19.2929 5.29289c.3905-.39052 1.0237-.39052 1.4142 0z" clip-rule="evenodd"/></svg> Fully supported via github issues.</li>
-                    <li v-scroll-reveal="{ delay: (1*50)+700, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}"><svg class="text-gray-900 inline-block w-6 h-6 fill-current mr-2" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M20.7071 5.29289c.3905.39053.3905 1.02369 0 1.41422L9.70711 17.7071c-.39053.3905-1.02369.3905-1.41422 0l-5-5c-.39052-.3905-.39052-1.0237 0-1.4142.39053-.3905 1.02369-.3905 1.41422 0L9 15.5858 19.2929 5.29289c.3905-.39052 1.0237-.39052 1.4142 0z" clip-rule="evenodd"/></svg> Open-source and customizable.</li>
-                    <li v-scroll-reveal="{ delay: (2*50)+700, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}"><svg class="text-gray-900 inline-block w-6 h-6 fill-current mr-2" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M20.7071 5.29289c.3905.39053.3905 1.02369 0 1.41422L9.70711 17.7071c-.39053.3905-1.02369.3905-1.41422 0l-5-5c-.39052-.3905-.39052-1.0237 0-1.4142.39053-.3905 1.02369-.3905 1.41422 0L9 15.5858 19.2929 5.29289c.3905-.39052 1.0237-.39052 1.4142 0z" clip-rule="evenodd"/></svg> Regular Updates & Full testing.</li>
-                    <li v-scroll-reveal="{ delay: (3*50)+700, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}"><svg class="text-gray-900 inline-block w-6 h-6 fill-current mr-2" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M20.7071 5.29289c.3905.39053.3905 1.02369 0 1.41422L9.70711 17.7071c-.39053.3905-1.02369.3905-1.41422 0l-5-5c-.39052-.3905-.39052-1.0237 0-1.4142.39053-.3905 1.02369-.3905 1.41422 0L9 15.5858 19.2929 5.29289c.3905-.39052 1.0237-.39052 1.4142 0z" clip-rule="evenodd"/></svg> Security and privacy</li>
-                </ul>
-            </div>
-            <div class="w-full flex flex-wrap gap-y-4 md:gap-8 justify-center items-center">
-                <div v-scroll-reveal="{ delay: (i*50)+700, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" v-for="(app, i) in apps" :key="i" class="w-full md:max-w-sm rounded-lg duration-300 transition-all flex flex-col items-stretch justify-start shadow-xl bg-white">
+    <div>
+        <div class="w-full flex flex-wrap gap-y-4 md:gap-8 justify-center items-center">
+                <div v-scroll-reveal="{ delay: (i*50)+700, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" v-for="(app, i) in data" :key="i" class="w-full md:max-w-sm rounded-lg duration-300 transition-all flex flex-col items-stretch justify-start shadow-xl bg-white">
                     <div class="w-full self-stretch flex flex-wrap items-center justify-center py-5 rounded-t-md md:rounded-t-lg card-img" v-lazy-container="{ selector: 'img' }">
                         <img :data-src="`${app.path}/display.svg`"
                             :data-loading="`${app.path}/display.svg?lqip`"
@@ -39,66 +27,19 @@
                     </div>
                 </div>
             </div>
-        </div>
     </div>
 </template>
 <script>
-import Lottie from '@/components/apps/lottie.vue';
-import animationData from '@/static/json/idea_anim.json';
 export default {
-    layout: 'apps',
-    components:{
-        'lottie': Lottie,
-    },
-    data(){
-        return{
-            defaultOptions: {animationData, animationData }
+    props: {
+        data: {
+            type: Object,
+            default: {}
         }
-    },
-    async asyncData({ $content, params }) {
-        const apps = await $content('apps').fetch()
-        return { apps }
-    },
-    filters:{
-        desc: val=>{
-            let str_arrs = val.split(" ");
-            str_arrs.shift();
-            let capitalize = (s) => {
-                if (typeof s !== 'string') return ''
-                return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase()
-            }
-            return capitalize(val.split(" ")[0]) + " " + str_arrs.join(" ").toLowerCase();
-        },
-        date: val=>{
-            const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-                                "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-                                ];
-            let new_date = new Date(val);
-            return new_date.getDate() + " " + monthNames[new_date.getMonth()] + " " + new_date.getFullYear();
-        },
-        year: val=>{
-            let new_date = new Date(val);
-            return new_date.getFullYear();
-        }
-    },
-    methods:{
-        handleAnimation: function (anim) {
-            this.anim = anim;
-        },
-        img: (path)=>{
-            return `~/static/apps/${path}/display.svg`;
-        },
-        imgLazy: (path)=>{
-            return `~/static/apps/${path}/display.svg?webp?lqip`;
-        }
-    },
-    created() {
-        if (process.client) {
-            window.scrollTo(0,0);
-        }
-    },
+    }
 }
 </script>
+
 <style lang="scss" scoped>
 
 .filter-img{

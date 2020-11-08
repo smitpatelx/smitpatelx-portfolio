@@ -3,12 +3,8 @@
     <div class="w-full px-6 lg:px-10 -mt-10 pb-6 md:pb-16 flex flex-wrap justify-between items-center">
       <nuxt-link to="/apps/" class="text-gray-800 font-medium text-xl no-underline hover:underline flex flex-wrap items-center justify-center">
         <svg class="w-6 h-6 inline-block mr-2 fill-current text-blue-500" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M15.7 5.3c.4.4.4 1 0 1.4L10.4 12l5.3 5.3a1 1 0 01-1.4 1.4l-6-6a1 1 0 010-1.4l6-6a1 1 0 011.4 0z" clip-rule="evenodd"/></svg>
-        Return to Apps
+        All Apps
       </nuxt-link>
-      <a :href="article.download_url" target="_blank" class="btn-primary">
-        Download
-        <svg class="w-5 h-5 ml-3 inline-block fill-current" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 14c.6 0 1 .4 1 1v4a1 1 0 001 1h14a1 1 0 001-1v-4a1 1 0 112 0v4a3 3 0 01-3 3H5a3 3 0 01-3-3v-4c0-.6.4-1 1-1z" clip-rule="evenodd"/><path fill-rule="evenodd" d="M6.3 9.3a1 1 0 011.4 0l4.3 4.3 4.3-4.3a1 1 0 111.4 1.4l-5 5a1 1 0 01-1.4 0l-5-5a1 1 0 010-1.4z" clip-rule="evenodd"/><path fill-rule="evenodd" d="M12 2c.6 0 1 .4 1 1v12a1 1 0 11-2 0V3c0-.6.4-1 1-1z" clip-rule="evenodd"/></svg>
-      </a>
     </div>
     <div class="flex w-full flex-wrap-reverse lg:flex-wrap justify-center items-start">
       <article class="w-full lg:w-4/6 px-5 md:px-8 lg:px-20">
@@ -63,6 +59,12 @@
             <span class="font-medium text-blue-800">License:</span>
             <span class="font-normal text-gray-600 ml-1">{{article.license}}</span> 
           </div>
+          <div class="w-full flex justify-center items-center pt-8 pb-2">
+            <a :href="article.download_url" target="_blank" class="btn-primary">
+              Download
+              <svg class="w-5 h-5 ml-3 inline-block fill-current" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 14c.6 0 1 .4 1 1v4a1 1 0 001 1h14a1 1 0 001-1v-4a1 1 0 112 0v4a3 3 0 01-3 3H5a3 3 0 01-3-3v-4c0-.6.4-1 1-1z" clip-rule="evenodd"/><path fill-rule="evenodd" d="M6.3 9.3a1 1 0 011.4 0l4.3 4.3 4.3-4.3a1 1 0 111.4 1.4l-5 5a1 1 0 01-1.4 0l-5-5a1 1 0 010-1.4z" clip-rule="evenodd"/><path fill-rule="evenodd" d="M12 2c.6 0 1 .4 1 1v12a1 1 0 11-2 0V3c0-.6.4-1 1-1z" clip-rule="evenodd"/></svg>
+            </a>
+          </div>
         </div>
       </section>
     </div>
@@ -91,7 +93,10 @@ import ScrollingImages from '@/components/library/ScrollingImages.vue';
     },
     components:{
       ScrollingImages,
-    }
+    },
+    created() {
+      window.scrollTo(0,0);
+    },
   }
 </script>
 <style lang="scss">
