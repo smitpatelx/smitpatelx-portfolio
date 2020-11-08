@@ -10,7 +10,7 @@
           Specialised in building and designing websites and applications.
         </h3>
         <div v-scroll-reveal="{ delay: 1500, mobile: true, origin: 'right', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '180px'}" class="w-full z-10 flex flex-wrap justify-start items-center">
-          <a href="#contact" class="focus:outline-none focus:shadow-outline get_in_touch select-none tracking-wider">
+          <a href="#contact" class="pl-8 pr-5 focus:outline-none focus:shadow-outline get_in_touch select-none tracking-wider">
             <span>Get in Touch</span>
             <svg class="fill-current w-8 h-6 inline-block ml-1" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.2929 5.2929c.3905-.3905 1.0237-.3905 1.4142 0l6 6c.3905.3905.3905 1.0237 0 1.4142l-6 6c-.3905.3905-1.0237.3905-1.4142 0-.3905-.3905-.3905-1.0237 0-1.4142L13.5858 12l-5.293-5.2929c-.3904-.3905-.3904-1.0237 0-1.4142z"/></svg>
           </a>
@@ -60,7 +60,7 @@ export default {
 
 <style lang="scss">
 .get_in_touch{
-  @apply bg-transparent pl-8 pr-5 py-3 text-blue-500 rounded-md text-base font-sans font-secondary flex flex-wrap justify-center items-center text-center shadow-2xl;
+  @apply bg-transparent py-3 text-blue-500 rounded-md text-base font-sans font-secondary flex flex-wrap justify-center items-center text-center shadow-2xl;
   background: rgba(47, 140, 246, 0.25);
   transition: all 0.4s;
   backdrop-filter: blur(5px);
