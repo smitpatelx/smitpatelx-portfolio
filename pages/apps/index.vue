@@ -56,6 +56,8 @@ export default {
         }
     },
     async asyncData({ $content, params }) {
+        console.log('$content : ', $content);
+        console.log('$content(apps)', $content('apps'));
         const apps = await $content('apps').fetch()
         return { apps }
     },

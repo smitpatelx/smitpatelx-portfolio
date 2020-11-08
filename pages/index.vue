@@ -33,8 +33,9 @@
 export default {
   scrollToTop: false,
   async asyncData({ $content, params }) {
-        const apps = await this.$content('apps').fetch()
-        return { apps }
+      // console.log($content);
+      // const apps = await this.$content('apps').fetch();
+      // return { apps }
   },
   components:{
     AboutMe: () => import('@/components/index/AboutMe.vue'),
