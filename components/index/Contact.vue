@@ -14,7 +14,7 @@
                     <div class="flex flex-wrap flex-col">
                         <label for="phone" class="font-mono text-base text-blue-600 mb-2 w-full">Phone</label>
                         <div class="grid grid-cols-8 relative w-full gap-x-2">
-                            <Country class="flex flex-col items-stretch justify-center col-span-2 focus-within:shadow-outline" v-on:countrySelected="onCountrySelect"/>
+                            <Country class="flex flex-col items-stretch justify-center col-span-2 focus-within:shadow-outline select-none focus:outline-none" v-on:countrySelected="onCountrySelect"/>
                             <input tabindex="4" required class="inline-block col-span-6 form-input" type="tel" pattern="[0-9]{10}" maxlength="10" name="phone" id="phone" v-model="phone" placeholder="eg. 000-000-0000">
                         </div>
                     </div>

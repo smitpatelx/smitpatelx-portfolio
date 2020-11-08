@@ -33,9 +33,8 @@
 export default {
   scrollToTop: false,
   async asyncData({ $content, params }) {
-      // console.log($content);
-      // const apps = await this.$content('apps').fetch();
-      // return { apps }
+    const apps = await $content('apps').fetch()
+    return { apps }
   },
   components:{
     AboutMe: () => import('@/components/index/AboutMe.vue'),
@@ -59,7 +58,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .get_in_touch{
   @apply bg-transparent pl-8 pr-5 py-3 text-blue-500 rounded-md text-base font-sans font-secondary flex flex-wrap justify-center items-center text-center shadow-2xl;
   background: rgba(47, 140, 246, 0.25);
