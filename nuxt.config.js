@@ -60,8 +60,7 @@ export default {
    */
   plugins: [
     { src: '~/plugins/vue-scroll-reveal', ssr: false },
-    { src: '~/plugins/vue-notification', ssr: false },
-    { src: '~/plugins/vuelidate', ssr: false },
+    // { src: '~/plugins/vuelidate', ssr: false },
   ],
   /*
   ** Auto import components
@@ -73,9 +72,9 @@ export default {
   */
   buildModules: [
     '@nuxtjs/dotenv',
+    '@nuxtjs/tailwindcss',
     '@nuxtjs/style-resources',
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-    '@nuxtjs/tailwindcss',
     '@aceforth/nuxt-optimized-images',
     '@nuxtjs/pwa',
   ],

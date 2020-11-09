@@ -34,6 +34,7 @@ export default {
             new_array:[],
         }
     },
+    fetchOnServer: true,
     methods:{
         load_countries(){
             this.$axios.$get('/json/name_alpha2_calling_codes.json')
