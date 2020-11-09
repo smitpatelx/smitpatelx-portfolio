@@ -108,6 +108,11 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
-    extractCSS: true,
+    analyze: true,
+    // or
+    analyze: {
+      analyzerMode: 'static'
+    },
+    extractCSS: false,
   }
 }
