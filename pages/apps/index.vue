@@ -6,25 +6,25 @@
             </div>
             <div class="w-auto pb-8 block md:inline-block" style="z-index:20;">
                 <ul class="list-style-1" style="z-index:20;">
-                    <li v-scroll-reveal="{ delay: 150, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}">
+                    <li v-scroll-reveal="{ delay: 500, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}">
                         <span>
                             <svg viewBox="0 0 24 24"><path fill-rule="evenodd" d="M20.7071 5.29289c.3905.39053.3905 1.02369 0 1.41422L9.70711 17.7071c-.39053.3905-1.02369.3905-1.41422 0l-5-5c-.39052-.3905-.39052-1.0237 0-1.4142.39053-.3905 1.02369-.3905 1.41422 0L9 15.5858 19.2929 5.29289c.3905-.39052 1.0237-.39052 1.4142 0z" clip-rule="evenodd"/></svg>
                         </span>
                          Fully supported via github issues.
                     </li>
-                    <li v-scroll-reveal="{ delay: 40+150, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}">
+                    <li v-scroll-reveal="{ delay: 40+500, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}">
                         <span>
                             <svg viewBox="0 0 24 24"><path fill-rule="evenodd" d="M20.7071 5.29289c.3905.39053.3905 1.02369 0 1.41422L9.70711 17.7071c-.39053.3905-1.02369.3905-1.41422 0l-5-5c-.39052-.3905-.39052-1.0237 0-1.4142.39053-.3905 1.02369-.3905 1.41422 0L9 15.5858 19.2929 5.29289c.3905-.39052 1.0237-.39052 1.4142 0z" clip-rule="evenodd"/></svg>
                         </span>
                          Open-source and customizable.
                     </li>
-                    <li v-scroll-reveal="{ delay: 80+150, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}">
+                    <li v-scroll-reveal="{ delay: 80+500, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}">
                         <span>
                             <svg viewBox="0 0 24 24"><path fill-rule="evenodd" d="M20.7071 5.29289c.3905.39053.3905 1.02369 0 1.41422L9.70711 17.7071c-.39053.3905-1.02369.3905-1.41422 0l-5-5c-.39052-.3905-.39052-1.0237 0-1.4142.39053-.3905 1.02369-.3905 1.41422 0L9 15.5858 19.2929 5.29289c.3905-.39052 1.0237-.39052 1.4142 0z" clip-rule="evenodd"/></svg>
                         </span>
                          Regular Updates & Full testing.
                     </li>
-                    <li v-scroll-reveal="{ delay: 120+150, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}">
+                    <li v-scroll-reveal="{ delay: 120+500, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}">
                         <span>
                             <svg viewBox="0 0 24 24"><path fill-rule="evenodd" d="M20.7071 5.29289c.3905.39053.3905 1.02369 0 1.41422L9.70711 17.7071c-.39053.3905-1.02369.3905-1.41422 0l-5-5c-.39052-.3905-.39052-1.0237 0-1.4142.39053-.3905 1.02369-.3905 1.41422 0L9 15.5858 19.2929 5.29289c.3905-.39052 1.0237-.39052 1.4142 0z" clip-rule="evenodd"/></svg>
                         </span>
