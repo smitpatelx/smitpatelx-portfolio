@@ -1,11 +1,10 @@
 <template>
     <section class="w-full min-h-screen flex flex-wrap justify-center items-center mt-5 lg:mt-0 p-4 lg:p-32 mb-32" id="contact">
         <div class="flex flex-wrap justify-center items-center">
-            <h2 v-scroll-reveal="{ delay: 700, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full text-gray-700 text-3xl md:text-4xl font-semibold leading-tight text-center">
-                <span class="mr-3 text-blue-600 text-base lg:text-2xl font-medium font-mono leading-tight self-end">04.</span>
+            <h2 v-scroll-reveal="{ delay: 100, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full text-gray-700 text-3xl md:text-4xl font-semibold leading-tight text-center mb-10">
                 Lets get in touch
             </h2>
-            <form v-scroll-reveal="{ delay: 1000, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" method="post" @submit.prevent="formSubmission" class="flex flex-wrap flex-col mt-8 w-full maxw-50 px-6">
+            <form v-scroll-reveal="{ delay: 300, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" method="post" @submit.prevent="formSubmission" class="flex flex-wrap flex-col mt-8 w-full maxw-50 px-6">
                 <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 my-2">
                     <div class="flex flex-wrap flex-col">
                         <label for="email" class="font-mono text-base text-blue-600 mb-2 w-full">Email</label>

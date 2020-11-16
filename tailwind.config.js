@@ -25,6 +25,7 @@ module.exports = {
         // 'primary': '#0a192f',
         'primary': '#f7fafc',
         'secondary': '#0d1e36',
+        'teal-s': '#42baff',
       },
       outline: {
         blue: '2px solid #f7fafc',

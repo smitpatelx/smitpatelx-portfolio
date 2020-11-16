@@ -14,14 +14,11 @@
 import { FadeTransition } from 'vue2-transitions';
 import Header from '@/components/Header.vue';
 import Footer from '@/components/Footer.vue';
-// import SideBars from '@/components/SideBars.vue';
-// import LoadingAmination from '@/components/LoadingAmination.vue';
 
 export default {
   components: {
     FadeTransition,
     Header,
-    // LoadingAmination,
     Footer
   },
   data(){
@@ -29,11 +26,6 @@ export default {
       // loading: true
     }
   },
-  created(){
-    // setTimeout(()=>{
-    //   this.loading = false;
-    // }, 3000);
-  }
 }
 </script>
 

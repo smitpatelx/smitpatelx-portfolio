@@ -104,7 +104,7 @@ export default {
             }
 
             .title{
-                @apply text-gray-500 text-lg font-medium inline-block pb-1 px-2 w-full text-left leading-tight;
+                @apply text-gray-500 text-lg font-secondary inline-block pb-1 px-2 w-full text-left leading-tight;
             }
 
             .text{

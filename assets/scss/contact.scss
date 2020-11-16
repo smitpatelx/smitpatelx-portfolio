@@ -30,7 +30,7 @@
 }
 
 .form_button{
-  @apply bg-transparent px-5 py-2 text-blue-600 border border-blue-600 rounded-md text-lg font-medium  flex flex-wrap justify-center items-center self-stretch mt-auto;
+  @apply bg-transparent px-5 py-2 text-blue-600 border border-blue-600 rounded-md text-lg font-secondary  flex flex-wrap justify-center items-center self-stretch mt-auto;
   transition: background 0.4s;
 
   &:hover{
@@ -39,7 +39,7 @@
 }
 
 .form_button2{
-  @apply px-5 py-2 text-blue-500 border border-transparent rounded-md text-lg font-medium  flex flex-wrap justify-center items-center self-stretch mt-auto;
+  @apply px-5 py-2 text-blue-500 border border-transparent rounded-md text-lg font-secondary  flex flex-wrap justify-center items-center self-stretch mt-auto;
   background: rgba(47, 140, 246, 0.3);
   transition: background 0.4s;
 

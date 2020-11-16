@@ -9,7 +9,7 @@ img[lazy='loading'] {
     filter: blur(15px);
 }
 
-/* Vue Transition - Slide Up */
+/* Vue Transition - slide (up) */
 .slide-leave-active,
 .slide-enter-active {
   transition: 0.3s ease-in-out;
@@ -22,3 +22,33 @@ img[lazy='loading'] {
   transform: translate(0, 25%);
   opacity: 0;
 }
+
+/* Vue Transition - fade-in */
+.fade-in-leave-active,
+.fade-in-enter-active {
+  transition: 0.3s ease-in-out;
+}
+.fade-in-enter {
+  opacity: 0;
+}
+.fade-in-leave-to {
+  opacity: 0;
+}
+
+/* Zoom In Start */
+.zoom-in-enter-active {
+    animation: zoom-in .3s ease-in-out;
+}
+.zoom-in-leave-active {
+    animation: zoom-in .3s reverse ease-in-out;
+}
+
+@keyframes zoom-in {
+    0% {
+        transform: scale(0) translateX(80%);
+    }
+    100% {
+        transform: scale(1) translateX(0%);
+    }
+}
+/* Zoom In End */
