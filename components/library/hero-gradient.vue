@@ -518,9 +518,13 @@ export default {
     * Gradient.toggleColor(index)
     * Gradient.updateFrequency(freq)
     */
-    if (process.client) {
-      var gradient = new Gradient();
-      gradient.initGradient("#gradient-canvas");
+    try {
+        if (process.client) {
+            var gradient = new Gradient();
+            gradient.initGradient("#gradient-canvas");
+        }
+    } catch (err) {
+        
     }
   }
 }

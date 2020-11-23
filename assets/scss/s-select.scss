@@ -46,14 +46,14 @@
     @apply  text-blue-800 py-2 px-3 text-left relative rounded bg-gray-300 antialiased text-lg  border-2 border-transparent transition-all duration-300;
 
     &:focus{
-        @apply bg-gray-500 text-white outline-none shadow-outline transition-all duration-300;
+        @apply bg-opacity-75 text-opacity-75 outline-none border-teal-s transition-all duration-300;
 
         &::placeholder{
-            @apply text-white;
+            @apply text-opacity-75;
         }
 
         &::after{
-            border-top: 8px solid #ffffff;
+            border-top: 8px solid #42baff;
         }
     }
 

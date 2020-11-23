@@ -1,6 +1,6 @@
 .focus-within\:shadow-outline{
     &:focus-within{
-        @apply shadow-outline
+        @apply border-2 border-teal-s;
     }
 }
 
@@ -8,10 +8,10 @@
     @apply  text-blue-800 py-2 px-3 rounded bg-gray-300 antialiased text-lg font-light  border-2 border-transparent transition-all duration-300;
 
     &:focus{
-        @apply bg-gray-500 text-white outline-none shadow-outline transition-all duration-300;
+        @apply bg-opacity-75 text-opacity-75 outline-none border-teal-s transition-all duration-300;
 
         &::placeholder{
-            @apply text-white;
+            @apply text-opacity-75;
         }
     }
 
@@ -49,43 +49,33 @@
 }
 
 .slider_progress{
-    background: linear-gradient(90deg, rgb(47, 140, 246) 0%, rgba(232, 255, 253, 0) 100%);
+    background: linear-gradient(90deg, rgb(36, 87, 255) 0%, rgb(66, 186, 255) 100%);
 }
 
 #est_budget{
     -webkit-appearance: none;
-    @apply cursor-pointer h-2 mt-2 rounded-md bg-gray-400 opacity-50;
+    @apply cursor-pointer h-2 mt-2 rounded-md bg-gray-400 bg-opacity-50;
     transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
 
     &:hover{
-        @apply bg-gray-400 opacity-75;
+        @apply bg-gray-400 bg-opacity-75;
     }
 
     &::-webkit-slider-thumb {
-        width: 26px;
-        height: 26px;
+        width: 24px;
+        height: 24px;
         border: none;
-        background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMiAwQzcuMDI5NzIgMCAzIDQuMDI5NzIgMyA5QzMgMTIuNTM1NiA1LjAzOTM2IDE1LjU4NzQgOCAxNy4wNTg3VjE4VjIwQzggMjEuNjU2OSA5LjM0MzE1IDIzIDExIDIzSDEzQzE0LjY1NjkgMjMgMTYgMjEuNjU2OSAxNiAyMFYxOFYxNy4wNTg3QzE4Ljk2MDYgMTUuNTg3NCAyMSAxMi41MzU2IDIxIDlDMjEgNC4wMjk3MiAxNi45NzAzIDAgMTIgMFpNMTQgMTdWMTYuNDEzQzE0IDE2LjAwNTcgMTQuMjQ3MSAxNS42MzkgMTQuNjI0NiAxNS40ODYxQzE3LjE5MiAxNC40NDY0IDE5IDExLjkzNDggMTkgOUMxOSA1LjEzNDI4IDE1Ljg2NTcgMiAxMiAyQzguMTM0MjggMiA1IDUuMTM0MjggNSA5QzUgMTEuOTM0OCA2LjgwNzk4IDE0LjQ0NjQgOS4zNzUzNyAxNS40ODYxQzkuNzUyOTIgMTUuNjM5IDEwIDE2LjAwNTcgMTAgMTYuNDEzVjE3SDE0Wk0xMCAxOVYyMEMxMCAyMC41NTIzIDEwLjQ0NzcgMjEgMTEgMjFIMTNDMTMuNTUyMyAyMSAxNCAyMC41NTIzIDE0IDIwVjE5SDEwWiIgZmlsbD0iIzRCOENEOSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDZDMTAuMzQzMyA2IDkgNy4zNDMyOCA5IDlDOSA5LjU1MjI4IDguNTUyMjggMTAgOCAxMEM3LjQ0NzcyIDEwIDcgOS41NTIyOCA3IDlDNyA2LjIzODcyIDkuMjM4NzIgNCAxMiA0QzEyLjU1MjMgNCAxMyA0LjQ0NzcyIDEzIDVDMTMgNS41NTIyOCAxMi41NTIzIDYgMTIgNloiIGZpbGw9IiM0QjhDRDkiLz4KPC9zdmc+Cg==");
-        opacity: 1;
-        background-origin: cover;
-        background-size: 103%;
-        background-repeat: no-repeat;
-        background-position: center;
+        @apply bg-teal-s;
         cursor: pointer;
         z-index: 20;
         border-radius: 50%;
     }
 
     &::-moz-range-thumb {
-        width: 26px;
-        height: 26px;
+        width: 24px;
+        height: 24px;
         border: none;
-        background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMiAwQzcuMDI5NzIgMCAzIDQuMDI5NzIgMyA5QzMgMTIuNTM1NiA1LjAzOTM2IDE1LjU4NzQgOCAxNy4wNTg3VjE4VjIwQzggMjEuNjU2OSA5LjM0MzE1IDIzIDExIDIzSDEzQzE0LjY1NjkgMjMgMTYgMjEuNjU2OSAxNiAyMFYxOFYxNy4wNTg3QzE4Ljk2MDYgMTUuNTg3NCAyMSAxMi41MzU2IDIxIDlDMjEgNC4wMjk3MiAxNi45NzAzIDAgMTIgMFpNMTQgMTdWMTYuNDEzQzE0IDE2LjAwNTcgMTQuMjQ3MSAxNS42MzkgMTQuNjI0NiAxNS40ODYxQzE3LjE5MiAxNC40NDY0IDE5IDExLjkzNDggMTkgOUMxOSA1LjEzNDI4IDE1Ljg2NTcgMiAxMiAyQzguMTM0MjggMiA1IDUuMTM0MjggNSA5QzUgMTEuOTM0OCA2LjgwNzk4IDE0LjQ0NjQgOS4zNzUzNyAxNS40ODYxQzkuNzUyOTIgMTUuNjM5IDEwIDE2LjAwNTcgMTAgMTYuNDEzVjE3SDE0Wk0xMCAxOVYyMEMxMCAyMC41NTIzIDEwLjQ0NzcgMjEgMTEgMjFIMTNDMTMuNTUyMyAyMSAxNCAyMC41NTIzIDE0IDIwVjE5SDEwWiIgZmlsbD0iIzRCOENEOSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDZDMTAuMzQzMyA2IDkgNy4zNDMyOCA5IDlDOSA5LjU1MjI4IDguNTUyMjggMTAgOCAxMEM3LjQ0NzcyIDEwIDcgOS41NTIyOCA3IDlDNyA2LjIzODcyIDkuMjM4NzIgNCAxMiA0QzEyLjU1MjMgNCAxMyA0LjQ0NzcyIDEzIDVDMTMgNS41NTIyOCAxMi41NTIzIDYgMTIgNloiIGZpbGw9IiM0QjhDRDkiLz4KPC9zdmc+Cg==");
-        opacity: 1;
-        background-origin: cover;
-        background-size: 103%;
-        background-repeat: no-repeat;
-        background-position: center;
+        @apply bg-teal-s;
         cursor: pointer;
         z-index: 20;
         border-radius: 50%;

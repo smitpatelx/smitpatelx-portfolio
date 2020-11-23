@@ -1,6 +1,6 @@
 <template>
     <div v-click-outside="hide_menu" v-focus-outside="hide_menu" class="flex cursor-pointer bg-gray-300 rounded items-stretch justify-center z-20" >
-        <button tabindex="2" class="flex items-center justify-center rounded py-1 px-4 focus:outline-none" v-lazy-container="{ selector: 'img' }" @click.prevent="open_menu()" @keydown.enter="menu_state ? ()=>{} : open_menu()" @keydown.38="up_one" @keydown.40="down_one">
+        <button tabindex="2" class="flex-1 items-center justify-center self-stretch rounded py-1 px-2 focus:outline-none" v-lazy-container="{ selector: 'img' }" @click.prevent="open_menu()" @keydown.enter="menu_state ? ()=>{} : open_menu()" @keydown.38="up_one" @keydown.40="down_one">
             <img class="h-5 w-8 inline-block rounded-sm" :data-src="require(`~/static/flags/${current_country}.svg`)" data-loading="/image-loading.gif" />
         </button>
         <transition name="slide">
