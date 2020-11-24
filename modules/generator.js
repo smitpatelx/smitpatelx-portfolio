@@ -1,7 +1,5 @@
-import { Module } from '@nuxt/types'
-
-const generator: Module = function () {
-  this.nuxt.hook('generate:done', async (context: any) => {
+const generator = function () {
+  this.nuxt.hook('generate:done', async (context) => {
     const routesToExclude =
     process.env.NUXT_ENV_EXCLUDE_ROUTES
       ? process.env.NUXT_ENV_EXCLUDE_ROUTES.split(',') : []
