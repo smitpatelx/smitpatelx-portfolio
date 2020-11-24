@@ -82,6 +82,7 @@ export default {
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@aceforth/nuxt-optimized-images',
     '@nuxtjs/pwa',
+    '@/modules/generator',
   ],
   /*
   ** Nuxt.js modules
