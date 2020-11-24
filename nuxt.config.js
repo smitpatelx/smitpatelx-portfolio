@@ -64,6 +64,7 @@ export default {
    */
   plugins: [
     { src: '~/plugins/vue-scroll-reveal', ssr: false },
+    { src: '~plugins/ga.js', mode: 'client' },
     // { src: '~/plugins/vuelidate', ssr: false },
   ],
   /*
@@ -89,9 +90,28 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    '@nuxtjs/sitemap',
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
   ],
+  sitemap: {
+    hostname: 'https://smitpatelx.com',
+    gzip: true,
+    exclude: [
+
+    ],
+    filter ({ routes }) {
+      return routes.map(route => {
+        route.url = `${route.url}/`
+        return route
+      })
+    },
+    defaults: {
+      changefreq: 'daily',
+      priority: 1,
+      lastmod: new Date()
+    }
+  },
   optimizedImages: {
     optimizeImages: true
   },
