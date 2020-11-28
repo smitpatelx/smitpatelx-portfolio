@@ -16,7 +16,7 @@
             <svg class="fill-current h-3 inline-block ml-2" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.70711.292893c-.39053-.390524-1.02369-.390524-1.41422 0-.39052.390524-.39052 1.023687 0 1.414217L12.5858 7H1c-.552285 0-1 .44772-1 1 0 .55229.447715 1 1 1h11.5858l-5.29291 5.2929c-.39052.3905-.39052 1.0237 0 1.4142.39053.3905 1.02369.3905 1.41422 0l6.99999-6.99999c.3905-.39053.3905-1.02369 0-1.41422L8.70711.292893z" clip-rule="evenodd"/></svg>
           </nuxt-link>
           <nuxt-link to="#services" class="base-btn bg-transparent text-gray-800 font-secondary ml-1 md:ml-4">
-            <span>View services</span>
+            <span class="leading-none">View services</span>
             <svg class="fill-current h-3 inline-block ml-2" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.70711.292893c-.39053-.390524-1.02369-.390524-1.41422 0-.39052.390524-.39052 1.023687 0 1.414217L12.5858 7H1c-.552285 0-1 .44772-1 1 0 .55229.447715 1 1 1h11.5858l-5.29291 5.2929c-.39052.3905-.39052 1.0237 0 1.4142.39053.3905 1.02369.3905 1.41422 0l6.99999-6.99999c.3905-.39053.3905-1.02369 0-1.41422L8.70711.292893z" clip-rule="evenodd"/></svg>
           </nuxt-link>
         </div>
@@ -69,7 +69,7 @@ export default {
   }
 }
 .base-btn{
-  @apply border-2 border-transparent cursor-pointer select-none py-3 px-5 rounded-full leading-none text-base flex flex-wrap justify-center items-center text-center transition-all duration-300 ease-in-out;
+  @apply border-2 border-transparent cursor-pointer select-none py-3 px-5 rounded-full leading-none text-base flex flex-wrap justify-center items-center content-center text-center transition-all duration-300 ease-in-out;
 
   &:hover{
     @apply transition-all duration-300 ease-in-out;

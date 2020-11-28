@@ -1,17 +1,17 @@
 <template>
-    <div v-click-outside="hide_menu" v-focus-outside="hide_menu" class="flex cursor-pointer bg-gray-300 rounded items-stretch justify-center z-20" >
+    <div v-click-outside="hide_menu" v-focus-outside="hide_menu" class="flex cursor-pointer bg-gray-200 rounded items-stretch justify-center z-20" >
         <button tabindex="2" class="flex-1 items-center justify-center self-stretch rounded py-1 px-2 focus:outline-none" v-lazy-container="{ selector: 'img' }" @click.prevent="open_menu()" @keydown.enter="menu_state ? ()=>{} : open_menu()" @keydown.38="up_one" @keydown.40="down_one">
             <img class="h-5 w-8 inline-block rounded-sm" :data-src="require(`~/static/flags/${current_country}.svg`)" data-loading="/image-loading.gif" />
         </button>
         <transition name="slide">
-            <div @blur="hide_menu" v-if="menu_state" class="mt-12 shadow-lg absolute custom_scroll flex flex-col w-64 bg-gray-200 border border-gray-400 rounded-md top-0 left-0">
+            <div @blur="hide_menu" v-if="menu_state" class="mt-12 shadow-lg absolute custom_scroll flex flex-col w-64 bg-gray-100 border border-gray-300 rounded-md top-0 left-0">
                 <div class="relative w-full">
                     <div class="p-0 flex items-stretch justify-center w-full sticky top-0 left-0">
-                        <input @input="e => search = e.target.value" :autocomplete="random_alpha" id="search_country" @keydown.38="up_one(current_el_focus)" @keydown.40="down_one(current_el_focus)" @keydown.esc="search=''" @keydown.prevent.enter="select_first" tabindex="3" type="text" :value="search" class="bg-gray-400 text-gray-800 focus:outline-none w-full rounded-t-md py-2 px-4 placeholder-gray-700 text-base mb-1" placeholder="Seach...">
+                        <input @input="e => search = e.target.value" :autocomplete="random_alpha" id="search_country" @keydown.38="up_one(current_el_focus)" @keydown.40="down_one(current_el_focus)" @keydown.esc="search=''" @keydown.prevent.enter="select_first" tabindex="3" type="text" :value="search" class="bg-gray-300 text-gray-800 focus:outline-none w-full rounded-t-md py-2 px-4 placeholder-gray-700 text-base mb-1" placeholder="Seach...">
                     </div>
                 </div>
                 <div class="pt-1 px-1 flex flex-row flex-wrap items-start justify-start content-start h-56 overflow-y-scroll overflow-x-hidden scrolling-touch">
-                    <span tabindex="3" :ref="'country_'+i" @keydown.prevent.enter="select(ct.alpha2Code, i)" v-for="(ct, i) in new_array" :key="i" class="rounded-md py-2 px-3 text-base w-full text-gray-800 focus:underline bg-gray-200 hover:bg-white focus:outline-none focus:text-gray-800" @click="select(ct.alpha2Code, i)" @keydown.prevent.38="up_one(i)" @keydown.prevent.40="down_one(i)">
+                    <span tabindex="3" :ref="'country_'+i" @keydown.prevent.enter="select(ct.alpha2Code, i)" v-for="(ct, i) in new_array" :key="i" class="rounded-md py-2 px-3 text-base w-full text-gray-800 focus:underline bg-gray-100 hover:bg-white focus:outline-none focus:text-gray-800" @click="select(ct.alpha2Code, i)" @keydown.prevent.38="up_one(i)" @keydown.prevent.40="down_one(i)">
                         {{ct.name}}
                     </span>
                 </div>

@@ -7,7 +7,7 @@
             <div class="w-full h-full flex flex-wrap mt-2">
                 <div class="w-full flex flex-wrap items-center justify-center">
                     <div class="mb-4 flex flex-wrap items-center justify-center leading-none relative">
-                        <span class="absolute bg-indigo-500 bg-opacity-25 h-8 w-26 rounded-md top-0 transition-all duration-300 ease-in-out z-0" :style="`left:${current_company*6.5}rem`"></span>
+                        <span class="absolute bg-blue-s bg-opacity-75 h-8 w-26 rounded-md top-0 transition-all duration-300 ease-in-out z-0" :style="`left:${current_company*6.5}rem`"></span>
                         <button role="tab" aria-selected="true" type="button" @click="change_company(0)" class="text-nav">Netdevv</button>
                         <button role="tab" aria-selected="false" type="button" @click="change_company(1)" class="text-nav">Blabbly</button>
                     </div>
@@ -15,7 +15,7 @@
                 <div class="w-full relative antialiased" style="min-height: 80vh;">
                     <div v-if="!current_company" class="w-full flex flex-wrap flex-col pl-4 mt-6 lg:mt-0">
                         <div class="w-full flex flex-wrap flex-col items-center justify-center">
-                            <p class="text-xl font-secondary text-gray-800">Full-stack Developer <span class="pl-2 text-indigo-500 whitespace-no-wrap">@ Netdevv</span></p>
+                            <p class="text-xl font-secondary text-gray-800">Full-stack Developer <span class="pl-2 text-blue-s whitespace-nowrap">@ Netdevv</span></p>
                             <p class="text-base font-secondary text-gray-500 font-mono mt-3">Oct 2017 – Apr 2020</p>
                         </div>
                         <ul class="text-gray-800 pt-6 text-base font-light w-full">
@@ -31,7 +31,7 @@
                     </div>
                     <div v-if="current_company" class="w-full flex flex-wrap flex-col pl-4 mt-6 lg:mt-0">
                         <div class="w-full flex flex-wrap flex-col items-center justify-center">
-                            <p class="text-xl font-secondary text-gray-800">Director of Web Development<span class="pl-2 text-indigo-500 whitespace-no-wrap">@ Blabbly</span></p>
+                            <p class="text-xl font-secondary text-gray-800">Director of Web Development<span class="pl-2 text-blue-s whitespace-nowrap">@ Blabbly</span></p>
                             <p class="text-base font-secondary text-gray-500 font-mono mt-3">June 2020 - Present</p>
                         </div>
                         <ul class="text-gray-800 pt-6 text-base font-light">
@@ -72,10 +72,11 @@ export default {
 }
 
 .text-nav {
- @apply z-20 text-center self-center text-gray-800 transition-all duration-300 ease-out text-base font-secondary tracking-wider py-2 px-3 rounded-md leading-4;
+ @apply z-20 text-center self-center text-gray-900 transition-all duration-300 ease-out text-base font-secondary tracking-wider py-2 px-3 rounded-md leading-4;
  width: 6.5rem;
     &:focus{
-        @apply outline-none select-none bg-transparent text-indigo-600;
+        @apply outline-none select-none bg-transparent;
+        -webkit-tap-highlight-color: transparent;
     }
 
     &:hover {

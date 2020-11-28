@@ -1,6 +1,6 @@
 <template>
-    <div class="container mx-auto px-4 md:px-10 lg:px-32 grid grid-cols-4 min-h-screen gap-x-5" id="services">
-      <div class="col-span-4 flex flex-wrap items-center justify-start py-4">
+    <div class="container mx-auto px-4 md:px-10 lg:px-32 grid grid-cols-4 min-h-screen space-x-5 md:space-x-0" id="services">
+      <div class="col-span-4 flex flex-wrap items-center justify-center md:justify-start py-4">
         <h2 class="text-4xl md:text-6xl text-gray-800 font-semibold">I can help you with</h2>
       </div>
       <div class="services-container">
@@ -31,7 +31,7 @@
         <h3>Dev-ops</h3>
         <p>I analyze your business requirements and configure CI/CD pipelines.</p>
       </div>
-      <div class="col-span-4 flex flex-wrap pt-10 lg:pt-0 justify-start items-start">
+      <div class="col-span-4 flex flex-wrap pt-10 lg:pt-0 justify-center md:justify-start items-start">
         <nuxt-link to="#about" class="base-btn bg-gray-900 text-white">
           <span>Who am i</span>
           <svg class="fill-current h-3 inline-block ml-3 rounded-full transform rotate-90" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.70711.292893c-.39053-.390524-1.02369-.390524-1.41422 0-.39052.390524-.39052 1.023687 0 1.414217L12.5858 7H1c-.552285 0-1 .44772-1 1 0 .55229.447715 1 1 1h11.5858l-5.29291 5.2929c-.39052.3905-.39052 1.0237 0 1.4142.39053.3905 1.02369.3905 1.41422 0l6.99999-6.99999c.3905-.39053.3905-1.02369 0-1.41422L8.70711.292893z" clip-rule="evenodd"/></svg>
@@ -54,22 +54,14 @@ export default {
 </script>
 <style lang="scss">
 .services-container{
-  @apply col-span-4 relative;
-
-  @media (min-width: 768px) {
-    @apply col-span-1;
-
-    & > h3 {
-      @apply text-3xl mt-24;
-    }
-
-  }
+  @apply col-span-4 relative flex flex-wrap justify-center items-center mb-8;
 
   & > div:nth-child(1) {
     @apply w-full relative;
-    // min-height:6.5rem;
+    
     & > svg {
-      @apply inline-block w-24 h-24 absolute top-0 left-0 transform -translate-x-2; 
+      @apply inline-block w-24 h-24 absolute top-0 transform -translate-x-1/2;
+      left: 50%;
     }
   }
 
@@ -78,7 +70,26 @@ export default {
   }
 
   & > p {
-    @apply text-base font-light text-gray-600;
+    @apply text-base font-light text-gray-600 text-center px-4;
+  }
+
+  @media (min-width: 768px) {
+    @apply col-span-1 justify-start items-start content-start mb-0;
+
+    & > h3 {
+      @apply text-3xl mt-24;
+    }
+
+    & > div:nth-child(1) {
+      & > svg {
+        @apply -translate-x-2;
+        left: 0%;
+      }
+    }
+
+    & > p {
+      @apply text-left px-0;
+    }
   }
 }
 </style>

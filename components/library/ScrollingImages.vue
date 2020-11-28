@@ -1,10 +1,10 @@
 <template>
-    <div>
+    <div class="flex flex-wrap flex-row items-center justify-center content-start">
         <!-- <transition-group name="img-slide"> -->
         <div v-show="show==i" :key="i" v-for="(img,i) in images" class="shadow-lg rounded-lg my-4 w-full flex flex-wrap items-stretch place-items-stretch justify-center">
-            <img :src="img.src" :alt="img.name"
-                class="w-auto self-center block rounded-none md:rounded-t-lg border border-b-0 border-blue-700">
-            <p class="w-full block text-center border border-t-0 border-blue-700 bg-blue-200 text-blue-700 text-sm md:text-base py-1 md:py-2 px-2 md:px-4 rounded-b-lg">{{img.name}}</p>
+            <img :src="img.src" :alt="img.name" style="margin:0 !important;"
+                class="w-auto self-center block rounded-t-lg border border-b-0 border-blue-700">
+            <p style="margin:0 !important;" class="w-full block text-center border border-t-0 border-blue-700 bg-blue-200 text-blue-700 text-sm md:text-base py-1 md:py-2 px-2 md:px-4 rounded-b-lg">{{img.name}}</p>
         </div>
         <!-- </transition-group> -->
         <div class="w-full flex flex-wrap justify-between">

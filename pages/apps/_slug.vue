@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex flex-wrap py-10 bg-gray-100 invert container mx-auto z-20" >
+  <div class="w-full flex flex-wrap py-10 invert container mx-auto z-20" >
     <div class="w-full px-6 lg:px-20 pb-6 md:pb-16 flex flex-wrap justify-between items-center z-20">
       <nuxt-link to="/apps/" class="z-20 focus:outline-none text-white hover:text-opacity-50 flex flex-wrap justify-center items-center">
         <div class="py-2 px-1 mr-2 flex items-center justify-center leading-none rounded-full bg-white bg-opacity-50">
@@ -18,7 +18,7 @@
             :data-loading="require(`~/static/noimage.png?lqip`)" 
             class="min:h-10 min:w-10 w-full h-24rem self-center inline-block rounded-none md:rounded-lg shadow-lg" :alt="article.title">
         </div>
-        <nuxt-content :document="article" class="markdown" />
+        <nuxt-content :document="article" class="prose" />
       </article>
       <section class="w-full lg:w-2/6 flex flex-wrap items-start justify-center px-6 lg:pr-8">
         <div class="py-4 md:py-12 mb-16 px-6 md:px-10 bg-white shadow-xl antialiased rounded-lg w-full flex flex-wrap justify-start items-start">
@@ -118,7 +118,7 @@ article{
   }
 
   &:focus{
-    @apply transition-all duration-300 ease-in-out text-blue-700 shadow-outline outline-none;
+    @apply transition-all duration-300 ease-in-out text-blue-700 ring-2 ring-blue-500 outline-none;
     background: rgba(47, 140, 246, 0.4);
   }
 }

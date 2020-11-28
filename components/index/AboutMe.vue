@@ -3,18 +3,18 @@
         <section class="w-full container mx-auto px-4 lg:px-32 grid grid-cols-4 py-32 md:py-64 bg-transparent" id="about">
             <div class="col-span-4 lg:col-span-2 flex flex-wrap justify-start content-start cursor-default text-base">
                 <h4 v-scroll-reveal="{ delay: 100, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="relative w-full text-left flex flex-wrap justify-start">
-                    <span class="w-full text-teal-s text-xl font-secondary leading-tight">Turn vision into reality</span>
+                    <span class="w-full text-blue-s text-xl font-secondary leading-tight">Turn vision into reality</span>
                 </h4>
                 <h2 v-scroll-reveal="{ delay: 200, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="relative w-full text-left flex flex-wrap justify-start">
                     <span class="w-full text-gray-200 text-3xl lg:text-4xl mt-6 font-secondary leading-tight">I believe in learning and exploring new 
-                        <span class="text-teal-s font-bold">IDEAS</span>
+                        <span class="text-blue-s font-bold">IDEAS</span>
                     </span>
                 </h2>
-                <p v-scroll-reveal="{ delay: 300, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="mt-5 text-gray-500 tracking-wide font-light text-lg">
+                <p v-scroll-reveal="{ delay: 300, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="mt-5 text-gray-300 tracking-wide font-light text-lg">
                     With over 4 years of senior experience working in the Software Industry with proficiencies in operations, back-end, front-end and dev-ops, I continue to be a driving force for my team.
                 </p>
                 <div class="w-full flex flex-wrap justify-start items-center">
-                    <nuxt-link to="blog" class="base-btn bg-teal-s text-gray-900 mt-8 hover:bg-white">
+                    <nuxt-link to="blog" class="base-btn bg-blue-s text-gray-900 mt-8 hover:bg-white">
                         Explore my blog
                         <svg class="fill-current h-3 inline-block ml-2" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.70711.292893c-.39053-.390524-1.02369-.390524-1.41422 0-.39052.390524-.39052 1.023687 0 1.414217L12.5858 7H1c-.552285 0-1 .44772-1 1 0 .55229.447715 1 1 1h11.5858l-5.29291 5.2929c-.39052.3905-.39052 1.0237 0 1.4142.39053.3905 1.02369.3905 1.41422 0l6.99999-6.99999c.3905-.39053.3905-1.02369 0-1.41422L8.70711.292893z" clip-rule="evenodd"/></svg>
                     </nuxt-link>
@@ -113,7 +113,7 @@ export default {
                     content: '';
                     height: 0%;
                     top: 0%;
-                    @apply w-5 absolute border-none border-teal-s transform -translate-x-8 -translate-y-1/2;
+                    @apply w-5 absolute border-none border-blue-s transform -translate-x-8 -translate-y-1/2;
                 }
 
                 @media (min-width: 768px){
@@ -127,7 +127,7 @@ export default {
             }
 
             &>ul{
-                @apply text-gray-500 mt-3 font-light;
+                @apply text-gray-400 mt-3 font-light;
             }
         }
     }

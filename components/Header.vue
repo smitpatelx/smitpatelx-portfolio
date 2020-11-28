@@ -122,7 +122,7 @@ export default {
   @apply bg-gray-900 z-20 px-5 py-2 leading-none text-white rounded-full text-base font-secondary transition-all duration-300 ease-out;
 
   @media (min-width: 740px) { 
-    @apply bg-white bg-opacity-25;
+    @apply bg-white bg-opacity-25 hover:bg-opacity-50;
 
     &:focus{
       @apply transition-all duration-300 ease-out;

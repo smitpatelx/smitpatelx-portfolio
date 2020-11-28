@@ -1,5 +1,5 @@
 .form-drop-down{
-    @apply w-full shadow-lg absolute select-none bg-gray-200 border border-gray-400 rounded z-50 px-1 mt-2 grid grid-cols-1 items-stretch justify-center;
+    @apply w-full shadow-lg absolute select-none bg-gray-100 border border-gray-300 rounded z-50 px-2 mt-2 grid grid-cols-1 items-stretch justify-center;
     top: 100%;
     width: 100%;
     border-radius: 5px;
@@ -43,10 +43,10 @@
 }
 
 .form-select{
-    @apply  text-blue-800 py-2 px-3 text-left relative rounded bg-gray-300 antialiased text-lg  border-2 border-transparent transition-all duration-300;
+    @apply  text-gray-500 py-2 px-3 text-left relative rounded bg-gray-200 antialiased text-lg  border-2 border-transparent transition-all duration-300;
 
     &:focus{
-        @apply bg-opacity-75 text-opacity-75 outline-none border-teal-s transition-all duration-300;
+        @apply bg-opacity-75 text-opacity-75 outline-none border-blue-s transition-all duration-300;
 
         &::placeholder{
             @apply text-opacity-75;

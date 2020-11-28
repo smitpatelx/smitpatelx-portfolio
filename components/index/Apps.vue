@@ -5,7 +5,7 @@
                 Apps &  Plugins
             </h2>
         </div>
-        <div class="w-full flex flex-wrap p-4 gap-y-4 md:gap-8 justify-center items-center">
+        <div class="w-full flex flex-wrap p-4 space-y-6 md:space-y-0 md:space-x-8 justify-center items-center">
             <div v-scroll-reveal="{ delay: (i*50)+200, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" v-for="(app, i) in apps_data" :key="i" class="w-full md:max-w-sm rounded-lg duration-300 transition-all flex flex-col items-stretch justify-start shadow-xl bg-white">
                 <div class="w-full self-stretch flex flex-wrap items-center justify-center py-5 rounded-t-md md:rounded-t-lg card-img" v-lazy-container="{ selector: 'img' }">
                     <img :data-src="`${app.path}/display.svg`"
@@ -33,7 +33,7 @@
             </div>
         </div>
         <div v-scroll-reveal="{ delay: 300, mobile: true, origin: 'center', easing: 'cubic-bezier(0.5, 0, 0, 1)', scale: 0}" class="w-full flex flex-wrap justify-center items-center mt-10 md:mt-0">
-            <nuxt-link to="/apps" class="base-btn bg-gradient-to-r from-blue-600 to-teal-s text-gray-100">
+            <nuxt-link to="/apps" class="base-btn bg-gradient-to-r from-blue-600 to-blue-s text-gray-100">
                 <span>View More Apps</span>
                 <svg class="fill-current w-4 h-4 inline-block ml-2" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M11.5559 2.34509c-.0003.00014-.0006.00029-.0009.00044l-7.99778 3.9989-.00222.0011a1.000068 1.000068 0 00-.40486.36852c-.09801.15806-.15.34031-.15014.52629 0-.00006 0 .00006 0 0V16.767c-.00129.1863.04949.3693.14667.5284.09703.1587.23641.2873.40249.3711-.00027-.0001.00027.0002 0 0l7.99804 3.9991c.1389.0695.2925.1058.4478.1058.1554 0 .3086-.0362.4475-.1057l8.0003-4.0001.0022-.0011c.1666-.0828.3068-.2104.4049-.3686.098-.1581.15-.3404.1501-.5264V7.24053a1.000402 1.000402 0 00-.1501-.52648c-.0981-.15811-.2383-.28573-.4049-.36852l-.0022-.0011-7.9978-3.9989c-.0003-.00015-.0006-.0003-.0009-.00044-.138-.06843-.29-.10403-.4441-.10403-.1541 0-.3061.0356-.4441.10403zM12.89 1.45l.445-.895529C12.9202.348334 12.4632.241062 12 .241062c-.4632 0-.9202.107272-1.335.313409l-.0022.001103L2.665 4.55447c-.00041.0002-.00082.00041-.00123.00061a3.00008 3.00008 0 00-1.21335 1.10496A2.999991 2.999991 0 001 7.23947v9.51743c-.003167.5577.14923 1.1054.44011 1.5814.29155.477.71061.8632 1.20992 1.1147l.00276.0014 7.99971 3.9999c.4168.2085.8764.3171 1.3425.3171.466 0 .9255-.1085 1.3422-.317.0001 0-.0001.0001 0 0l7.9978-3.9989a.004671.004671 0 00.001-.0005c.4994-.2483.9196-.631 1.2136-1.105.2941-.4744.4501-1.0213.4504-1.5795V7.24c-.0003-.55813-.1563-1.10563-.4504-1.57996-.2939-.47393-.7141-.85655-1.2133-1.10493-.0004-.00022-.0009-.00043-.0013-.00064L13.3372.555574 12.89 1.45z" clip-rule="evenodd"/><path fill-rule="evenodd" d="M1.42558 5.71279c.24698-.49398.84766-.69421 1.34164-.44722L12 9.88197l9.2328-4.6164c.494-.24699 1.0946-.04676 1.3416.44722.247.49398.0468 1.09465-.4472 1.34164l-9.68 4.83997c-.2815.1408-.6129.1408-.8944 0L1.87279 7.05443c-.49398-.24699-.6942-.84766-.44721-1.34164z" clip-rule="evenodd"/><path fill-rule="evenodd" d="M12 10c.5523 0 1 .4477 1 1v11.76c0 .5523-.4477 1-1 1s-1-.4477-1-1V11c0-.5523.4477-1 1-1z" clip-rule="evenodd"/></svg>
             </nuxt-link>

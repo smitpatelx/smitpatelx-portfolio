@@ -1,14 +1,14 @@
-.focus-within\:shadow-outline{
+.focus-within\:ring-2 ring-blue-500{
     &:focus-within{
-        @apply border-2 border-teal-s;
+        @apply border-2 border-blue-s;
     }
 }
 
 .form-input{
-    @apply  text-blue-800 py-2 px-3 rounded bg-gray-300 antialiased text-lg font-light  border-2 border-transparent transition-all duration-300;
+    @apply  text-blue-800 py-2 px-3 rounded bg-gray-200 antialiased text-lg font-light  border-2 border-transparent transition-all duration-300;
 
     &:focus{
-        @apply bg-opacity-75 text-opacity-75 outline-none border-teal-s transition-all duration-300;
+        @apply bg-opacity-75 text-opacity-75 outline-none border-blue-s transition-all duration-300;
 
         &::placeholder{
             @apply text-opacity-75;
@@ -65,7 +65,7 @@
         width: 24px;
         height: 24px;
         border: none;
-        @apply bg-teal-s;
+        @apply bg-blue-s;
         cursor: pointer;
         z-index: 20;
         border-radius: 50%;
@@ -75,7 +75,7 @@
         width: 24px;
         height: 24px;
         border: none;
-        @apply bg-teal-s;
+        @apply bg-blue-s;
         cursor: pointer;
         z-index: 20;
         border-radius: 50%;

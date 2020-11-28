@@ -13,7 +13,7 @@
                     <div class="flex flex-wrap flex-col">
                         <label for="phone" class="text-base text-gray-600 mb-2 w-full">Phone</label>
                         <div class="grid grid-cols-8 relative w-full gap-x-2">
-                            <Country class="flex flex-col items-stretch justify-center content-center col-span-2 focus-within:shadow-outline select-none focus:outline-none" v-on:countrySelected="onCountrySelect"/>
+                            <Country class="flex flex-col items-stretch justify-center content-center col-span-2 focus-within:ring-2 ring-blue-500 select-none focus:outline-none" v-on:countrySelected="onCountrySelect"/>
                             <input tabindex="4" required class="inline-block col-span-6 form-input" type="tel" pattern="[0-9]{10}" maxlength="10" name="phone" id="phone" v-model="phone" placeholder="eg. 000-000-0000">
                         </div>
                     </div>
@@ -54,7 +54,7 @@
                         Send
                         <svg class="w-4 h-4 fill-current inline-block ml-2" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M22.7071 1.293c.3905.3904.3905 1.0236 0 1.4141l-11 11c-.3905.3906-1.0237.3906-1.4142 0-.3905-.3905-.3905-1.0237 0-1.4142l11-11c.3905-.3905 1.0237-.3905 1.4142 0z" /><path fill-rule="evenodd" clip-rule="evenodd" d="M22.7071 1.293c.2716.2716.3637.6748.2368 1.0374l-7 20a1.0001 1.0001 0 01-1.8577.0758l-3.8438-8.6486-8.6485-3.8438a1 1 0 01.0757-1.8576l20.0001-7a1 1 0 011.0374.2367zM4.7111 9.1105l6.695 2.9756a1 1 0 01.5077.5077l2.9756 6.6951L20.37 3.63 4.711 9.1106z" /></svg>
                     </button>
-                    <button tabindex="12" class="base-btn bg-gray-400 text-gray-800" @click.prevent="reset" type="button">
+                    <button tabindex="12" class="base-btn bg-gray-300 focus:bg-opacity-75 hover:bg-opacity-75 text-gray-800" @click.prevent="reset" type="button">
                         Reset
                         <svg class="w-4 h-4 fill-current inline-block ml-2" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.7071 5.2929c.3905.3905.3905 1.0237 0 1.4142l-12 12c-.3905.3905-1.0237.3905-1.4142 0-.3905-.3905-.3905-1.0237 0-1.4142l12-12c.3905-.3905 1.0237-.3905 1.4142 0z" /><path fill-rule="evenodd" clip-rule="evenodd" d="M5.2929 5.2929c.3905-.3905 1.0237-.3905 1.4142 0l12 12c.3905.3905.3905 1.0237 0 1.4142-.3905.3905-1.0237.3905-1.4142 0l-12-12c-.3905-.3905-.3905-1.0237 0-1.4142z"/></svg>
                     </button>

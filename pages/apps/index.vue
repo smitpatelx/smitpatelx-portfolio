@@ -32,7 +32,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="w-full flex flex-wrap gap-y-4 md:gap-8 justify-center items-center">
+            <div class="w-full flex flex-wrap space-y-6 md:space-y-0 md:space-x-8 justify-center items-center">
                 <div v-for="(app, i) in apps" :key="i" class="w-full md:max-w-sm rounded-lg duration-300 transition-all flex flex-col items-stretch justify-start shadow-xl bg-white">
                     <div class="w-full self-stretch flex flex-wrap items-center justify-center py-5 rounded-t-md md:rounded-t-lg card-img" v-lazy-container="{ selector: 'img' }">
                         <img :data-src="`${app.path}/display.svg`"
@@ -128,13 +128,12 @@ export default {
         @apply w-full flex flex-wrap items-center mb-1 text-gray-200;
 
         span {
-            @apply w-6 h-6 mr-2 bg-gray-300 shadow inline-flex flex-wrap justify-center items-center rounded-full;
+            @apply w-6 h-6 mr-2 bg-gray-600 shadow inline-flex flex-wrap justify-center items-center rounded-full;
             mix-blend-mode: color-burn;
             --bg-opacity: 20%;
 
             svg {
-                @apply text-gray-200 inline-block w-4 h-4 fill-current;
-                mix-blend-mode: color-burn;
+                @apply text-gray-100 inline-block w-4 h-4 fill-current;
             }
         }
     }

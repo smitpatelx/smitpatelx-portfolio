@@ -92,25 +92,7 @@ If you have a question or problem with the Robust User Search plugin, post it on
 # Frequently Asked Questions [FAQ]
 
 1. Do I require any other plugin to add businnes name and phone number meta data ?
-    - `No, because meta data is provided by this plugin.`
+   <br/>No, because meta data is provided by this plugin.
 
 # Changelog
 
-### 1.0.4
->>- `Plugin transition from functional programming to Object-Oriented programming`
->>- `Auto ReSync on editing user data.`
->>- `Save loading indicator added.`
->>- `Data loading indicator added.`
-
-### 1.0.3
->>- `Role Management added.`
->>- `Activation and Deactivation Hooks Added.`
-
-### 1.0.2
->>- `Quick Edit feature added.`
-
-### 1.0.1
->>- `Custom REST API added.`
-
-### 1.0.0
->>- `First commit to the WP repository.`
