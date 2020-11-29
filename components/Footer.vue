@@ -12,34 +12,37 @@
     </slide-y-down-transition>
     <div class="w-full flex flex-wrap items-center justify-start bg-gray-200 clip-path-1 relative">
       <div class="container mx-auto pt-32 pb-24">
-        <div class="w-full flex flex-wrap items-start justify-center content-center space-x-2">
-          <div class="flex-1 px-5 py-5 space-y-3">
-            <img src="/smitpatelx/smit-dark.svg" class="h-8" />
-            <div class="flex flex-wrap flex-col items-start justify-center space-y-2">
-                <a class="text-base text-gray-800 mt-6 flex flex-wrap items-center justify-center">
-                    <svg class="w-5 h-5 fill-current inline-block mr-2" viewBox="0 0 24 24"> <path fill-rule="evenodd" d="M12 2c-2.12173 0-4.15656.84285-5.65685 2.34315C4.84285 5.84344 4 7.87827 4 10c0 3.0981 2.01574 6.1042 4.22595 8.4373 1.08466 1.1449 2.17275 2.0822 2.99075 2.7335.3044.2425.5703.4444.7833.6018.213-.1574.4789-.3593.7833-.6018.818-.6513 1.9061-1.5886 2.9907-2.7335C17.9843 16.1042 20 13.0981 20 10c0-2.12173-.8429-4.15656-2.3431-5.65685C16.1566 2.84285 14.1217 2 12 2zm0 21c-.5547.8321-.555.8319-.5552.8317l-.0029-.0019-.0067-.0045-.0229-.0155c-.0195-.0132-.0472-.0322-.0827-.0568-.0711-.0492-.1731-.1209-.3018-.2138-.2573-.1858-.6214-.457-1.05698-.8038-.86949-.6924-2.03143-1.6926-3.19677-2.9227C4.48426 17.3958 2 13.9019 2 10c0-2.65216 1.05357-5.1957 2.92893-7.07107C6.8043 1.05357 9.34784 0 12 0c2.6522 0 5.1957 1.05357 7.0711 2.92893C20.9464 4.8043 22 7.34784 22 10c0 3.9019-2.4843 7.3958-4.774 9.8127-1.1654 1.2301-2.3273 2.2303-3.1968 2.9227-.4356.3468-.7997.618-1.057.8038-.1287.0929-.2307.1646-.3018.2138-.0355.0246-.0632.0436-.0827.0568l-.0229.0155-.0067.0045-.0021.0014c-.0003.0002-.0013.0009-.556-.8312zm0 0l.5547.8321c-.3359.2239-.774.2235-1.1099-.0004L12 23z" clip-rule="evenodd"/> <path fill-rule="evenodd" d="M12 8c-1.1046 0-2 .89543-2 2 0 1.1046.8954 2 2 2s2-.8954 2-2c0-1.10457-.8954-2-2-2zm-4 2c0-2.20914 1.79086-4 4-4 2.2091 0 4 1.79086 4 4 0 2.2091-1.7909 4-4 4-2.20914 0-4-1.7909-4-4z" clip-rule="evenodd" /> </svg>
-                    Canada
-                </a>
-                <a class="text-base text-gray-800 mt-6 flex flex-wrap items-center justify-center">
-                    <svg class="w-5 h-5 fill-current inline-block mr-2" viewBox="0 0 22 20"><path fill-rule="evenodd" d="M11.855 13.67c.14-.36.0499-.77-.23-1.05l-2.09009-2.06.03003-.03C11.3049 8.59003 12.5449 6.35999 13.2749 4h1.9401c.54 0 .99-.45001.99-.98999v-.02002c0-.53998-.45-.98999-.99-.98999H9.20496V1c0-.549988-.44996-1-1-1-.55005 0-1 .450012-1 1v1H1.19495c-.540043 0-.989994.45001-.989994.98999 0 .54999.449951.98999.989994.98999H11.375c-.67 1.94-1.7301 3.77002-3.17004 5.37-.81006-.88996-1.48999-1.85999-2.06006-2.88001C5.98499 6.17999 5.69495 6 5.36499 6c-.69006 0-1.13.75-.79004 1.34998C5.20496 8.47998 5.97498 9.56 6.875 10.56l-4.37 4.31c-.40002.39-.40002 1.03 0 1.42.3899.39 1.0199.39 1.41993 0L8.20496 12l2.02004 2.02c.51.51 1.38.32 1.63-.35zM16.705 8c-.6 0-1.1401.37-1.35.94l-3.6701 9.8c-.24.61.22 1.26.87 1.26.39 0 .74-.24.88-.61L14.325 17h4.75l.9 2.39c.1399.36.49.61.88.61.6499 0 1.11-.65.8799-1.26l-3.67-9.8c-.2199-.57-.76-.94-1.3599-.94zm0 2.67L15.085 15h3.24l-1.62-4.33z" clip-rule="evenodd"/></svg>
-                    English
-                </a>
-            </div>
-          </div>
-          <div class="flex-1 px-5 py-5 space-y-2 flex flex-wrap flex-col items-center content-start justify-start">
-            <span class="w-full text-left text-lg font-secondary mb-3 text-gray-800">Navigation</span>
-            <nuxt-link to="/" class="nav-links-footer">Home</nuxt-link>
-            <nuxt-link to="#services" class="nav-links-footer">Services</nuxt-link>
-            <nuxt-link to="#about" class="nav-links-footer">About</nuxt-link>
-            <nuxt-link to="#experience" class="nav-links-footer">Experience</nuxt-link>
-            <nuxt-link to="#work" class="nav-links-footer">Work</nuxt-link>
-            <nuxt-link to="#contact" class="nav-links-footer">Contact</nuxt-link>
-          </div>
-          <div class="flex-1 px-5 py-5 flex flex-wrap items-center justify-center">
+        <div class="w-full flex flex-wrap items-start justify-center content-center">
+          <div class="w-full px-5 py-5 flex flex-wrap items-center justify-center">
             <subscription-form></subscription-form>
           </div>
-          <div class="w-full text-center text-sm text-blue-dark absolute bottom-0 py-3 px-12">
-            Copyright 2020 - Smit Patel
+          <div class="px-5 py-5 mx-0 md:mx-6 flex flex-wrap flex-col items-center content-start justify-start">
+            <img src="/smitpatelx/smit-dark.svg" class="h-8" />
+            <div class="space-x-4 md:space-x-7 flex flex-wrap flex-row items-center content-start justify-start mt-8">
+              <nuxt-link to="/" class="nav-links-footer">Home</nuxt-link>
+              <nuxt-link to="#services" class="nav-links-footer">Services</nuxt-link>
+              <nuxt-link to="#about" class="nav-links-footer">About</nuxt-link>
+              <nuxt-link to="#experience" class="nav-links-footer">Experience</nuxt-link>
+              <nuxt-link to="#work" class="nav-links-footer">Work</nuxt-link>
+              <nuxt-link to="#contact" class="nav-links-footer">Contact</nuxt-link>
+            </div>
+          </div>
+          <div class="w-full text-center text-gray-500 absolute bottom-0 py-3 px-10 md:px-52 flex flex-wrap justify-between items-center">
+            <span class="text-base">Copyright 2020 - Smit Patel</span>
+            <div class="flex flex-wrap items-center justify-center">
+              <a href="https://github.com/smitpatelx" target="_blank" class="hover:text-gray-600 p-1 rounded-full transition-all">
+                <svg class=" fill-current w-5 h-5" viewBox="0 0 24 24"><g clip-path="url(#clip0)"><path d="M16 23c-.6 0-1-.4-1-1v-3.9c.1-.8-.2-1.4-.7-1.9-.3-.3-.4-.7-.2-1 .1-.4.5-.6.8-.7 2.9-.3 5.6-1.3 5.6-6 0-1.1-.4-2.2-1.2-3.1-.3-.3-.3-.7-.2-1 .3-.8.3-1.6.1-2.4-.5.1-1.3.4-2.6 1.3-.2.2-.5.2-.8.1-2.1-.6-4.4-.6-6.5 0-.3.1-.6.1-.9-.1C7.2 2.4 6.3 2.1 5.8 2c-.2.8-.2 1.6.1 2.4.1.4.1.8-.2 1-.8.9-1.2 2-1.2 3.1 0 4.7 2.7 5.7 5.6 6 .4 0 .7.3.8.7.1.4 0 .8-.2 1-.5.5-.7 1.1-.7 1.8v3.9c0 .6-.4 1-1 1s-1-.4-1-1v-1.7c-3 .5-4.3-1.2-5.2-2.3-.4-.5-.7-.9-1.1-1-.5-.1-.9-.7-.7-1.2.1-.5.7-.9 1.2-.7 1 .3 1.6 1 2.2 1.7.8 1.1 1.5 1.9 3.6 1.5v-.1c0-.6.1-1.3.3-1.8-2.8-.6-5.8-2.4-5.8-7.7 0-1.5.5-2.9 1.4-4-.4-1.4-.3-2.7.3-4 .1-.3.3-.5.6-.6.4-.1 1.7-.3 4.4 1.4 2.2-.5 4.5-.5 6.6 0 2.6-1.7 4-1.5 4.4-1.4.3.1.5.3.6.6.5 1.3.6 2.6.3 3.9.9 1.1 1.4 2.5 1.4 4 0 5.7-3.4 7.2-5.8 7.8.2.6.3 1.3.3 1.9V22c0 .6-.4 1-1 1z" /></g><defs><clipPath id="clip0"><path d="M0 0h24v24H0V0z"/></clipPath></defs></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/smitpatelx/" target="_blank" class="hover:text-gray-600 p-1 rounded-full transition-all">
+                <svg class=" fill-current w-5 h-5" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 9a4.9997 4.9997 0 00-5 5v6h2v-6a3 3 0 016 0v6h2v-6a4.9997 4.9997 0 00-5-5zm0-2a6.9998 6.9998 0 00-7 7v7c0 .5523.4477 1 1 1h4c.5523 0 1-.4477 1-1v-7a1.0001 1.0001 0 012 0v7c0 .5523.4477 1 1 1h4c.5523 0 1-.4477 1-1v-7a6.9999 6.9999 0 00-7-7zM1 9c0-.5523.4477-1 1-1h4c.5523 0 1 .4477 1 1v12c0 .5523-.4477 1-1 1H2c-.5523 0-1-.4477-1-1V9zm2 1v10h2V10H3zM4 3c-.5523 0-1 .4477-1 1s.4477 1 1 1 1-.4477 1-1-.4477-1-1-1zM1 4c0-1.6568 1.3432-3 3-3 1.6569 0 3 1.3432 3 3 0 1.6569-1.3431 3-3 3-1.6568 0-3-1.3431-3-3z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/smit.dev/" target="_blank" class="hover:text-gray-600 p-1 rounded-full transition-all">
+                <svg class=" fill-current w-5 h-5" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 3C4.7909 3 3 4.7909 3 7v10c0 2.2091 1.7909 4 4 4h10c2.2091 0 4-1.7909 4-4V7c0-2.2091-1.7909-4-4-4H7zM1 7c0-3.3137 2.6863-6 6-6h10c3.3137 0 6 2.6863 6 6v10c0 3.3137-2.6863 6-6 6H7c-3.3137 0-6-2.6863-6-6V7z" /><path fill-rule="evenodd" clip-rule="evenodd" d="M12.4833 8.9892a2.9998 2.9998 0 00-3.402 3.4441 3.0002 3.0002 0 002.4854 2.4853 2.9996 2.9996 0 003.4441-3.4019 3 3 0 00-2.5275-2.5275zM9.7404 7.5186a5 5 0 114.6058 8.8764 5 5 0 01-4.6058-8.8764z" /></svg>
+              </a>
+              <a href="https://twitter.com/smitpatelx" target="_blank" class="hover:text-gray-600 p-1 rounded-full transition-all">
+                <svg class=" fill-current w-5 h-5" viewBox="0 0 24 24"><g clip-path="url(#clip0)"><path d="M8.3 21.9c-2.6 0-5.3-.7-7.7-2.1-.4-.2-.6-.7-.5-1.1.1-.4.5-.7.9-.7 1.7.1 3.4-.3 4.9-1-3.7-2.3-4.7-5.5-4.8-8-.1-2.9.9-5.3 1-5.4.1-.3.4-.6.8-.6s.7.1.9.4C5.5 5.8 8.1 7.3 11 7.5c0-1.6.7-3.1 1.9-4.2 2.1-1.8 5.2-1.8 7.3 0 .8-.3 1.6-.7 2.3-1.2.3-.2.8-.2 1.1 0 .3.2.5.7.4 1.1-.3 1.4-1 2.7-2 3.8v.5c0 5.5-2.4 10.1-6.7 12.5-2.1 1.3-4.5 1.9-7 1.9zM5 19.5c3.3.8 6.6.4 9.4-1.2 3.6-2.1 5.7-6.1 5.7-10.8 0-.2 0-.4-.1-.6-.1-.3 0-.7.3-.9.2-.2.4-.5.6-.7-.2.1-.5.2-.7.2-.4.1-.8 0-1-.3-1.3-1.4-3.5-1.6-4.9-.3-.9.6-1.3 1.6-1.3 2.6v1c0 .5-.4 1-1 1-3.3.1-6.4-1.2-8.6-3.5-.6 2.6-.8 7.5 5 10 .3.2.6.5.6.9s-.1.7-.4.9c-1.2.8-2.4 1.4-3.6 1.7z" /></g><defs><clipPath id="clip0"><path d="M0 0h24v24H0V0z" /></clipPath></defs></svg>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -93,6 +96,6 @@ export default {
 }
 
 .nav-links-footer {
-    @apply w-full text-left text-base font-light text-gray-800 hover:text-gray-700 focus:underline focus:outline-none;
+    @apply text-left text-base md:text-lg font-light text-gray-800 hover:text-opacity-70 focus:underline focus:outline-none transition-all duration-300;
 }
 </style>

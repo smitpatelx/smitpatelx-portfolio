@@ -32,13 +32,13 @@
         <p>I analyze your business requirements and configure CI/CD pipelines.</p>
       </div>
       <div class="col-span-4 flex flex-wrap pt-10 lg:pt-0 justify-center md:justify-start items-start">
-        <nuxt-link to="#about" class="base-btn bg-gray-900 text-white">
-          <span>Who am i</span>
-          <svg class="fill-current h-3 inline-block ml-3 rounded-full transform rotate-90" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.70711.292893c-.39053-.390524-1.02369-.390524-1.41422 0-.39052.390524-.39052 1.023687 0 1.414217L12.5858 7H1c-.552285 0-1 .44772-1 1 0 .55229.447715 1 1 1h11.5858l-5.29291 5.2929c-.39052.3905-.39052 1.0237 0 1.4142.39053.3905 1.02369.3905 1.41422 0l6.99999-6.99999c.3905-.39053.3905-1.02369 0-1.41422L8.70711.292893z" clip-rule="evenodd"/></svg>
-        </nuxt-link>
-        <nuxt-link to="#experience" class="base-btn bg-transparent text-gray-800 font-secondary ml-1 md:ml-4">
+        <nuxt-link to="#experience" class="base-btn  bg-gray-900 text-white">
           <span>Experience</span>
           <svg class="fill-current h-3 inline-block ml-2" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.70711.292893c-.39053-.390524-1.02369-.390524-1.41422 0-.39052.390524-.39052 1.023687 0 1.414217L12.5858 7H1c-.552285 0-1 .44772-1 1 0 .55229.447715 1 1 1h11.5858l-5.29291 5.2929c-.39052.3905-.39052 1.0237 0 1.4142.39053.3905 1.02369.3905 1.41422 0l6.99999-6.99999c.3905-.39053.3905-1.02369 0-1.41422L8.70711.292893z" clip-rule="evenodd"/></svg>
+        </nuxt-link>
+        <nuxt-link to="#about" class="base-btn bg-transparent text-gray-800 font-secondary ml-1 md:ml-4">
+          <span>Who am i</span>
+          <svg class="fill-current h-3 inline-block ml-3 rounded-full transform rotate-90" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.70711.292893c-.39053-.390524-1.02369-.390524-1.41422 0-.39052.390524-.39052 1.023687 0 1.414217L12.5858 7H1c-.552285 0-1 .44772-1 1 0 .55229.447715 1 1 1h11.5858l-5.29291 5.2929c-.39052.3905-.39052 1.0237 0 1.4142.39053.3905 1.02369.3905 1.41422 0l6.99999-6.99999c.3905-.39053.3905-1.02369 0-1.41422L8.70711.292893z" clip-rule="evenodd"/></svg>
         </nuxt-link>
       </div>
     </div>

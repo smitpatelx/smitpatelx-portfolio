@@ -5,10 +5,10 @@
 }
 
 .form-input{
-    @apply  text-blue-800 py-2 px-3 rounded bg-gray-200 antialiased text-lg font-light  border-2 border-transparent transition-all duration-300;
+    @apply  text-blue-800 py-2 px-3 rounded bg-gray-200 antialiased text-lg font-light focus:outline-none focus:ring focus:ring-blue-400 transition-all duration-300;
 
     &:focus{
-        @apply bg-opacity-75 text-opacity-75 outline-none border-blue-s transition-all duration-300;
+        @apply bg-opacity-75 text-opacity-75 transition-all duration-300;
 
         &::placeholder{
             @apply text-opacity-75;
@@ -30,8 +30,7 @@
 }
 
 .form_button{
-  @apply bg-transparent px-5 py-2 text-blue-600 border border-blue-600 rounded-md text-lg font-secondary  flex flex-wrap justify-center items-center self-stretch mt-auto;
-  transition: background 0.4s;
+  @apply bg-transparent px-5 py-2 text-blue-600 focus:ring focus:ring-blue-400 transition-colors duration-300 rounded-md text-lg font-secondary  flex flex-wrap justify-center items-center self-stretch mt-auto;
 
   &:hover{
     background: rgba(47, 140, 246, 0.151);
@@ -39,7 +38,7 @@
 }
 
 .form_button2{
-  @apply px-5 py-2 text-blue-500 border border-transparent rounded-md text-lg font-secondary  flex flex-wrap justify-center items-center self-stretch mt-auto;
+  @apply px-5 py-2 text-blue-500 focus:ring focus:ring-blue-400 rounded-md text-lg font-secondary  flex flex-wrap justify-center items-center self-stretch mt-auto;
   background: rgba(47, 140, 246, 0.3);
   transition: background 0.4s;
 
@@ -87,7 +86,7 @@
     }
 
     &:hover::-webkit-slider-thumb, &:hover::-moz-range-thumb, &:focus::-webkit-slider-thumb, &:focus::-moz-range-thumb{
-        transform: scale(1.3);
+        @apply ring ring-blue-300;
     }
     
 }

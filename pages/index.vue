@@ -1,6 +1,6 @@
 <template>
   <section class="overflow-hidden" >
-    <div class="w-full flex flex-wrap justify-center items-center pt-12 pb-20 lg:py-24 container mx-auto px-4 md:px-10 lg:px-32 relative antialiased">
+    <div class="w-full flex flex-wrap justify-center items-center content-start pt-12 pb-20 lg:py-24 container mx-auto px-4 md:px-10 lg:px-32 relative antialiased">
         <div class="w-full relative min-h-20">
           <h1 v-scroll-reveal="{ delay: 1000, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" style="mix-blend-mode: color-burn;color: #3a3a3a; z-index: 2;" class="text-6xl md:text-8xl font-semibold w-full leading-none opacity-75 absolute">Developing<br/>Beautiful<br/>Interfaces</h1>
           <h1 v-scroll-reveal="{ delay: 1000, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" style="color: #3a3a3a; opacity: 0.3; z-index: 2;" class="text-6xl md:text-8xl font-semibold w-full leading-none opacity-75 absolute">Developing<br/>Beautiful<br/>Interfaces</h1>
@@ -17,8 +17,16 @@
           </nuxt-link>
           <nuxt-link to="#services" class="base-btn bg-transparent text-gray-800 font-secondary ml-1 md:ml-4">
             <span class="leading-none">View services</span>
-            <svg class="fill-current h-3 inline-block ml-2" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.70711.292893c-.39053-.390524-1.02369-.390524-1.41422 0-.39052.390524-.39052 1.023687 0 1.414217L12.5858 7H1c-.552285 0-1 .44772-1 1 0 .55229.447715 1 1 1h11.5858l-5.29291 5.2929c-.39052.3905-.39052 1.0237 0 1.4142.39053.3905 1.02369.3905 1.41422 0l6.99999-6.99999c.3905-.39053.3905-1.02369 0-1.41422L8.70711.292893z" clip-rule="evenodd"/></svg>
+            <svg class="fill-current h-3 inline-block ml-2 transform rotate-90" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.70711.292893c-.39053-.390524-1.02369-.390524-1.41422 0-.39052.390524-.39052 1.023687 0 1.414217L12.5858 7H1c-.552285 0-1 .44772-1 1 0 .55229.447715 1 1 1h11.5858l-5.29291 5.2929c-.39052.3905-.39052 1.0237 0 1.4142.39053.3905 1.02369.3905 1.41422 0l6.99999-6.99999c.3905-.39053.3905-1.02369 0-1.41422L8.70711.292893z" clip-rule="evenodd"/></svg>
           </nuxt-link>
+        </div>
+        <div class="md:absolute flex py-10 md:py-0 md:flex-wrap z-10 justify-center items-center content-center right-0 top-0 hero-img-container" v-lazy-container="{ selector: 'img' }">
+          <img :data-src="require('~/static/assets/bg-hero-3-min.svg')"
+            :data-loading="require('~/static/assets/bg-hero-3.png?lqip')"
+            class="w-20vw shadow-2xl rounded-lg m-4 md:m-0 transform translate-x-14" alt="Hero Mockup 1">
+          <img :data-src="require('~/static/assets/bg-hero-2-min.svg')"
+            :data-loading="require('~/static/assets/bg-hero-2.png?lqip')"
+            class="w-20vw hover:scale-110 hover:translate-y-30 hover:-translate-x-46 transition-all duration-300 hover:shadow-lg shadow-2xl rounded-lg m-4 md:m-0 transform -translate-x-1/2 md:-translate-x-40 translate-y-14" alt="Hero Mockup 2">
         </div>
     </div>
     <div class="flex flex-wrap flex-col justify-center items-center">
@@ -58,6 +66,30 @@ export default {
 </script>
 
 <style lang="scss">
+.hero-img-container{
+  height:auto; 
+  transform: translateX(0%);
+
+  @media (min-width: 740px) { 
+    height:100%; 
+    transform: translateX(30%);
+  }
+  @media (min-width: 1024px) {
+    transform: translateX(30%);
+  }
+}
+
+.w-20vw{
+  width: 80vw;
+  
+  @media (min-width: 740px) { 
+    width: 24vw;
+  }
+  @media (min-width: 1024px) {
+    width: 19vw;
+  }
+}
+
 .min-h-20{
   min-height:14rem;
 
@@ -69,18 +101,14 @@ export default {
   }
 }
 .base-btn{
-  @apply border-2 border-transparent cursor-pointer select-none py-3 px-5 rounded-full leading-none text-base flex flex-wrap justify-center items-center content-center text-center transition-all duration-300 ease-in-out;
+  @apply cursor-pointer select-none py-3 px-5 rounded-full leading-none text-base flex flex-wrap justify-center items-center content-center text-center transition-all duration-300 ease-in-out;
 
   &:hover{
-    @apply transition-all duration-300 ease-in-out;
-    --bg-opacity: 0.85;
-    --text-opacity: 0.70;
+    @apply transition-all duration-300 ease-in-out bg-opacity-80 text-opacity-70;
   }
 
   &:focus{
-    @apply outline-none border-2 border-blue-300 transition-all duration-300 ease-out;
-    --bg-opacity: 0.85;
-    --text-opacity: 0.70;
+    @apply outline-none ring ring-blue-400 transition-all duration-300 ease-out bg-opacity-80 text-opacity-70;
   }
 }
 

@@ -1,8 +1,8 @@
 <template>
-  <div class="w-full flex flex-wrap flex-row items-center justify-center space-x-6 space-y-4">
-    <input type="email" class="w-64 inline-block col-span-6 form-input" placeholder="Your email" />
-    <button class="base-btn bg-blue-900 text-gray-200" type="submit">
-      Yes I am in
+  <div class="w-full flex flex-wrap flex-row items-stretch justify-center content-center">
+    <input type="email" class="w-64 inline-block col-span-6 form-input m-1.5 transition-all duration-300" placeholder="Your email" />
+    <button class="base-btn bg-blue-s text-gray-700 m-1.5 transition-all duration-300" type="submit">
+      Subscribe
       <svg class="w-4 h-4 fill-current inline-block ml-2" viewBox="0 0 24 24">
         <path
           fill-rule="evenodd"
@@ -26,10 +26,10 @@ export default {
 
 <style lang="scss" scoped>
 .form-input {
-  @apply text-gray-300 py-2 px-5 rounded-full bg-gray-300 antialiased text-lg font-light border-2 border-transparent transition-all duration-300;
+  @apply text-gray-300 py-2 px-5 rounded-full bg-gray-300 antialiased text-lg font-light focus:outline-none focus:ring focus:ring-blue-400 transition-all duration-300;
 
   &:focus {
-    @apply bg-opacity-75 text-opacity-75 outline-none border-blue-s transition-all duration-300;
+    @apply bg-opacity-75 text-opacity-75 transition-all duration-300;
 
     &::placeholder {
       @apply text-opacity-75;
