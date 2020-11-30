@@ -4,7 +4,7 @@ author : Smit Patel
 description: A comprehensive, easy to use, stable and well supported wordpress user search plugin.
 tags: ["Wordpress","Plugin","User Managment"]
 icon_url: apps/robust-user-search/icon.png
-banner_url: apps/robust-user-search/banner.png
+banner_url: apps/robust-user-search/banner.jpg
 reseaseDate: 10 September 2020
 contributors: Smit Patel
 donate_link: https://apps.smitpatelx.com/donate
@@ -23,15 +23,15 @@ download_url: https://wordpress.org/plugins/robust-user-search/
 
 <scrolling-images :images="[
     {
-        src: '/apps/robust-user-search/main-page.png',
+        src: '/apps/robust-user-search/main-page.jpg',
         name: 'Main Page'
     },
     {
-        src: '/apps/robust-user-search/edit-component.png',
+        src: '/apps/robust-user-search/edit-component.jpg',
         name: 'Live Editing'
     },
     {
-        src: '/apps/robust-user-search/settings-page.png',
+        src: '/apps/robust-user-search/settings-page.jpg',
         name: 'Settings Page'
     },
 ]"></scrolling-images>

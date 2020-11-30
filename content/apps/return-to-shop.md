@@ -22,11 +22,11 @@ download_url: https://github.com/smitpatelx/return-to-shop
 
 <scrolling-images :images="[
     {
-        src: '/apps/return-to-shop/config.png',
+        src: '/apps/return-to-shop/config.jpg',
         name: 'Config Page'
     },
     {
-        src: '/apps/return-to-shop/navigation.png',
+        src: '/apps/return-to-shop/navigation.jpg',
         name: 'Woocommerce Submenu'
     }
 ]"></scrolling-images>
