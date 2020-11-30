@@ -24,45 +24,45 @@
         <div class="py-4 md:py-12 mb-16 px-6 md:px-10 bg-white shadow-xl antialiased rounded-lg w-full flex flex-wrap justify-start items-start">
           <div class="mb-2 block w-full">
             <span class="font-secondary text-blue-800">Author:</span> 
-            <span class="font-normal text-gray-600 ml-1">{{article.author}}</span> 
+            <span class="font-light text-gray-600 ml-1">{{article.author}}</span> 
           </div>
           <div class="mb-2 block w-full">
             <span class="font-secondary text-blue-800">Description:</span>
-            <span class="font-normal text-gray-600 ml-1">{{article.description}}</span> 
+            <span class="font-light text-gray-600 ml-1">{{article.description}}</span> 
           </div>
           <div class="mb-2 block w-full">
             <span class="font-secondary text-blue-800">Tags:</span>
             <div class="pt-1 flex flex-wrap justify-start items-start">
               <span v-for="(tag,i) in article.tags" :key="i"
-                class="bg-blue-600 leading-none rounded-full py-2 px-3 m-1 text-sm font-normal shadow-lg text-gray-100">{{tag}}</span>
+                class="bg-gradient-to-r from-blue-s to-indigo-500 leading-none rounded-full py-2 px-3 m-1 text-sm font-light shadow-lg text-gray-100">{{tag}}</span>
             </div>
           </div>
           <div class="mb-2 block w-full">
             <span class="font-secondary text-blue-800">Resease Date:</span>
-            <span class="font-normal text-gray-600 font-mono ml-1">{{article.reseaseDate}}</span> 
+            <span class="font-light text-gray-600 font-mono ml-1">{{article.reseaseDate}}</span> 
           </div>
           <div class="mb-2 block w-full">
             <span class="font-secondary text-blue-800">Contributors:</span>
-            <span class="font-normal text-gray-600 ml-1">{{article.contributors}}</span> 
+            <span class="font-light text-gray-600 ml-1">{{article.contributors}}</span> 
           </div>
           <div class="mb-2 block w-full">
             <span class="font-secondary text-blue-800">Required WP Version:</span>
-            <span class="font-normal text-gray-600 ml-1">{{article.requires_at_least}}</span> 
+            <span class="font-light text-gray-600 ml-1">{{article.requires_at_least}}</span> 
           </div>
           <div class="mb-2 block w-full">
             <span class="font-secondary text-blue-800">Tested up to:</span>
-            <span class="font-normal text-gray-600 ml-1">{{article.tested_up_to}}</span> 
+            <span class="font-light text-gray-600 ml-1">{{article.tested_up_to}}</span> 
           </div>
           <div class="mb-2 block w-full">
             <span class="font-secondary text-blue-800">Stable Release:</span>
-            <span class="font-normal text-gray-600 ml-1">{{article.stable_tag}}</span> 
+            <span class="font-light text-gray-600 ml-1">{{article.stable_tag}}</span> 
           </div>
           <div class="mb-2 block w-full">
             <span class="font-secondary text-blue-800">License:</span>
-            <span class="font-normal text-gray-600 ml-1">{{article.license}}</span> 
+            <span class="font-light text-gray-600 ml-1">{{article.license}}</span> 
           </div>
           <div class="w-full flex justify-center items-center pt-8 pb-2">
-            <a :href="article.download_url" target="_blank" class="btn-primary">
+            <a :href="article.download_url" target="_blank" class="base-btn bg-blue-600 text-gray-100">
               Download
               <svg class="w-5 h-5 ml-3 inline-block fill-current" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 14c.6 0 1 .4 1 1v4a1 1 0 001 1h14a1 1 0 001-1v-4a1 1 0 112 0v4a3 3 0 01-3 3H5a3 3 0 01-3-3v-4c0-.6.4-1 1-1z" clip-rule="evenodd"/><path fill-rule="evenodd" d="M6.3 9.3a1 1 0 011.4 0l4.3 4.3 4.3-4.3a1 1 0 111.4 1.4l-5 5a1 1 0 01-1.4 0l-5-5a1 1 0 010-1.4z" clip-rule="evenodd"/><path fill-rule="evenodd" d="M12 2c.6 0 1 .4 1 1v12a1 1 0 11-2 0V3c0-.6.4-1 1-1z" clip-rule="evenodd"/></svg>
             </a>
