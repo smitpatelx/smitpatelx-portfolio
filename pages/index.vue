@@ -75,7 +75,7 @@ export default {
     transform: translateX(30%);
   }
   @media (min-width: 1024px) {
-    transform: translateX(30%);
+    transform: translateX(10%);
   }
 }
 
