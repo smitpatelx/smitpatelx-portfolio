@@ -40,11 +40,6 @@ export default {
       loading: true,
     };
   },
-  created() {
-    setTimeout(() => {
-      this.loading = false;
-    }, 3000);
-  },
 };
 </script>
 
