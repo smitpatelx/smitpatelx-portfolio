@@ -1,5 +1,5 @@
 <template>
-  <div class="px-0 lg:px-14 xl:px-24 pt-4 select-none z-30 relative">
+  <div class="px-0 xl:px-24 pt-4 select-none z-30 relative">
     <div v-click-outside="hideIt" class="w-full flex-wrap justify-between items-center flex relative container mx-auto">
       <div class="w-full flex-wrap justify-between items-center flex px-6 md:pl-12 lg:px-32">
         <nuxt-link v-scroll-reveal="{ delay: 0, mobile: true, origin: 'top', easing: 'ease-in', distance: '40px'}" to="/" class="focus:outline-none py-3 z-20">
@@ -89,6 +89,10 @@ export default {
           href: '#contact'
         },
         {
+          name: 'Blog',
+          href: 'blog/'
+        },
+        {
           name: 'Apps',
           href: 'apps/'
         }
@@ -106,6 +110,10 @@ export default {
 }
 </script>
 <style lang="scss">
+.nuxt-link-exact-active {
+    @apply text-opacity-60 underline;
+}
+
 .left-1\/2{
   left: 50%;
   width: 90%;

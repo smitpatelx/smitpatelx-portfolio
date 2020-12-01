@@ -1,6 +1,6 @@
 <template>
     <div class="w-full flex flex-wrap justify-center items-center min-h-screen bg-apps pb-24 md:pb-0">
-        <div class="w-full flex flex-wrap pb-3">
+        <div class="w-full flex flex-wrap pb-0">
             <h2 v-scroll-reveal="{ delay: 100, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full text-gray-700 text-3xl md:text-4xl font-semibold leading-tight text-center">
                 Apps &  Plugins
             </h2>

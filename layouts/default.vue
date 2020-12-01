@@ -44,6 +44,7 @@ export default {
 </script>
 
 <style lang="scss">
+
 html,
 body {
   @apply bg-primary;

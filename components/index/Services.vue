@@ -126,7 +126,7 @@ export default {
   },
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .md\:left-0per {
   @media (min-width: 768px) {
     left: 0%;

@@ -1,10 +1,10 @@
 <template>
     <section class="w-full flex flex-wrap justify-center items-center mt-24 lg:mt-0 mb-24 lg:mb-10 p-4 md:p-10 lg:p-32" id="experience">
         <div class="max-w-2xl flex flex-wrap justify-start items-center cursor-default">
-            <h2 v-scroll-reveal="{ delay: 100, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full text-gray-700 text-3xl md:text-4xl font-semibold leading-tight text-center mb-10">
+            <h2 v-scroll-reveal="{ delay: 100, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full text-gray-700 text-3xl md:text-4xl font-semibold leading-tight text-center mb-12">
                 My Experience
             </h2>
-            <div class="w-full h-full flex flex-wrap mt-2">
+            <div class="w-full h-full flex flex-wrap">
                 <div class="w-full flex flex-wrap items-center justify-center">
                     <div class="mb-4 flex flex-wrap items-center justify-center leading-none relative">
                         <span class="absolute bg-blue-s bg-opacity-75 h-8 w-26 rounded-md top-0 transition-all duration-300 ease-in-out z-0" :style="`left:${current_company*6.5}rem`"></span>

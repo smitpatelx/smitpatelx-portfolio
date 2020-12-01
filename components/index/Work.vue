@@ -1,10 +1,10 @@
 <template>
     <section class="w-full min-h-screen flex flex-wrap justify-center items-center mt-5 lg:mt-0 p-10 lg:p-32 mb-32" id="work">
         <div class="flex flex-wrap justify-start items-center cursor-default work-w">
-            <h2 v-scroll-reveal="{ delay: 100, mobile: true, viewOffset: { top: 50, right: 0, bottom: 0, left: 0, }, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full text-gray-700 text-3xl md:text-4xl font-semibold leading-tight text-center mb-10">
+            <h2 v-scroll-reveal="{ delay: 100, mobile: true, viewOffset: { top: 50, right: 0, bottom: 0, left: 0, }, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full text-gray-700 text-3xl md:text-4xl font-semibold leading-tight text-center mb-12">
                 My Work
             </h2>
-            <div class="w-full h-full flex flex-wrap mt-8 py-10 justify-center items-center">
+            <div class="w-full h-full flex flex-wrap pb-10 justify-center items-center">
                 <!-- Project 1 - Start -->
                 <div class="w-full flex flex-wrap relative justify-end rounded mb-10" >
                     <a href="https://4unaturalistic.com/" target="_blank" v-lazy-container="{ selector: 'img' }" v-scroll-reveal="{ delay: 300, mobile: true, viewOffset: { top: 50, right: 0, bottom: 0, left: 0, }, origin: 'left', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center shadow-xl focus:outline-none focus:ring focus:ring-blue-400">
