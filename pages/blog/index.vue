@@ -7,10 +7,10 @@
             <div class="w-full max-w-6xl flex flex-wrap -mx-4 justify-center items-stretch">
                 <div v-for="(blog, i) in blogs" :key="i" class="my-4 px-4 w-full md:w-1/2 lg:w-1/3 flex flex-wrap justify-between items-stretch select-none">
                     <div class="w-full rounded-lg duration-300 transition-all grid grid-rows-2 shadow-xl bg-gray-100">
-                        <div class="w-full block rounded-t-md md:rounded-t-lg object-cover max-h-60" v-lazy-container="{ selector: 'img' }">
-                            <img :data-src="`${blog.icon_url}`"
-                                :data-loading="`${blog.icon_url}?lqip`"
-                                class="h-full object-cover flex rounded-t-md md:rounded-t-lg" :alt="blog.title">
+                        <div class="w-full block rounded-t-md md:rounded-t-lg h-full overflow-hidden object-cover" v-lazy-container="{ selector: 'img' }">
+                            <img :data-src="require(`@/static${blog.icon_url}`)"
+                                :data-loading="require(`@/static${blog.icon_url}?lqip`)"
+                                class="w-full h-full rounded-t-md md:rounded-t-lg" :alt="blog.title">
                         </div>
                         <div class="px-8 pb-6 rounded-b-md md:rounded-b-lg w-full flex flex-wrap content-between bg-gray-100">
                             <div class="w-full flex flex-wrap justify-between items-center text-lg text-gray-600 font-light py-3">
@@ -18,7 +18,7 @@
                                 <p>{{blog.reseaseDate | year}}</p>
                             </div>
                             <div class="w-full flex flex-wrap">
-                                <h2 class="text-2xl font-medium text-gray-800">{{blog.title}}</h2>
+                                <h2 class="text-xl md:text-2xl font-medium text-gray-800">{{blog.title}}</h2>
                                 <p class="text-base text-gray-600 leading-tight my-2 font-light" style="-webkit-box-orient: vertical;-webkit-line-clamp: 2;line-height:1.5rem; max-height: 3rem;overflow: hidden;white-space: normal;text-overflow: ellipsis;-o-text-overflow: ellipsis;">{{blog.description | desc}}</p>
                                 <div class="mt-4 w-full flex flex-wrap justify-between items-stretch self-stretch">
                                     <div class="flex flex-wrap items-center justify-center gap-x-3" v-lazy-container="{ selector: 'img' }">
