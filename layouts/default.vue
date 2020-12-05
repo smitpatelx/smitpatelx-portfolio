@@ -14,6 +14,7 @@
         <nuxt />
       </fade-transition>
       <Footer />
+      <s-notify></s-notify>
     </div>
   </div>
 </template>
@@ -23,6 +24,7 @@ import HeroGradient from "@/components/library/hero-gradient.vue";
 import { FadeTransition } from "vue2-transitions";
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
+import SNotify from '@/components/library/SNotify.vue'
 // import SideBars from '@/components/SideBars.vue';
 // import LoadingAmination from '@/components/LoadingAmination.vue';
 
@@ -34,6 +36,7 @@ export default {
     // SideBars,
     // LoadingAmination,
     Footer,
+    SNotify,
   },
   data() {
     return {

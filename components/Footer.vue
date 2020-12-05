@@ -15,13 +15,15 @@
         <div class="w-full flex flex-wrap items-start justify-center content-center">
           <div class="px-5 py-5 mx-0 md:mx-6 flex flex-wrap flex-col items-center content-start justify-start">
             <img src="/smitpatelx/smit-dark.svg" class="h-8" />
-            <div class="space-x-0 md:space-x-7 flex flex-wrap flex-row items-center content-start justify-start mt-8">
+            <div class="space-x-0 md:space-x-7 w-full max-w-1/2 md:max-w-full flex flex-wrap flex-row items-center content-center md:content-start justify-center md:justify-start mt-8">
               <nuxt-link to="/" class="nav-links-footer">Home</nuxt-link>
               <nuxt-link to="#services" class="nav-links-footer">Services</nuxt-link>
               <nuxt-link to="#about" class="nav-links-footer">About</nuxt-link>
               <nuxt-link to="#experience" class="nav-links-footer">Experience</nuxt-link>
               <nuxt-link to="#work" class="nav-links-footer">Work</nuxt-link>
               <nuxt-link to="#contact" class="nav-links-footer">Contact</nuxt-link>
+              <nuxt-link to="/apps/" class="nav-links-footer">Apps</nuxt-link>
+              <nuxt-link to="/blog/" class="nav-links-footer">Blog</nuxt-link>
             </div>
           </div>
           <div class="w-full px-5 py-5 flex flex-wrap items-center justify-center">
@@ -94,8 +96,7 @@ export default {
     clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
   }
 }
-
 .nav-links-footer {
-    @apply text-center md:text-left text-base w-1/3 md:w-auto md:text-lg font-medium text-gray-600 hover:text-opacity-70 focus:underline focus:outline-none transition-all duration-300;
+    @apply items-center text-base w-1/2 md:w-auto md:text-lg font-medium text-gray-600 hover:text-opacity-70 focus:underline focus:outline-none transition-all duration-300;
 }
 </style>

@@ -61,21 +61,18 @@
                 </div>
             </form>
         </div>
-        <s-notify ref="sNotify"></s-notify>
     </section>
 </template>
 <script>
 import { CollapseTransition } from 'vue2-transitions'
 import Country from '@/components/library/Country.vue'
 import SSelect from '@/components/library/SSelect.vue'
-import SNotify from '@/components/library/SNotify.vue'
 
 export default {
     components:{
         Country,
         CollapseTransition,
         SSelect,
-        SNotify
     },
     data(){
         return {
@@ -115,16 +112,16 @@ export default {
             }
         }
     },
-    asyncData (context) {
-        return context.env
-    },
+    // asyncData (context) {
+    //     return context.env
+    // },
     methods: {
         async formSubmission(e){
             e.preventDefault();
             await this.getIp();
         },
         async submit(){
-            await this.$axios.$post(`${process.env.BASE_URL}/api/v1/contact`,
+            this.$axios.$post(`${process.env.NUXT_ENV_BASE_URL}/api/v1/contact`,
             {
                 first_name: this.first_name,
                 last_name: this.last_name,
@@ -138,11 +135,11 @@ export default {
                 ip_address: this.ip_address
             })
             .then(res=>{
-                this.$refs.sNotify.success('Thank you for contacting me!')
+                this.$store.dispatch('notifySuccess','Thank you for contacting me!')
                 this.reset();
             })
             .catch(err=>{
-                this.$refs.sNotify.error('End server connection problem. Please try again later.')
+                this.$store.dispatch('notifyErrors','End server connection problem. Please try again later.')
             })
         },
         set_no_of_employee(val){
@@ -168,7 +165,7 @@ export default {
                 this.ip_address = res.ip;
                 this.submit()
             }).catch(error=>{
-                this.$refs.sNotify.error('Please turn off ad blocker and try again.')
+                this.$store.dispatch('notifyErrors','Please turn off ad blocker and try again.')
             });
         }
     }

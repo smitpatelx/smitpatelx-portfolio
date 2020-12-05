@@ -23,10 +23,10 @@
         <div class="md:absolute flex py-10 md:py-0 md:flex-wrap z-10 justify-center items-center content-center right-0 top-0 hero-img-container" v-lazy-container="{ selector: 'img' }">
           <img :data-src="require('~/static/assets/bg-hero-3-min.svg')"
             :data-loading="require('~/static/assets/bg-hero-3.png?lqip')"
-            class="w-20vw shadow-2xl rounded-lg m-4 md:m-0 transform translate-x-14" alt="Hero Mockup 1">
+            class="w-20vw shadow-2xl rounded-xl m-4 md:m-0 transform translate-x-14" alt="Hero Mockup 1">
           <img :data-src="require('~/static/assets/bg-hero-2-min.svg')"
             :data-loading="require('~/static/assets/bg-hero-2.png?lqip')"
-            class="w-20vw hover:scale-110 hover:translate-y-30 hover:-translate-x-46 transition-all duration-300 hover:shadow-lg shadow-2xl rounded-lg m-4 md:m-0 transform -translate-x-1/2 md:-translate-x-40 translate-y-14" alt="Hero Mockup 2">
+            class="w-20vw hover:scale-110 hover:translate-y-30 hover:-translate-x-46 transition-all duration-300 hover:shadow-lg shadow-2xl rounded-xl m-4 md:m-0 transform -translate-x-1/2 md:-translate-x-40 translate-y-14" alt="Hero Mockup 2">
         </div>
     </div>
     <div class="flex flex-wrap flex-col justify-center items-center">
@@ -35,6 +35,7 @@
       <Experience/>
       <Work/>
       <Apps :data="apps"/>
+      <Blog :data="blog"/>
       <Contact/>
     </div>
   </section>
@@ -45,8 +46,9 @@
 export default {
   scrollToTop: false,
   async asyncData({ $content, params }) {
-    const apps = await $content('apps').fetch()
-    return { apps }
+    const apps = await $content('apps').fetch();
+    const blog = await $content('blog').fetch();
+    return { apps, blog }
   },
   components:{
     Services: () => import('@/components/index/Services.vue'),
@@ -55,6 +57,7 @@ export default {
     Work: () => import('@/components/index/Work.vue'),
     Contact: () => import('@/components/index/Contact.vue'),
     Apps: () => import('@/components/index/Apps.vue'),
+    Blog: () => import('@/components/index/Blog.vue'),
     timeout: 3000
   },
   data(){
@@ -75,7 +78,7 @@ export default {
     transform: translateX(30%);
   }
   @media (min-width: 1024px) {
-    transform: translateX(10%);
+    transform: translateX(12rem);
   }
 }
 

@@ -65,8 +65,8 @@ export default {
    */
   plugins: [
     { src: '~/plugins/vue-scroll-reveal', ssr: false },
-    { src: '~plugins/ga.js', mode: 'client' },
-    // { src: '~/plugins/vuelidate', ssr: false },
+    { src: '~/plugins/ga.js', ssr: false },
+    { src: '~/plugins/vuelidate', ssr: true },
   ],
   /*
   ** Auto import components

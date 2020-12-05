@@ -1,7 +1,19 @@
 <template>
-  <div class="w-full flex flex-wrap flex-row items-stretch justify-center content-center">
-    <input type="email" class="w-64 inline-block col-span-6 form-input m-1.5 transition-all duration-300" placeholder="Your email" />
-    <button class="base-btn bg-blue-500 text-gray-100 m-1.5 transition-all duration-300 shadow-lg" type="submit">
+  <form @submit.prevent="" class="w-full flex flex-wrap flex-row items-stretch justify-center content-center">
+    <button @click="back" v-if="step==2" class="base-btn bg-blue-500 text-gray-100 m-1.5 transition-all duration-300 shadow-lg" type="button">
+      <svg class="w-2 h-3 fill-current inline-block transform rotate-180" viewBox="0 0 8 14"><path fill-rule="evenodd" d="M.292893.292893c.390524-.390524 1.023687-.390524 1.414217 0l6 5.999997c.39052.39053.39052 1.02369 0 1.41422l-6 5.99999c-.39053.3905-1.023693.3905-1.414217 0-.390524-.3905-.390524-1.0237 0-1.4142L5.58579 7 .292893 1.70711c-.390524-.39053-.390524-1.023693 0-1.414217z" clip-rule="evenodd"/></svg>
+    </button>
+    <input v-if="step==1" v-model.trim="$v.email_address.$model" @keydown.enter="submit" type="text" class="w-64 inline-block col-span-6 form-input m-1.5 transition-all duration-300" 
+      :class="$v.email_address.required && $v.email_address.$anyError ? 'ring-offset-red-500 ring-offset-2' : 'ring-offset-0' " placeholder="Your email" />
+    <input v-if="step==2" v-model.trim="$v.first_name.$model" @keydown.enter="submit" type="text" class="w-40 inline-block col-span-6 form-input m-1.5 transition-all duration-300"
+      :class="$v.first_name.required && $v.first_name.$anyError ? 'ring-offset-red-500 ring-offset-2' : 'ring-offset-0' " placeholder="First name" />
+    <input v-if="step==2" v-model.trim="$v.last_name.$model" @keydown.enter="submit" type="text" class="w-40 inline-block col-span-6 form-input m-1.5 transition-all duration-300" 
+      :class="$v.last_name.required && $v.last_name.$anyError ? 'ring-offset-red-500 ring-offset-2' : 'ring-offset-0' " placeholder="Last name" />
+    <button @click="submit" v-if="step==1" class="base-btn bg-blue-500 text-gray-100 m-1.5 transition-all duration-300 shadow-lg" type="button">
+      Next
+      <svg class="w-2 h-3 fill-current inline-block ml-2 heartbeat" viewBox="0 0 8 14"><path fill-rule="evenodd" d="M.292893.292893c.390524-.390524 1.023687-.390524 1.414217 0l6 5.999997c.39052.39053.39052 1.02369 0 1.41422l-6 5.99999c-.39053.3905-1.023693.3905-1.414217 0-.390524-.3905-.390524-1.0237 0-1.4142L5.58579 7 .292893 1.70711c-.390524-.39053-.390524-1.023693 0-1.414217z" clip-rule="evenodd"/></svg>
+    </button>
+    <button @click="submit" v-if="step==2" class="base-btn bg-blue-500 text-gray-100 m-1.5 transition-all duration-300 shadow-lg" type="button">
       Subscribe
       <svg class="w-4 h-4 fill-current inline-block ml-2 heartbeat" viewBox="0 0 24 24">
         <path
@@ -11,26 +23,98 @@
         />
       </svg>
     </button>
-  </div>
+  </form>
 </template>
 <script>
+import { required, email, alpha, minLength, maxLength } from 'vuelidate/lib/validators'
+import { mapMutations } from 'vuex';
 export default {
   data() {
-    return {};
+    return {
+      step: 1,
+      email_address: '',
+      first_name: '',
+      last_name: '',
+      ip_address: ''
+    };
+  },
+  validations: {
+    email_address: {
+      required,
+      email,
+      minLength: minLength(6),
+      maxLength: maxLength(60),
+    },
+    first_name: {
+      required,
+      alpha,
+      minLength: minLength(2),
+      maxLength: maxLength(20),
+    },
+    last_name: {
+      required,
+      alpha,
+      minLength: minLength(2),
+      maxLength: maxLength(20),
+    },
   },
   methods: {
-    submit() {},
+    ...mapMutations({
+      setSuccess: 'notifySuccess'
+    }),
+    submit() {
+      if(this.step==1 && !this.$v.email_address.$anyError && this.$v.email_address.required){
+        this.step=2
+      } else if (this.step==2 && !this.$v.first_name.$anyError && this.$v.first_name.required && this.$v.last_name.required && !this.$v.last_name.$anyError) {
+        this.getIp().then(res=>{
+          this.$axios.$post(`${process.env.NUXT_ENV_BASE_URL}/api/v1/subscribe`,
+          {
+            first_name: this.first_name,
+            last_name: this.last_name,
+            email: this.email_address,
+            ip_address: this.ip_address
+          })
+          .then(res2=>{
+            this.$store.dispatch('notifySuccess','Thank you for subscribing!')
+            this.reset();
+          })
+          .catch(err=>{
+            console.log(err)
+            this.$store.dispatch('notifyErrors',err.response.data.error_message+". Maybe you already subscribed!")
+          })
+        })
+      }
+    },
+    back(){
+      if(this.step==2){
+        this.step=1
+      }
+    },
+    reset(){
+      this.back();
+      this.step=1;
+      this.$v.$reset();
+    },
+    async getIp() {
+      return new Promise((resolve, reject) =>{
+        this.$axios.$get('https://json.geoiplookup.io/')
+        .then(res=>{
+          this.ip_address = res.ip;
+          resolve(res.ip);
+        }).catch(err=>{
+          this.$store.dispatch('notifyErrors','Please turn off ad blocker and try again.')
+          reject(err);
+        });
+      })
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
 .form-input {
-  @apply text-gray-300 py-2 px-5 placeholder-gray-600 rounded-full bg-gray-300 antialiased text-lg font-light focus:outline-none focus:ring focus:ring-blue-400 transition-all duration-300;
-
-  &:focus {
-    @apply bg-opacity-60 text-opacity-75 transition-all duration-300 placeholder-gray-400;
-  }
+  @apply text-gray-800 py-2 px-5 placeholder-gray-600 rounded-full bg-gray-300 antialiased text-lg font-light focus:outline-none focus:ring focus:ring-blue-400 transition-all duration-300 outline-none
+    focus:bg-opacity-60 focus:text-opacity-75 focus:placeholder-gray-400;
 }
 
 .heartbeat{animation:heartbeat 1.5s ease-in-out infinite both}
