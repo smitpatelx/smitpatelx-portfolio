@@ -67,21 +67,26 @@ export default {
         this.step=2
       } else if (this.step==2 && !this.$v.first_name.$anyError && this.$v.first_name.required && this.$v.last_name.required && !this.$v.last_name.$anyError) {
         this.getIp().then(res=>{
-          this.$axios.$post(`${process.env.NUXT_ENV_BASE_URL}/api/v1/subscribe`,
-          {
-            first_name: this.first_name,
-            last_name: this.last_name,
-            email: this.email_address,
-            ip_address: this.ip_address
-          })
-          .then(res2=>{
-            this.$store.dispatch('notifySuccess','Thank you for subscribing!')
-            this.reset();
-          })
-          .catch(err=>{
-            console.log(err)
-            this.$store.dispatch('notifyErrors',err.response.data.error_message+". Maybe you already subscribed!")
-          })
+          try{
+            this.$axios.$post(`${process.env.NUXT_ENV_BASE_URL}/api/v1/subscribe`,
+            {
+              first_name: this.first_name,
+              last_name: this.last_name,
+              email: this.email_address,
+              ip_address: this.ip_address
+            })
+            .then(res2=>{
+              this.$store.dispatch('notifySuccess','Thank you for subscribing!')
+              this.reset();
+            })
+            .catch(err=>{
+              this.reset();
+              let error = typeof err.response === 'undefined' ? "CORS ERROR" : err.response.data.error_message;
+              this.$store.dispatch('notifyErrors',error+". Maybe you already subscribed!")
+            });
+          } catch (err) {
+            this.$store.dispatch('notifyErrors',err)
+          }
         })
       }
     },
@@ -94,6 +99,9 @@ export default {
       this.back();
       this.step=1;
       this.$v.$reset();
+      this.email_address="";
+      this.fist_name="";
+      this.last_name="";
     },
     async getIp() {
       return new Promise((resolve, reject) =>{
