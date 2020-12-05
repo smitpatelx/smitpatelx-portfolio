@@ -22,7 +22,6 @@
 <script>
 import ClickOutside from 'vue-click-outside'
 import focusOutside from 'vue-focus-outside'
-import CountryJson from '@/static/json/name_alpha2_calling_codes'
 
 export default {
     data(){
@@ -38,9 +37,13 @@ export default {
     fetchOnServer: true,
     methods:{
         load_countries(){
-            console.log(CountryJson)
-            this.countryData = CountryJson;
-            this.new_array = CountryJson;
+            this.$axios.$get("https://smitpatelx.com/json/name_alpha2_calling_codes.json")
+            .then(res=>{
+                this.countryData = res.data;
+                this.new_array = res.data;
+            }).catch(err=>{
+                console.log("Error: Fetching Country Codes. Refresh the page or try again later.")
+            })
         },
         select(val, i){
             this.current_index=i;
