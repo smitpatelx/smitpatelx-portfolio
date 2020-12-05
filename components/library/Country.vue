@@ -37,10 +37,11 @@ export default {
     fetchOnServer: true,
     methods:{
         load_countries(){
-            this.$axios.$get("https://smitpatelx.com/json/name_alpha2_calling_codes.json")
+            this.$axios.$get("https://static.smitpatelx.com/smitpatelx/json/name_alpha2_calling_codes.json")
             .then(res=>{
-                this.countryData = res.data;
-                this.new_array = res.data;
+                console.log(res)
+                this.countryData = res;
+                this.new_array = res;
             }).catch(err=>{
                 console.log("Error: Fetching Country Codes. Refresh the page or try again later.")
             })
