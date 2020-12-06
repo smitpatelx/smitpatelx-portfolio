@@ -1,7 +1,7 @@
 <template>
   <form @submit.prevent="" class="w-full flex flex-wrap flex-row items-stretch justify-center content-center">
-    <button @click="back" v-if="step==2" class="base-btn bg-blue-500 text-gray-100 m-1.5 transition-all duration-300 shadow-lg" type="button">
-      <svg class="w-2 h-3 fill-current inline-block transform rotate-180" viewBox="0 0 8 14"><path fill-rule="evenodd" d="M.292893.292893c.390524-.390524 1.023687-.390524 1.414217 0l6 5.999997c.39052.39053.39052 1.02369 0 1.41422l-6 5.99999c-.39053.3905-1.023693.3905-1.414217 0-.390524-.3905-.390524-1.0237 0-1.4142L5.58579 7 .292893 1.70711c-.390524-.39053-.390524-1.023693 0-1.414217z" clip-rule="evenodd"/></svg>
+    <button @click="back" v-if="step==2" class="hidden md:flex bg-blue-500 p-4 items-center justify-center focus:outline-none focus:ring focus:ring-blue-300 rounded-full text-gray-100 m-1.5 leading-none relative transition-all duration-300 shadow-lg" type="button">
+      <svg class="w-2 h-3 fill-current inline-block transform rotate-180 " viewBox="0 0 8 14"><path fill-rule="evenodd" d="M.292893.292893c.390524-.390524 1.023687-.390524 1.414217 0l6 5.999997c.39052.39053.39052 1.02369 0 1.41422l-6 5.99999c-.39053.3905-1.023693.3905-1.414217 0-.390524-.3905-.390524-1.0237 0-1.4142L5.58579 7 .292893 1.70711c-.390524-.39053-.390524-1.023693 0-1.414217z" clip-rule="evenodd"/></svg>
     </button>
     <input v-if="step==1" v-model.trim="$v.email_address.$model" @keydown.enter="submit" type="text" class="w-64 inline-block col-span-6 form-input m-1.5 transition-all duration-300" 
       :class="$v.email_address.required && $v.email_address.$anyError ? 'ring-offset-red-500 ring-offset-2' : 'ring-offset-0' " placeholder="Your email" />
@@ -12,6 +12,9 @@
     <button @click="submit" v-if="step==1" class="base-btn bg-blue-500 text-gray-100 m-1.5 transition-all duration-300 shadow-lg" type="button">
       Next
       <svg class="w-2 h-3 fill-current inline-block ml-2 heartbeat" viewBox="0 0 8 14"><path fill-rule="evenodd" d="M.292893.292893c.390524-.390524 1.023687-.390524 1.414217 0l6 5.999997c.39052.39053.39052 1.02369 0 1.41422l-6 5.99999c-.39053.3905-1.023693.3905-1.414217 0-.390524-.3905-.390524-1.0237 0-1.4142L5.58579 7 .292893 1.70711c-.390524-.39053-.390524-1.023693 0-1.414217z" clip-rule="evenodd"/></svg>
+    </button>
+    <button @click="back" v-if="step==2" class="flex md:hidden bg-blue-500 p-4 items-center justify-center focus:outline-none focus:ring focus:ring-blue-300 rounded-full text-gray-100 m-1.5 leading-none relative transition-all duration-300 shadow-lg" type="button">
+      <svg class="w-2 h-3 fill-current inline-block transform rotate-180 " viewBox="0 0 8 14"><path fill-rule="evenodd" d="M.292893.292893c.390524-.390524 1.023687-.390524 1.414217 0l6 5.999997c.39052.39053.39052 1.02369 0 1.41422l-6 5.99999c-.39053.3905-1.023693.3905-1.414217 0-.390524-.3905-.390524-1.0237 0-1.4142L5.58579 7 .292893 1.70711c-.390524-.39053-.390524-1.023693 0-1.414217z" clip-rule="evenodd"/></svg>
     </button>
     <button @click="submit" v-if="step==2" class="base-btn bg-blue-500 text-gray-100 m-1.5 transition-all duration-300 shadow-lg" type="button">
       Subscribe
@@ -85,6 +88,7 @@ export default {
               this.$store.dispatch('notifyErrors',error+". Maybe you already subscribed!")
             });
           } catch (err) {
+            this.reset();
             this.$store.dispatch('notifyErrors',err)
           }
         })

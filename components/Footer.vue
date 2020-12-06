@@ -13,7 +13,7 @@
     <div class="w-full flex flex-wrap items-center justify-start bg-gray-200 clip-path-1 relative">
       <div class="container mx-auto pt-32 pb-24">
         <div class="w-full flex flex-wrap items-start justify-center content-center">
-          <div class="px-5 py-5 mx-0 md:mx-6 flex flex-wrap flex-col items-center content-start justify-start">
+          <div class="px-5 py-5 mx-0 md:mx-6 flex flex-wrap flex-col items-center content-center md:content-start justify-center md:justify-start">
             <img src="/smitpatelx/smit-dark.svg" class="h-8" />
             <div class="space-x-0 md:space-x-7 w-full max-w-1/2 md:max-w-full flex flex-wrap flex-row items-center content-center md:content-start justify-center md:justify-start mt-8">
               <nuxt-link to="/" class="nav-links-footer">Home</nuxt-link>
@@ -97,6 +97,10 @@ export default {
   }
 }
 .nav-links-footer {
-    @apply items-center text-base w-1/2 md:w-auto md:text-lg font-medium text-gray-600 hover:text-opacity-70 focus:underline focus:outline-none transition-all duration-300;
+    @apply items-center text-base px-4 md:px-0 w-1/2 md:w-auto md:text-lg font-medium text-gray-600 hover:text-opacity-70 focus:underline focus:outline-none transition-all duration-300;
+
+    &:nth-child(odd){
+      @apply text-right;
+    }
 }
 </style>
