@@ -51,5 +51,11 @@
     "sqip-loader": "^1.0.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "webp-loader": "^0.6.0"
-  }
+  },
+  "browserslist": [
+    "last 3 Safari version",
+    "last 3 Firefox version",
+    "last 3 ChromeAndroid version",
+    "last 3 Chrome version"
+  ]
 }
