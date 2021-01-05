@@ -56,6 +56,8 @@
     "last 3 Safari version",
     "last 3 Firefox version",
     "last 3 ChromeAndroid version",
-    "last 3 Chrome version"
+    "last 3 Chrome version",
+    "last 3 IE version",
+    "last 3 Opera version"
   ]
 }
