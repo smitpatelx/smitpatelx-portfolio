@@ -1,13 +1,14 @@
 <template>
-  <section class="overflow-hidden" >
-    <div class="w-full flex flex-wrap justify-center items-center content-start pt-12 pb-20 lg:py-24 container mx-auto px-4 md:px-10 lg:px-32 relative antialiased">
+  <section class="overflow-hidden w-full flex flex-wrap items-stretch justify-center" >
+    <div class="w-full flex flex-wrap justify-center items-start  pt-12 pb-20 lg:py-20 relative antialiased container-spx">
+      <div class="w-full md:w-1/2 flex flex-wrap items-start justify-start content-start">
         <div class="w-full relative min-h-20">
           <h1 v-scroll-reveal="{ delay: 1000, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" style="mix-blend-mode: color-burn;color: #3a3a3a; z-index: 2;" class="text-6xl md:text-8xl font-semibold w-full leading-none opacity-75 absolute">Developing<br/>Beautiful<br/>Interfaces</h1>
           <h1 v-scroll-reveal="{ delay: 1000, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" style="color: #3a3a3a; opacity: 0.3; z-index: 2;" class="text-6xl md:text-8xl font-semibold w-full leading-none opacity-75 absolute">Developing<br/>Beautiful<br/>Interfaces</h1>
           <h1 v-scroll-reveal="{ delay: 1000, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" style="color: #bdc6d2;" class="text-6xl md:text-8xl font-semibold w-full leading-none opacity-75 absolute">Developing<br/>Beautiful<br/>Interfaces</h1>
         </div>
         <h3 v-scroll-reveal="{ delay: 1400, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="text-lg lg:text-xl text-gray-600 w-full z-10 my-6 md:my-6 font-light">
-          I'm a Full Stack Developer based in Winnipeg, MB <br/> 
+          I'm a Full Stack Developer based in Winnipeg.<br/> 
           Specialised in building and designing websites and applications.
         </h3>
         <div v-scroll-reveal="{ delay: 1500, mobile: true, origin: 'right', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '180px'}" class="w-full z-10 flex flex-wrap justify-start items-center pt-4">
@@ -20,14 +21,15 @@
             <svg class="fill-current h-3 inline-block ml-2 transform rotate-90" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.70711.292893c-.39053-.390524-1.02369-.390524-1.41422 0-.39052.390524-.39052 1.023687 0 1.414217L12.5858 7H1c-.552285 0-1 .44772-1 1 0 .55229.447715 1 1 1h11.5858l-5.29291 5.2929c-.39052.3905-.39052 1.0237 0 1.4142.39053.3905 1.02369.3905 1.41422 0l6.99999-6.99999c.3905-.39053.3905-1.02369 0-1.41422L8.70711.292893z" clip-rule="evenodd"/></svg>
           </nuxt-link>
         </div>
-        <div class="md:absolute flex py-10 md:py-0 md:flex-wrap z-10 justify-center items-center content-center right-0 top-0 hero-img-container" v-lazy-container="{ selector: 'img' }">
-          <img :data-src="require('~/static/assets/bg-hero-3-min.svg')"
-            :data-loading="require('~/static/assets/bg-hero-3.png?lqip')"
-            class="w-20vw shadow-2xl rounded-xl m-4 md:m-0 transform translate-x-14" alt="Hero Mockup 1">
-          <img :data-src="require('~/static/assets/bg-hero-2-min.svg')"
-            :data-loading="require('~/static/assets/bg-hero-2.png?lqip')"
-            class="w-20vw hover:scale-110 hover:translate-y-30 hover:-translate-x-46 transition-all duration-300 hover:shadow-lg shadow-2xl rounded-xl m-4 md:m-0 transform -translate-x-1/2 md:-translate-x-40 translate-y-14" alt="Hero Mockup 2">
-        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-x-4 p-0 md:p-6 w-full md:w-1/2 pt-24 md:pt-0" v-lazy-container="{ selector: 'img' }">
+        <img :data-src="require('~/static/assets/bg-hero-3-min.svg')"
+          :data-loading="require('~/static/assets/bg-hero-3.png?lqip')"
+          class="shadow-lg rounded-xl z-20" alt="Hero Mockup 1">
+        <img :data-src="require('~/static/assets/bg-hero-2-min.svg')"
+          :data-loading="require('~/static/assets/bg-hero-2.png?lqip')"
+          class="shadow-lg rounded-xl z-20" alt="Hero Mockup 2">
+      </div>
     </div>
     <div class="flex flex-wrap flex-col justify-center items-center">
       <Services/>
@@ -83,13 +85,13 @@ export default {
 }
 
 .w-20vw{
-  width: 80vw;
+  width: 15rem;
   
   @media (min-width: 740px) { 
-    width: 24vw;
+    width: 15rem;
   }
   @media (min-width: 1024px) {
-    width: 19vw;
+    width: 18rem;
   }
 }
 

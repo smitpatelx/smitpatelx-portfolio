@@ -1,7 +1,7 @@
 <template>
-  <div class="px-0 xl:px-24 pt-4 select-none z-30 relative">
-    <div v-click-outside="hideIt" class="w-full flex-wrap justify-between items-center flex relative container mx-auto">
-      <div class="w-full flex-wrap justify-between items-center flex px-6 md:pl-12 lg:px-32">
+  <div class="pt-4 select-none z-30 relative">
+    <div v-click-outside="hideIt" class="w-full flex-wrap justify-between items-center flex relative container-spx">
+      <div class="w-full flex-wrap justify-between items-center flex">
         <nuxt-link v-scroll-reveal="{ delay: 0, mobile: true, origin: 'top', easing: 'ease-in', distance: '40px'}" to="/" class="focus:outline-none py-3 z-20">
           <img src="/smitpatelx/smit.svg" class=" h-8"/>
         </nuxt-link>

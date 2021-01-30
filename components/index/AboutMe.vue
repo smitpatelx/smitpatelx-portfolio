@@ -1,6 +1,6 @@
 <template>
   <div class="w-full bg-dark-blue relative mt-16 md:mt-4">
-    <section class="w-full container mx-auto px-4 lg:px-32 grid grid-cols-4 py-32 md:py-64 bg-transparent" id="about">
+    <section class="w-full container-spx grid grid-cols-4 py-32 md:py-64 bg-transparent" id="about">
       <div class="col-span-4 lg:col-span-2 flex flex-wrap justify-start content-start cursor-default text-base">
         <h4 v-scroll-reveal="{ delay: 100, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px' }" class="relative w-full text-left flex flex-wrap justify-start">
           <span class="w-full text-blue-s text-xl font-secondary leading-tight">Turn vision into reality</span>

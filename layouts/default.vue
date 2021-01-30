@@ -108,4 +108,8 @@ img[lazy='loading'] {
     }
 }
 /* Zoom In End */
+
+.container-spx{
+  @apply px-6 md:px-10 lg:px-16 xl:px-24;
+}
 </style>
