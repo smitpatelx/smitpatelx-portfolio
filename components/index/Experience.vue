@@ -1,46 +1,58 @@
 <template>
-    <section class="w-full flex flex-wrap justify-center items-center mt-24 lg:mt-0 mb-24 lg:mb-10 p-4 md:p-10 lg:p-32" id="experience">
-        <div class="max-w-2xl flex flex-wrap justify-start items-center cursor-default">
+    <section class="w-full flex flex-wrap justify-center items-center mt-24 lg:mt-0 container-spx py-16 md:py-20 lg:py-24" id="experience">
+        <div class="flex flex-wrap justify-start items-center cursor-default">
             <h2 v-scroll-reveal="{ delay: 100, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full text-gray-700 text-3xl md:text-4xl font-semibold leading-tight text-center mb-12">
                 My Experience
             </h2>
             <div class="w-full h-full flex flex-wrap">
-                <div class="w-full flex flex-wrap items-center justify-center">
-                    <div class="mb-4 flex flex-wrap items-center justify-center leading-none relative">
-                        <span class="absolute bg-blue-s bg-opacity-75 h-8 w-26 rounded-md top-0 transition-all duration-300 ease-in-out z-0" :style="`left:${current_company*6.5}rem`"></span>
-                        <button role="tab" aria-selected="true" type="button" @click="change_company(0)" class="text-nav">Netdevv</button>
-                        <button role="tab" aria-selected="false" type="button" @click="change_company(1)" class="text-nav">Blabbly</button>
-                    </div>
-                </div>
-                <div class="w-full relative antialiased" style="min-height: 80vh;">
-                    <div v-if="!current_company" class="w-full flex flex-wrap flex-col pl-4 mt-6 lg:mt-0">
-                        <div class="w-full flex flex-wrap flex-col items-center justify-center">
-                            <p class="text-xl font-secondary text-gray-800">Full-stack Developer <span class="pl-2 text-blue-s whitespace-nowrap">@ Netdevv</span></p>
-                            <p class="text-base font-secondary text-gray-500 font-mono mt-3">Oct 2017 – Apr 2020</p>
+                <div class="w-full max-w-7xl flex flex-wrap justify-center items-stretch">
+                    <div class="my-4 p-3 w-full md:w-1/2 lg:w-1/3 flex flex-wrap justify-between items-stretch select-none" v-scroll-reveal="{ delay: 200, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}">
+                        <div class="bg-white shadow-lg rounded-lg p-6">
+                            <div class="w-full flex flex-wrap flex-col items-start justify-center">
+                                <p class="text-xl font-secondary text-gray-800">Full-stack Developer</p>
+                                <p class="text-lg text-blue-500">Netdevv</p>
+                                <p class="text-base font-secondary text-gray-500 font-mono mt-3">Oct 2017 – Apr 2020</p>
+                            </div>
+                            <ul class="text-gray-800 pt-6 list-disc pl-4 text-base font-light">
+                                <li>Building Backend API using Node.js, PHP, ASP.NET, JAVA to serve requests and content on front-end.</li>
+                                <li>Setup containers on Debian based systems to host Nginx and Apache servers. </li>
+                                <li>Setup docker containers for Postgres, MySql and MongoDB to improve stability and scalability of projects.</li>
+                                <li>Develop UI/UX by using tools like AdobeXD, Figma and collobrate with other developers to improve design.</li>
+                                <li>Work as part of an agile team fostering teamwork, mentoring others, and striving for overall excellence.</li>
+                            </ul>
                         </div>
-                        <ul class="text-gray-800 pt-6 text-base font-light w-full">
-                            <li>Building Backend API using Node.js, PHP, ASP.NET, JAVA to serve 10,000+ requests and server content on front-end.</li>
-                            <li>Setup containers on Debian based systems to host Nginx and Apache servers. </li>
-                            <li>Improve security of websites using LetsEncrypt’s Certbot on linux and configure certificates for nginx and apache.</li>
-                            <li>Setup docker containers for Postgres, MySql and MongoDB to improve stability and scalability of projects.</li>
-                            <li>Develop UI/UX by using tools like AdobeXD, Figma and collobrate with other developers to improve design.</li>
-                            <li>Prototype responsive websites using Nuxt.js; design interactions using SCSS, TailwindCss and BootStrap.</li>
-                            <li>Use version control on Github and Gitlabs to collobrate with team and share my code as OpenSource.</li>
-                            <li>Work as part of an agile team fostering teamwork, mentoring others, and striving for overall excellence.</li>
-                        </ul>
                     </div>
-                    <div v-if="current_company" class="w-full flex flex-wrap flex-col pl-4 mt-6 lg:mt-0">
-                        <div class="w-full flex flex-wrap flex-col items-center justify-center">
-                            <p class="text-xl font-secondary text-gray-800">Director of Web Development<span class="pl-2 text-blue-s whitespace-nowrap">@ Blabbly</span></p>
-                            <p class="text-base font-secondary text-gray-500 font-mono mt-3">June 2020 - Present</p>
+                    <div class="my-4 p-3 w-full md:w-1/2 lg:w-1/3 flex flex-wrap justify-between items-stretch select-none" v-scroll-reveal="{ delay: 300, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}">
+                        <div class="bg-white shadow-lg rounded-lg p-6">
+                            <div class="w-full flex flex-wrap flex-col items-start justify-center">
+                                <p class="text-xl font-secondary text-gray-800">Director of Web Development</p>
+                                <p class="text-lg text-blue-500">Blabbly</p>
+                                <p class="text-base font-secondary text-gray-500 font-mono mt-3">June 2020 - Jan 2021</p>
+                            </div>
+                            <ul class="text-gray-800 pt-6 list-disc pl-4 text-base font-light">
+                                <li>Perform web development tasks utilizing PHP/NodeJs Framework, Web Services, and SQL Server</li>
+                                <li>Lead design and implementation of solutions for our corporate websites and microsites</li>
+                                <li>Design and evolve highly interactive user interfaces and HTML prototypes for web and email initiatives</li>
+                                <li>Work as part of an agile team fostering teamwork, mentoring others, and striving for overall excellence</li>
+                                <li>Utilize social media platforms, support advanced online Marketing activities, and integrate with internal systems.</li>
+                            </ul>
                         </div>
-                        <ul class="text-gray-800 pt-6 text-base font-light">
-                            <li>Perform web development tasks utilizing PHP/NodeJs Framework, Web Services, and SQL Server</li>
-                            <li>Lead design and implementation of solutions for our corporate websites and microsites</li>
-                            <li>Design and evolve highly interactive user interfaces and HTML prototypes for web and email initiatives</li>
-                            <li>Work as part of an agile team fostering teamwork, mentoring others, and striving for overall excellence</li>
-                            <li>Utilize social media platforms, support advanced online Marketing activities, and integrate with internal systems.</li>
-                        </ul>
+                    </div>
+                    <div class="my-4 p-3 w-full md:w-1/2 lg:w-1/3 flex flex-wrap justify-between items-stretch select-none" v-scroll-reveal="{ delay: 400, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}">
+                        <div class="bg-white shadow-lg rounded-lg p-6">
+                            <div class="w-full flex flex-wrap flex-col items-start justify-center">
+                                <p class="text-xl font-secondary text-gray-800">Software Engineer</p>
+                                <p class="text-lg text-blue-500">Farmlink Solutions</p>
+                                <p class="text-base font-secondary text-gray-500 font-mono mt-3">Jan 2021 - Present</p>
+                            </div>
+                            <ul class="text-gray-800 pt-6 list-disc pl-4 text-base font-light">
+                                <li>Designing, coding and debugging software applications using front end frameworks and enterprise applications (Full stack development).</li>
+                                <li>Performing Software analysis, code analysis, requirements analysis, software reviews, identification of code metrics, system risk analysis, and software reliability analysis.</li>
+                                <li>Providing assistance with installations, system configuration and third-party system integrations.</li>
+                                <li>Providing team members and clients with support and guidance</li>
+                                <li>Writing Tests and Migrations for back-end.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -94,18 +106,11 @@ export default {
 }
 
 li{
-    @apply mb-2 flex w-full;
+    @apply mb-2.5;
 
-    &::before{
-        content:'';
-        display:inline-flex; 
-        height:0.7em; 
-        width:1em; 
-        background-image:url('/assets/list-style-svg.svg'); 
-        background-size:contain; 
-        background-repeat:no-repeat; 
-        padding-left: 2em;
-        margin-top: 7px;
-    }
+    // &::before{
+    //     content:'';
+    //     @apply inline-flex w-2 h-0.5 bg-blue-600 absolute -left-4 top-3 transform;
+    // }
 }
 </style>
