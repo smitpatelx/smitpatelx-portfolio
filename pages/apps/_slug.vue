@@ -10,13 +10,27 @@
     </div>
     <div class="flex w-full flex-wrap-reverse lg:flex-wrap justify-center items-start z-20">
       <article class="w-full lg:w-4/6 m-0 px-5 md:px-8 lg:px-20">
-        <div class="px-0 md:px-4 lg:px-0 mb-8 py-0 w-full flex flex-wrap justify-start items-start" v-lazy-container="{ selector: 'img' }">
-          <img v-if="article.banner_url" :data-src="require(`~/static/${article.banner_url}?webp`)"
-              :data-loading="require(`~/static/${article.banner_url}?lqip`)"
-              class="min:h-10 min:w-10 w-full h-24rem self-center inline-block rounded-none md:rounded-lg shadow-lg" :alt="article.title">
-          <img v-if="!article.banner_url" :data-src="require(`~/static/noimage.png`)"
-            :data-loading="require(`~/static/noimage.png?lqip`)" 
-            class="min:h-10 min:w-10 w-full h-24rem self-center inline-block rounded-none md:rounded-lg shadow-lg" :alt="article.title">
+        <div class="px-0 md:px-4 lg:px-0 mb-8 py-0 w-full flex flex-wrap justify-start items-start" >
+          <nuxt-picture
+            v-if="article.banner_url"
+            placeholder
+            :src="article.banner_url"
+            class="min:h-10 min:w-10 w-full h-24rem self-center inline-block rounded-none md:rounded-lg shadow-lg"
+            :title="article.title"
+            :alt="article.title"
+            width="1200"
+            height="337"
+          />
+          <nuxt-picture
+            v-if="!article.banner_url"
+            placeholder
+            src="noimage.png"
+            class="min:h-10 min:w-10 w-full h-24rem self-center inline-block rounded-none md:rounded-lg shadow-lg"
+            :title="article.title"
+            :alt="article.title"
+            width="1200"
+            height="337"
+          />
         </div>
         <nuxt-content :document="article" class="prose" />
       </article>
@@ -76,21 +90,21 @@
 import ScrollingImages from '@/components/library/ScrollingImages.vue';
   export default {
     async asyncData({ $content, params }) {
-        const article = await $content('apps', params.slug).fetch()
-        return { article }
+      const article = await $content('apps', params.slug).fetch()
+      return { article }
     },
     data(){
-        return{
-            dummy: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis voluptates libero explicabo autem tempore quasi vero, similique nobis ullam dolorem ipsam minima, illo cumque vitae. Facilis quae ducimus eligendi! Laborum?', 
-        }
+      return{
+        
+      }
     },
     filters:{
-        truncate: (val)=>{
-            let str_arrs = val.split(" ");
-            str_arrs.length = 20;
-            
-            return str_arrs.join(" ");
-        },
+      truncate: (val)=>{
+        let str_arrs = val.split(" ");
+        str_arrs.length = 20;
+
+        return str_arrs.join(" ");
+      },
     },
     components:{
       ScrollingImages,

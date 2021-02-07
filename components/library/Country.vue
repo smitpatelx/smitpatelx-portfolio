@@ -1,7 +1,17 @@
 <template>
     <div v-click-outside="()=>{menu_state=false}" v-focus-outside="()=>{menu_state=false}" class="flex cursor-pointer bg-gray-200 rounded items-stretch justify-center z-20" >
-        <button tabindex="2" class="flex-1 items-center justify-center self-stretch rounded py-1 px-2 focus:outline-none" v-lazy-container="{ selector: 'img' }" @click.prevent="open_menu()" @keydown.enter="menu_state ? ()=>{} : open_menu()" @keydown.38="up_one" @keydown.40="down_one">
-            <img class="h-5 w-8 inline-block rounded-sm" :data-src="require(`~/static/flags/${current_country}.svg`)" data-loading="/image-loading.gif" />
+        <button tabindex="2" class="flex-1 items-center content-center justify-center self-stretch rounded py-1 px-2 focus:outline-none"  @click.prevent="open_menu()" @keydown.enter="menu_state ? ()=>{} : open_menu()" @keydown.38="up_one" @keydown.40="down_one">
+            <div class="w-full flex flex-wrap items-center justify-center">
+                <nuxt-picture
+                    placeholder
+                    :src="`/flags/${current_country}.svg`"
+                    class="h-5 w-8 inline-block rounded-sm"
+                    :title="current_country"
+                    :alt="current_country"
+                    width="40"
+                    height="30"
+                />
+            </div>
         </button>
         <transition name="slide">
             <div @blur="hide_menu" v-if="menu_state" class="mt-12 shadow-lg absolute custom_scroll flex flex-col w-64 bg-gray-100 border border-gray-300 rounded-md top-0 left-0">
@@ -39,7 +49,6 @@ export default {
         load_countries(){
             this.$axios.$get("https://static.smitpatelx.com/smitpatelx/json/name_alpha2_calling_codes.json")
             .then(res=>{
-                console.log(res)
                 this.countryData = res;
                 this.new_array = res;
             }).catch(err=>{

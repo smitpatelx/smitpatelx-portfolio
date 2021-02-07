@@ -81,9 +81,9 @@ export default {
     '@nuxtjs/tailwindcss',
     '@nuxtjs/style-resources',
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-    '@aceforth/nuxt-optimized-images',
     '@nuxtjs/pwa',
     '@/modules/generator',
+    '@nuxt/image'
   ],
   /*
   ** Nuxt.js modules
@@ -113,9 +113,6 @@ export default {
       priority: 1,
       lastmod: new Date()
     }
-  },
-  optimizedImages: {
-    optimizeImages: true
   },
   /*
   ** Axios module configuration

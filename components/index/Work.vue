@@ -7,10 +7,16 @@
             <div class="w-full h-full flex flex-wrap pb-10 justify-center items-center">
                 <!-- Project 1 - Start -->
                 <div class="w-full flex flex-wrap relative justify-end rounded mb-10" >
-                    <a href="https://4unaturalistic.com/" target="_blank" v-lazy-container="{ selector: 'img' }" v-scroll-reveal="{ delay: 300, mobile: true, viewOffset: { top: 50, right: 0, bottom: 0, left: 0, }, origin: 'left', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center shadow-xl focus:outline-none focus:ring focus:ring-blue-400">
-                        <img :data-src="require('~/static/projects/4unaturalistic.png')"
-                        :data-loading="require('~/static/projects/4unaturalistic.png?lqip')"
-                        class="rounded-sm project-img w-full" title="Featured Shot" alt="Project Image">
+                    <a href="https://4unaturalistic.com/" target="_blank"  v-scroll-reveal="{ delay: 300, mobile: true, viewOffset: { top: 50, right: 0, bottom: 0, left: 0, }, origin: 'left', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center shadow-xl focus:outline-none focus:ring focus:ring-blue-400">
+											<nuxt-picture
+												placeholder
+												src="/projects/4unaturalistic.png"
+												class="rounded-sm project-img w-full"
+												title="4unaturalistic.com"
+												alt="4unaturalistic.com"
+												width="480"
+												height="245"
+											/>
                     </a>
                     <div v-scroll-reveal="{ delay: 300, mobile: true, viewOffset: { top: 50, right: 0, bottom: 0, left: 0, }, origin: 'right', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 z-10 flex flex-wrap flex-col justify-start items-end py-5 md:min-h-full">
                         <h3 class="font-mono text-blue-600 text-sm text-right">Featured Project</h3>
@@ -55,19 +61,31 @@
                             </a>
                         </div>
                     </div>
-                    <a href="https://4unaturalistic.netlify.app" target="_blank" v-lazy-container="{ selector: 'img' }" v-scroll-reveal="{ delay: 300, mobile: true, viewOffset: { top: 50, right: 0, bottom: 0, left: 0, }, origin: 'right', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center shadow-xl focus:outline-none focus:ring focus:ring-blue-400">
-                        <img :data-src="require('~/static/projects/4unaturalistic-netlify.png')"
-                            :data-loading="require('~/static/projects/4unaturalistic-netlify.png?lqip')"
-                            class="rounded-sm project-img w-full" title="Featured Shot" alt="Project Image">
+                    <a href="https://4unaturalistic.netlify.app" target="_blank"  v-scroll-reveal="{ delay: 300, mobile: true, viewOffset: { top: 50, right: 0, bottom: 0, left: 0, }, origin: 'right', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center shadow-xl focus:outline-none focus:ring focus:ring-blue-400">
+											<nuxt-picture
+												placeholder
+												src="/projects/4unaturalistic-netlify.png"
+												class="rounded-sm project-img w-full"
+												title="4unaturalistic.netlify.app"
+												alt="4unaturalistic.netlify.app"
+												width="480"
+												height="245"
+											/>
                     </a>
                 </div>
                 <!-- Project 2 - End -->
                 <!-- Project 3 - Start -->
                 <div class="w-full flex flex-wrap relative justify-end rounded mb-10" >
-                    <a href="https://avenest.smitpatelx.com" target="_blank" v-lazy-container="{ selector: 'img' }" v-scroll-reveal="{ delay: 300, mobile: true, viewOffset: { top: 50, right: 0, bottom: 0, left: 0, }, origin: 'left', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center shadow-xl focus:outline-none focus:ring focus:ring-blue-400">
-                        <img :data-src="require('~/static/projects/avenest.png')"
-                            :data-loading="require('~/static/projects/avenest.png?lqip')"
-                            class="rounded-sm project-img w-full" title="Featured Shot" alt="Project Image">
+                    <a href="https://avenest.smitpatelx.com" target="_blank"  v-scroll-reveal="{ delay: 300, mobile: true, viewOffset: { top: 50, right: 0, bottom: 0, left: 0, }, origin: 'left', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center shadow-xl focus:outline-none focus:ring focus:ring-blue-400">
+											<nuxt-picture
+												placeholder
+												src="/projects/avenest.png"
+												class="rounded-sm project-img w-full"
+												title="avenest.smitpatelx.com"
+												alt="avenest.smitpatelx.com"
+												width="480"
+												height="245"
+											/>
                     </a>
                     <div v-scroll-reveal="{ delay: 300, mobile: true, viewOffset: { top: 50, right: 0, bottom: 0, left: 0, }, origin: 'right', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 z-10 flex flex-wrap flex-col justify-start items-end py-5 md:min-h-full">
                         <h3 class="font-mono text-blue-600 text-sm text-right">Featured Project</h3>
@@ -115,19 +133,31 @@
                             </a>
                         </div>
                     </div>
-                    <a href="https://snapi.netlify.app/" target="_blank" v-lazy-container="{ selector: 'img' }" v-scroll-reveal="{ delay: 300, mobile: true, viewOffset: { top: 50, right: 0, bottom: 0, left: 0, }, origin: 'right', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center shadow-xl focus:outline-none focus:ring focus:ring-blue-400">
-                        <img :data-src="require('~/static/projects/snapi.png')"
-                            :data-loading="require('~/static/projects/snapi.png?lqip')"
-                            class="rounded-sm project-img w-full" title="Featured Shot" alt="Project Image">
+                    <a href="https://snapi.netlify.app/" target="_blank"  v-scroll-reveal="{ delay: 300, mobile: true, viewOffset: { top: 50, right: 0, bottom: 0, left: 0, }, origin: 'right', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center shadow-xl focus:outline-none focus:ring focus:ring-blue-400">
+											<nuxt-picture
+												placeholder
+												src="/projects/snapi.png"
+												class="rounded-sm project-img w-full"
+												title="snapi.netlify.app"
+												alt="snapi.netlify.app"
+												width="480"
+												height="245"
+											/>
                     </a>
                 </div>
                 <!-- Project 4 - End -->
                 <!-- Project 5 - Start -->
                 <div class="w-full flex flex-wrap relative justify-end rounded mb-10" >
-                    <a href="https://dcwebd.netlify.app/" target="_blank" v-lazy-container="{ selector: 'img' }" v-scroll-reveal="{ delay: 300, mobile: true, viewOffset: { top: 50, right: 0, bottom: 0, left: 0, }, origin: 'left', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center shadow-xl focus:outline-none focus:ring focus:ring-blue-400">
-                        <img :data-src="require('~/static/projects/dcwebd.png')"
-                            :data-loading="require('~/static/projects/dcwebd.png?lqip')"
-                            class="rounded-sm project-img w-full" title="Featured Shot" alt="Project Image">
+                    <a href="https://dcwebd.netlify.app/" target="_blank"  v-scroll-reveal="{ delay: 300, mobile: true, viewOffset: { top: 50, right: 0, bottom: 0, left: 0, }, origin: 'left', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 md:h-full z-0 rounded flex justify-center items-center shadow-xl focus:outline-none focus:ring focus:ring-blue-400">
+                      <nuxt-picture
+												placeholder
+												src="/projects/dcwebd.png"
+												class="rounded-sm project-img w-full"
+												title="dcwebd.netlify.app"
+												alt="dcwebd.netlify.app"
+												width="480"
+												height="245"
+											/>
                     </a>
                     <div v-scroll-reveal="{ delay: 300, mobile: true, viewOffset: { top: 50, right: 0, bottom: 0, left: 0, }, origin: 'right', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="w-full md:w-1/2 z-10 flex flex-wrap flex-col justify-start items-end py-5 md:min-h-full">
                         <h3 class="font-mono text-blue-600 text-sm text-right">Featured Project</h3>

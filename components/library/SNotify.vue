@@ -1,7 +1,7 @@
 <template>
     <div class="s-notification-container">
         <transition-group name="notify">
-            <div v-for="(note,i) in notificationQue" :key="i" class="s-notification" :class="note.class" @click="$store.commit('HIDE_NOTIFY', i);">
+            <div v-for="(note,i) in notificationQue" :key="i+note.title+note.text" class="s-notification" :class="note.class" @click="$store.commit('HIDE_NOTIFY', i);">
                 <span class="title">{{note.title}}</span>
                 <span class="text">{{note.text}}</span>
             </div>

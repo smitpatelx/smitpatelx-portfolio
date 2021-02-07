@@ -85,8 +85,15 @@
         </div>
       </div>
       <div class="flex col-span-4 lg:col-span-2 justify-center items-center">
-        <div class="w-full flex flex-wrap justify-center items-center mt-24 lg:mt-0 p-8" v-lazy-container="{ selector: 'img' }">
-          <img :data-src="require('~/static/SMIT-GRAY-SCALED.jpg')" :data-loading="require(`~/static/SMIT-GRAY-SCALED.jpg?lqip`)" class="w-64 md:w-full max-w-sm z-10 h-auto ml-0 md:ml-8 rounded transform hover:scale-95 skew-y-3 -skew-x-6 transition-all duration-300 ease-in-out" />
+        <div class="w-full flex flex-wrap justify-center items-center mt-24 lg:mt-0 p-8" >
+          <nuxt-picture
+            placeholder 
+            src="/SMIT-GRAY-SCALED.jpg"
+            alt="Smit Patel"
+            width="400"
+            height="400"
+            class="w-64 md:w-full max-w-sm z-10 h-auto ml-0 md:ml-8 rounded transform hover:scale-95 skew-y-3 -skew-x-6 transition-all duration-300 ease-in-out" 
+          />
         </div>
       </div>
     </section>

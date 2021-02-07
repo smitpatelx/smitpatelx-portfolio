@@ -22,13 +22,23 @@
           </nuxt-link>
         </div>
       </div>
-      <div class="grid grid-cols-2 gap-x-4 p-0 md:p-6 w-full md:w-1/2 pt-24 md:pt-0" v-lazy-container="{ selector: 'img' }">
-        <img :data-src="require('~/static/assets/bg-hero-3-min.svg')"
-          :data-loading="require('~/static/assets/bg-hero-3.png?lqip')"
-          class="shadow-lg rounded-xl z-20" alt="Hero Mockup 1">
-        <img :data-src="require('~/static/assets/bg-hero-2-min.svg')"
-          :data-loading="require('~/static/assets/bg-hero-2.png?lqip')"
-          class="shadow-lg rounded-xl z-20" alt="Hero Mockup 2">
+      <div class="grid grid-cols-2 gap-x-4 p-0 md:p-6 w-full md:w-1/2 pt-24 md:pt-0" >
+        <nuxt-picture
+          placeholder
+          src="/assets/bg-hero-3-min.svg"
+          class="shadow-lg rounded-xl z-20"
+          alt="Hero Mockup 1"
+          width="100"
+          height="210"
+        />
+        <nuxt-picture 
+          placeholder
+          src="/assets/bg-hero-2-min.svg"
+          class="shadow-lg rounded-xl z-20"
+          alt="Hero Mockup 2"
+          width="100"
+          height="210"
+        />
       </div>
     </div>
     <div class="flex flex-wrap flex-col justify-center items-center">
