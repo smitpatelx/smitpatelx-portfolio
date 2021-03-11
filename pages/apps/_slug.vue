@@ -14,7 +14,7 @@
           <nuxt-picture
             v-if="article.banner_url"
             placeholder
-            :src="`@/static/${article.banner_url}`"
+            :src="`/${this.article.banner_url}`"
             class="min:h-10 min:w-10 w-full h-24rem self-center inline-block rounded-none md:rounded-lg shadow-lg"
             :title="article.title"
             :alt="article.title"
@@ -114,6 +114,14 @@ import ScrollingImages from '@/components/library/ScrollingImages.vue';
         window.scrollTo(0,0);
       }
     },
+    computed:{
+      article_image(){
+        if (!this.article.banner_url) {
+          return
+        }
+        return `~@/static/${this.article.banner_url}`;
+      }
+    }
   }
 </script>
 <style lang="scss">
