@@ -3,12 +3,12 @@
     <div class="w-full flex flex-wrap justify-center items-start  pt-12 pb-20 lg:py-20 relative antialiased container-spx">
       <div class="w-full md:w-1/2 flex flex-wrap items-start justify-start content-start">
         <div class="w-full relative min-h-20">
-          <h1 v-scroll-reveal="{ delay: 1000, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" style="mix-blend-mode: color-burn;color: #3a3a3a; z-index: 2;" class="text-6xl md:text-8xl font-semibold w-full leading-none opacity-75 absolute">Developing<br/>Beautiful<br/>Interfaces</h1>
-          <h1 v-scroll-reveal="{ delay: 1000, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" style="color: #3a3a3a; opacity: 0.3; z-index: 2;" class="text-6xl md:text-8xl font-semibold w-full leading-none opacity-75 absolute">Developing<br/>Beautiful<br/>Interfaces</h1>
-          <h1 v-scroll-reveal="{ delay: 1000, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" style="color: #bdc6d2;" class="text-6xl md:text-8xl font-semibold w-full leading-none opacity-75 absolute">Developing<br/>Beautiful<br/>Interfaces</h1>
+          <h1 style="mix-blend-mode: color-burn;color: #3a3a3a; z-index: 2;" class="dbi_txt text-6xl md:text-8xl font-semibold w-full leading-none opacity-75 absolute">Developing<br/>Beautiful<br/>Interfaces</h1>
+          <h1 style="color: #3a3a3a; opacity: 0.3; z-index: 2;" class="dbi_txt text-6xl md:text-8xl font-semibold w-full leading-none absolute">Developing<br/>Beautiful<br/>Interfaces</h1>
+          <h1 style="color: #bdc6d2;" class="dbi_txt text-6xl md:text-8xl font-semibold w-full leading-none opacity-75 absolute">Developing<br/>Beautiful<br/>Interfaces</h1>
         </div>
         <h3 v-scroll-reveal="{ delay: 1400, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="text-lg lg:text-xl text-gray-600 w-full z-10 my-6 md:my-6 font-light">
-          I'm a Full Stack Developer based in Winnipeg.<br/> 
+          I'm a Full Stack Developer based in Winnipeg.<br/>
           Specialised in building and designing websites and applications.
         </h3>
         <div v-scroll-reveal="{ delay: 1500, mobile: true, origin: 'right', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '180px'}" class="w-full z-10 flex flex-wrap justify-start items-center pt-4">
@@ -31,7 +31,7 @@
           width="100"
           height="210"
         />
-        <nuxt-picture 
+        <nuxt-picture
           placeholder
           src="/assets/bg-hero-2-min.svg"
           class="shadow-lg rounded-xl z-20"
@@ -76,17 +76,17 @@ export default {
     return {
       name: 'smitpatelx'
     }
-  }
+  },
 }
 </script>
 
 <style lang="scss">
 .hero-img-container{
-  height:auto; 
+  height:auto;
   transform: translateX(0%);
 
-  @media (min-width: 740px) { 
-    height:100%; 
+  @media (min-width: 740px) {
+    height:100%;
     transform: translateX(30%);
   }
   @media (min-width: 1024px) {
@@ -96,8 +96,8 @@ export default {
 
 .w-20vw{
   width: 15rem;
-  
-  @media (min-width: 740px) { 
+
+  @media (min-width: 740px) {
     width: 15rem;
   }
   @media (min-width: 1024px) {
@@ -108,7 +108,7 @@ export default {
 .min-h-20{
   min-height:14rem;
 
-  @media (min-width: 740px) { 
+  @media (min-width: 740px) {
     min-height:16rem;
   }
   @media (min-width: 1024px) {
@@ -142,7 +142,7 @@ export default {
 .cube-hero-section{
   filter: blur(4px);
 
-  @media (min-width: 740px) { 
+  @media (min-width: 740px) {
       filter: blur(0px);
   }
 }

@@ -47,10 +47,6 @@
 <script>
 
 export default {
-    // layout: 'apps',
-    components:{
-        
-    },
     data(){
         return{
         }

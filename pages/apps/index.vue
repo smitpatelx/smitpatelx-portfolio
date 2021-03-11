@@ -1,36 +1,38 @@
 <template>
     <div class="w-full flex flex-col md:flex-row flex-wrap items-stretch justify-center py-4 bg-gray-50" style="z-index:20;">
         <div class="px-0 md:px-6 lg:px-10 pb-10 flex flex-wrap relative items-start justify-center" style="z-index:20;">
-            <div class="w-full h-16 flex flex-wrap items-start justify-center mb-4 px-4" style="z-index:20;">
-                <span style="z-index:20;" class="font-bold text-4xl text-gray-100" v-scroll-reveal="{ delay: 100, mobile: true, origin: 'top', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}">Apps</span>
+            <div class="w-full h-16 flex flex-wrap items-start justify-center mb-4 px-4 relative" style="z-index:20;">
+                <span style="z-index:20;" class="font-bold text-4xl text-gray-100 relative" v-scroll-reveal="{ delay: 100, mobile: true, origin: 'top', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}">Apps</span>
             </div>
-            <div class="w-auto pb-8 block md:inline-block" style="z-index:20;">
-                <ul class="list-style-1" style="z-index:20;">
-                    <li v-scroll-reveal="{ delay: 500, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}">
-                        <span>
-                            <svg viewBox="0 0 24 24"><path fill-rule="evenodd" d="M20.7071 5.29289c.3905.39053.3905 1.02369 0 1.41422L9.70711 17.7071c-.39053.3905-1.02369.3905-1.41422 0l-5-5c-.39052-.3905-.39052-1.0237 0-1.4142.39053-.3905 1.02369-.3905 1.41422 0L9 15.5858 19.2929 5.29289c.3905-.39052 1.0237-.39052 1.4142 0z" clip-rule="evenodd"/></svg>
-                        </span>
-                         Fully supported via github issues.
-                    </li>
-                    <li v-scroll-reveal="{ delay: 40+500, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}">
-                        <span>
-                            <svg viewBox="0 0 24 24"><path fill-rule="evenodd" d="M20.7071 5.29289c.3905.39053.3905 1.02369 0 1.41422L9.70711 17.7071c-.39053.3905-1.02369.3905-1.41422 0l-5-5c-.39052-.3905-.39052-1.0237 0-1.4142.39053-.3905 1.02369-.3905 1.41422 0L9 15.5858 19.2929 5.29289c.3905-.39052 1.0237-.39052 1.4142 0z" clip-rule="evenodd"/></svg>
-                        </span>
-                         Open-source and customizable.
-                    </li>
-                    <li v-scroll-reveal="{ delay: 80+500, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}">
-                        <span>
-                            <svg viewBox="0 0 24 24"><path fill-rule="evenodd" d="M20.7071 5.29289c.3905.39053.3905 1.02369 0 1.41422L9.70711 17.7071c-.39053.3905-1.02369.3905-1.41422 0l-5-5c-.39052-.3905-.39052-1.0237 0-1.4142.39053-.3905 1.02369-.3905 1.41422 0L9 15.5858 19.2929 5.29289c.3905-.39052 1.0237-.39052 1.4142 0z" clip-rule="evenodd"/></svg>
-                        </span>
-                         Regular Updates & Full testing.
-                    </li>
-                    <li v-scroll-reveal="{ delay: 120+500, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}">
-                        <span>
-                            <svg viewBox="0 0 24 24"><path fill-rule="evenodd" d="M20.7071 5.29289c.3905.39053.3905 1.02369 0 1.41422L9.70711 17.7071c-.39053.3905-1.02369.3905-1.41422 0l-5-5c-.39052-.3905-.39052-1.0237 0-1.4142.39053-.3905 1.02369-.3905 1.41422 0L9 15.5858 19.2929 5.29289c.3905-.39052 1.0237-.39052 1.4142 0z" clip-rule="evenodd"/></svg>
-                        </span>
-                         Security and privacy
-                    </li>
-                </ul>
+            <div class="w-full flex flex-wrap items-center justify-center relative">
+                <div class="w-auto pb-8 block md:inline-block relative" style="z-index:20;">
+                    <ul class="list-style-1 relative" style="z-index:20;">
+                        <li v-scroll-reveal="{ delay: 500, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}">
+                            <span>
+                                <svg viewBox="0 0 24 24"><path fill-rule="evenodd" d="M20.7071 5.29289c.3905.39053.3905 1.02369 0 1.41422L9.70711 17.7071c-.39053.3905-1.02369.3905-1.41422 0l-5-5c-.39052-.3905-.39052-1.0237 0-1.4142.39053-.3905 1.02369-.3905 1.41422 0L9 15.5858 19.2929 5.29289c.3905-.39052 1.0237-.39052 1.4142 0z" clip-rule="evenodd"/></svg>
+                            </span>
+                             Fully supported via github issues.
+                        </li>
+                        <li v-scroll-reveal="{ delay: 40+500, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}">
+                            <span>
+                                <svg viewBox="0 0 24 24"><path fill-rule="evenodd" d="M20.7071 5.29289c.3905.39053.3905 1.02369 0 1.41422L9.70711 17.7071c-.39053.3905-1.02369.3905-1.41422 0l-5-5c-.39052-.3905-.39052-1.0237 0-1.4142.39053-.3905 1.02369-.3905 1.41422 0L9 15.5858 19.2929 5.29289c.3905-.39052 1.0237-.39052 1.4142 0z" clip-rule="evenodd"/></svg>
+                            </span>
+                             Open-source and customizable.
+                        </li>
+                        <li v-scroll-reveal="{ delay: 80+500, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}">
+                            <span>
+                                <svg viewBox="0 0 24 24"><path fill-rule="evenodd" d="M20.7071 5.29289c.3905.39053.3905 1.02369 0 1.41422L9.70711 17.7071c-.39053.3905-1.02369.3905-1.41422 0l-5-5c-.39052-.3905-.39052-1.0237 0-1.4142.39053-.3905 1.02369-.3905 1.41422 0L9 15.5858 19.2929 5.29289c.3905-.39052 1.0237-.39052 1.4142 0z" clip-rule="evenodd"/></svg>
+                            </span>
+                             Regular Updates & Full testing.
+                        </li>
+                        <li v-scroll-reveal="{ delay: 120+500, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}">
+                            <span>
+                                <svg viewBox="0 0 24 24"><path fill-rule="evenodd" d="M20.7071 5.29289c.3905.39053.3905 1.02369 0 1.41422L9.70711 17.7071c-.39053.3905-1.02369.3905-1.41422 0l-5-5c-.39052-.3905-.39052-1.0237 0-1.4142.39053-.3905 1.02369-.3905 1.41422 0L9 15.5858 19.2929 5.29289c.3905-.39052 1.0237-.39052 1.4142 0z" clip-rule="evenodd"/></svg>
+                            </span>
+                             Security and privacy
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="w-full max-w-6xl flex flex-wrap -mx-4 justify-center items-stretch">
                 <div v-for="(app, i) in apps" :key="i" class="my-4 px-4 w-full md:w-1/2 lg:w-1/3 flex flex-wrap justify-between items-stretch select-none">
@@ -76,14 +78,6 @@
 
 
 export default {
-    // layout: 'apps',
-    components:{
-        
-    },
-    data(){
-        return{
-        }
-    },
     async asyncData({ $content, params }) {
         const apps = await $content('apps').fetch()
         return { apps }

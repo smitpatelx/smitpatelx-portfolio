@@ -6,8 +6,7 @@
       </fade-transition>
     </client-only> -->
     <!-- <div :class="loading ? 'hidden' : 'block'" v-if="!loading"> -->
-    <hero-gradient></hero-gradient>
-    <div>
+    <div class="relative">
       <Header />
       <!-- <SideBars></SideBars> -->
       <fade-transition :duration="{ enter: 900, leave: 600 }">
@@ -16,6 +15,7 @@
       <Footer />
       <s-notify></s-notify>
     </div>
+    <hero-gradient></hero-gradient>
   </div>
 </template>
 
@@ -111,5 +111,6 @@ img[lazy='loading'] {
 
 .container-spx{
   @apply px-6 md:px-10 lg:px-16 xl:px-24;
+  max-width: 1800px;
 }
 </style>

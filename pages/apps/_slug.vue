@@ -14,7 +14,7 @@
           <nuxt-picture
             v-if="article.banner_url"
             placeholder
-            :src="article.banner_url"
+            :src="`@/static/${article.banner_url}`"
             class="min:h-10 min:w-10 w-full h-24rem self-center inline-block rounded-none md:rounded-lg shadow-lg"
             :title="article.title"
             :alt="article.title"
@@ -37,12 +37,12 @@
       <section class="w-full lg:w-2/6 flex flex-wrap items-start justify-center px-6 lg:pr-8">
         <div class="py-4 md:py-12 mb-16 px-6 md:px-10 bg-white shadow-xl antialiased rounded-lg w-full flex flex-wrap justify-start items-start">
           <div class="mb-2 block w-full">
-            <span class="font-secondary text-blue-800">Author:</span> 
-            <span class="font-light text-gray-600 ml-1">{{article.author}}</span> 
+            <span class="font-secondary text-blue-800">Author:</span>
+            <span class="font-light text-gray-600 ml-1">{{article.author}}</span>
           </div>
           <div class="mb-2 block w-full">
             <span class="font-secondary text-blue-800">Description:</span>
-            <span class="font-light text-gray-600 ml-1">{{article.description}}</span> 
+            <span class="font-light text-gray-600 ml-1">{{article.description}}</span>
           </div>
           <div class="mb-2 block w-full">
             <span class="font-secondary text-blue-800">Tags:</span>
@@ -53,27 +53,27 @@
           </div>
           <div class="mb-2 block w-full">
             <span class="font-secondary text-blue-800">Resease Date:</span>
-            <span class="font-light text-gray-600 font-mono ml-1">{{article.reseaseDate}}</span> 
+            <span class="font-light text-gray-600 font-mono ml-1">{{article.reseaseDate}}</span>
           </div>
           <div class="mb-2 block w-full">
             <span class="font-secondary text-blue-800">Contributors:</span>
-            <span class="font-light text-gray-600 ml-1">{{article.contributors}}</span> 
+            <span class="font-light text-gray-600 ml-1">{{article.contributors}}</span>
           </div>
           <div class="mb-2 block w-full">
             <span class="font-secondary text-blue-800">Required WP Version:</span>
-            <span class="font-light text-gray-600 ml-1">{{article.requires_at_least}}</span> 
+            <span class="font-light text-gray-600 ml-1">{{article.requires_at_least}}</span>
           </div>
           <div class="mb-2 block w-full">
             <span class="font-secondary text-blue-800">Tested up to:</span>
-            <span class="font-light text-gray-600 ml-1">{{article.tested_up_to}}</span> 
+            <span class="font-light text-gray-600 ml-1">{{article.tested_up_to}}</span>
           </div>
           <div class="mb-2 block w-full">
             <span class="font-secondary text-blue-800">Stable Release:</span>
-            <span class="font-light text-gray-600 ml-1">{{article.stable_tag}}</span> 
+            <span class="font-light text-gray-600 ml-1">{{article.stable_tag}}</span>
           </div>
           <div class="mb-2 block w-full">
             <span class="font-secondary text-blue-800">License:</span>
-            <span class="font-light text-gray-600 ml-1">{{article.license}}</span> 
+            <span class="font-light text-gray-600 ml-1">{{article.license}}</span>
           </div>
           <div class="w-full flex justify-center items-center pt-8 pb-2">
             <a :href="article.download_url" target="_blank" class="base-btn bg-blue-600 text-gray-100">
@@ -95,7 +95,7 @@ import ScrollingImages from '@/components/library/ScrollingImages.vue';
     },
     data(){
       return{
-        
+
       }
     },
     filters:{

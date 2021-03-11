@@ -1,5 +1,5 @@
 <template>
-    <div style="z-index:1;">
+    <div style="z-index:1; ">
       <canvas style="z-index:1;" id="gradient-canvas"></canvas>  
     </div>
 </template>
