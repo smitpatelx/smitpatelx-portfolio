@@ -5,7 +5,7 @@
                 My Experience
             </h2>
             <div class="w-full h-full flex flex-wrap">
-                <div class="w-full max-w-7xl flex flex-wrap justify-center items-stretch">
+                <div class="w-full max-w-7xl flex flex-wrap justify-center items-stretch mx-auto">
                     <div class="my-4 p-3 w-full md:w-1/2 lg:w-1/3 flex flex-wrap justify-between items-stretch select-none" v-scroll-reveal="{ delay: 200, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}">
                         <div class="bg-white shadow-lg rounded-lg p-6">
                             <div class="w-full flex flex-wrap flex-col items-start justify-center">

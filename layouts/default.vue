@@ -110,7 +110,7 @@ img[lazy='loading'] {
 /* Zoom In End */
 
 .container-spx{
-  @apply px-6 md:px-10 lg:px-16 xl:px-24;
+  @apply px-6 md:px-10 lg:px-16 xl:px-24 mx-auto;
   max-width: 1800px;
 }
 </style>
