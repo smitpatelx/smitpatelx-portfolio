@@ -6,22 +6,62 @@
             </h2>
             <div class="w-full h-full flex flex-wrap">
                 <div class="w-full max-w-7xl flex flex-wrap justify-center items-stretch mx-auto">
-                    <div class="my-4 p-3 w-full md:w-1/2 lg:w-1/3 flex flex-wrap justify-between items-stretch select-none" v-scroll-reveal="{ delay: 200, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}">
+                    <div class="my-4 p-3 w-full md:w-1/2 lg:w-1/3 flex flex-wrap justify-between items-stretch select-none" v-scroll-reveal="{ delay: 400, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}">
                         <div class="bg-white shadow-lg rounded-lg p-6">
                             <div class="w-full flex flex-wrap flex-col items-start justify-center">
-                                <p class="text-xl font-secondary text-gray-800">Full-stack Developer</p>
-                                <p class="text-lg text-blue-500">Netdevv</p>
-                                <p class="text-base font-secondary text-gray-500 font-mono mt-3">Oct 2017 – Apr 2020</p>
+                                <p class="text-xl font-secondary text-gray-800">Senior Full Stack Engineer</p>
+                                <p class="text-lg text-blue-500">Datomar Labs</p>
+                                <p class="text-base font-secondary text-gray-500 font-mono mt-3">Mar 2022 - Present</p>
                             </div>
                             <ul class="text-gray-800 pt-6 list-disc pl-4 text-base font-light">
-                                <li>Building Backend API using Node.js, PHP, ASP.NET, JAVA to serve requests and content on front-end.</li>
-                                <li>Setup containers on Debian based systems to host Nginx and Apache servers. </li>
-                                <li>Setup docker containers for Postgres, MySql and MongoDB to improve stability and scalability of projects.</li>
-                                <li>Develop UI/UX by using tools like AdobeXD, Figma and collobrate with other developers to improve design.</li>
-                                <li>Work as part of an agile team fostering teamwork, mentoring others, and striving for overall excellence.</li>
+                              <li>
+                                Work with the business unit to understand, develop or refine requirements for projects within the company
+                              </li>
+                              <li>
+                                Work with the back end team to architect solutions for the Company projects
+                              </li>
+                              <li>
+                                Lead the front end development for all projects at Datomar Labs
+                              </li>
+                              <li>
+                                Work with the team to determine the technologies and development stacks used
+                              </li>
+                              <li>
+                                Manage UX and UI design and/or work with outside design stakeholders to ensure high quality design is implemented
+                              </li>
+                              <li>
+                                Design front end development processes and best practices to optimize development at the Company
+                              </li>
+                              <li>
+                                Work with the Company leadership to evaluate new front end candidates for hiring
+                              </li>
+                              <li>
+                                Assist in the onboarding and training of new employees within the team
+                              </li>
+                              <li>
+                                Work with Project Management and Product Management resources to ensure project work is completed on time and within budget
+                              </li>
                             </ul>
                         </div>
                     </div>
+
+                    <div class="my-4 p-3 w-full md:w-1/2 lg:w-1/3 flex flex-wrap justify-between items-stretch select-none" v-scroll-reveal="{ delay: 400, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}">
+                        <div class="bg-white shadow-lg rounded-lg p-6">
+                            <div class="w-full flex flex-wrap flex-col items-start justify-center">
+                                <p class="text-xl font-secondary text-gray-800">Software Engineer</p>
+                                <p class="text-lg text-blue-500">Farmlink Solutions</p>
+                                <p class="text-base font-secondary text-gray-500 font-mono mt-3">Jan 2021 - Jan 2022</p>
+                            </div>
+                            <ul class="text-gray-800 pt-6 list-disc pl-4 text-base font-light">
+                                <li>Designing, coding and debugging software applications using front end frameworks and enterprise applications (Full stack development).</li>
+                                <li>Performing Software analysis, code analysis, requirements analysis, software reviews, identification of code metrics, system risk analysis, and software reliability analysis.</li>
+                                <li>Providing assistance with installations, system configuration and third-party system integrations.</li>
+                                <li>Providing team members and clients with support and guidance</li>
+                                <li>Writing Tests and Migrations for back-end.</li>
+                            </ul>
+                        </div>
+                    </div>
+
                     <div class="my-4 p-3 w-full md:w-1/2 lg:w-1/3 flex flex-wrap justify-between items-stretch select-none" v-scroll-reveal="{ delay: 300, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}">
                         <div class="bg-white shadow-lg rounded-lg p-6">
                             <div class="w-full flex flex-wrap flex-col items-start justify-center">
@@ -38,19 +78,20 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="my-4 p-3 w-full md:w-1/2 lg:w-1/3 flex flex-wrap justify-between items-stretch select-none" v-scroll-reveal="{ delay: 400, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}">
+
+                    <div class="my-4 p-3 w-full md:w-1/2 lg:w-1/3 flex flex-wrap justify-between items-stretch select-none" v-scroll-reveal="{ delay: 200, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}">
                         <div class="bg-white shadow-lg rounded-lg p-6">
                             <div class="w-full flex flex-wrap flex-col items-start justify-center">
-                                <p class="text-xl font-secondary text-gray-800">Software Engineer</p>
-                                <p class="text-lg text-blue-500">Farmlink Solutions</p>
-                                <p class="text-base font-secondary text-gray-500 font-mono mt-3">Jan 2021 - Present</p>
+                                <p class="text-xl font-secondary text-gray-800">Full-stack Developer</p>
+                                <p class="text-lg text-blue-500">Netdevv</p>
+                                <p class="text-base font-secondary text-gray-500 font-mono mt-3">Oct 2017 – Apr 2020</p>
                             </div>
                             <ul class="text-gray-800 pt-6 list-disc pl-4 text-base font-light">
-                                <li>Designing, coding and debugging software applications using front end frameworks and enterprise applications (Full stack development).</li>
-                                <li>Performing Software analysis, code analysis, requirements analysis, software reviews, identification of code metrics, system risk analysis, and software reliability analysis.</li>
-                                <li>Providing assistance with installations, system configuration and third-party system integrations.</li>
-                                <li>Providing team members and clients with support and guidance</li>
-                                <li>Writing Tests and Migrations for back-end.</li>
+                                <li>Building Backend API using Node.js, PHP, ASP.NET, JAVA to serve requests and content on front-end.</li>
+                                <li>Setup containers on Debian based systems to host Nginx and Apache servers. </li>
+                                <li>Setup docker containers for Postgres, MySql and MongoDB to improve stability and scalability of projects.</li>
+                                <li>Develop UI/UX by using tools like AdobeXD, Figma and collobrate with other developers to improve design.</li>
+                                <li>Work as part of an agile team fostering teamwork, mentoring others, and striving for overall excellence.</li>
                             </ul>
                         </div>
                     </div>
