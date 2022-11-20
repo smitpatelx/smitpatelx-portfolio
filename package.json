@@ -37,7 +37,7 @@
     "@tailwindcss/postcss7-compat": "^2.0.3",
     "@tailwindcss/typography": "^0.3.1",
     "autoprefixer": "^9.8.6",
-    "node-sass": "4.14.1",
+    "node-sass": "8.0.0",
     "postcss": "^8.2.10",
     "responsive-loader": "^2.2.0",
     "sass-loader": "^8.0.2",
