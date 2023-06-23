@@ -11,7 +11,7 @@
                             <div class="w-full flex flex-wrap flex-col items-start justify-center">
                                 <p class="text-xl font-secondary text-gray-800">Lead Full Stack Engineer</p>
                                 <p class="text-lg text-blue-500">Datomar Labs</p>
-                                <p class="text-base font-secondary text-gray-500 font-mono mt-3">Mar 2022 - Present</p>
+                                <p class="text-base font-secondary text-gray-500 font-mono mt-3">Mar 2022 - May 2023</p>
                             </div>
                             <ul class="text-gray-800 pt-6 list-disc pl-4 text-base font-light">
                               <li>
