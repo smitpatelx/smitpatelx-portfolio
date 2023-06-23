@@ -12,7 +12,7 @@
           </span>
         </h2>
         <p v-scroll-reveal="{ delay: 300, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px' }" class="mt-5 text-gray-300 tracking-wide font-light text-lg">
-          With over 4 years of senior experience working in the Software Industry with proficiencies in operations, back-end, front-end and dev-ops, I continue to be a driving force for my team.
+          With over 4.5 years of experience working in the Software Industry with proficiencies in Javascript(ES6), Typescript, Python, GO, PHP, UI/UX, C#, Java and many more, I continue to be a driving force for my team. Seeking full time placement where I could deepen my existing knowledge and pick up on new rising tech.
         </p>
         <div class="w-full flex flex-wrap justify-start items-center">
           <nuxt-link to="blog" class="base-btn bg-blue-s text-gray-900 mt-8 hover:bg-white">
