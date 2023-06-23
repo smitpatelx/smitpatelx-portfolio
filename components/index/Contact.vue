@@ -8,30 +8,30 @@
                 <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 my-2">
                     <div class="flex flex-wrap flex-col">
                         <label for="email" class="text-base text-gray-600 mb-2 w-full">Email</label>
-                        <input tabindex="1" required class="w-full form-input" minlength="6" maxlength="50" type="email" name="email" id="email" v-model="email" placeholder="eg. xyz@gmail.com">
+                        <input tabindex="1" required class="w-full form-input" minlength="6" maxlength="50" type="email" name="email" id="email" v-model="email" placeholder="Email address">
                     </div>
                     <div class="flex flex-wrap flex-col">
                         <label for="phone" class="text-base text-gray-600 mb-2 w-full">Phone</label>
                         <div class="grid grid-cols-8 relative w-full gap-x-2">
                             <Country class="flex flex-col items-stretch justify-center content-center col-span-2 focus-within:ring focus-within:ring-blue-400 select-none focus:outline-none" v-on:countrySelected="onCountrySelect"/>
-                            <input tabindex="4" required class="inline-block col-span-6 form-input" type="tel" pattern="[0-9]{10}" maxlength="10" name="phone" id="phone" v-model="phone" placeholder="eg. 000-000-0000">
+                            <input tabindex="4" required class="inline-block col-span-6 form-input" type="tel" pattern="[0-9]{10}" maxlength="10" name="phone" id="phone" v-model="phone" placeholder="0000000000">
                         </div>
                     </div>
                 </div>
                 <div class="w-full grid grid-cols-2 gap-4 my-2">
                     <div class="flex flex-wrap flex-col">
                         <label for="first_name" class="text-base text-gray-600 mb-2 w-full">First Name</label>
-                        <input tabindex="5" required class="w-full form-input" minlength="2" maxlength="15" type="text" name="first_name" id="first_name" v-model="first_name" placeholder="eg. Smit">
+                        <input tabindex="5" required class="w-full form-input" minlength="2" maxlength="15" type="text" name="first_name" id="first_name" v-model="first_name" placeholder="First name">
                     </div>
                     <div class="flex flex-wrap flex-col">
                         <label for="last_name" class="text-base text-gray-600 mb-2">Last Name</label>
-                        <input tabindex="6" required class="w-full form-input" minlength="2" maxlength="15" type="text" name="last_name" id="last_name" v-model="last_name" placeholder="eg. Patel">
+                        <input tabindex="6" required class="w-full form-input" minlength="2" maxlength="15" type="text" name="last_name" id="last_name" v-model="last_name" placeholder="Last name">
                     </div>
                 </div>
                 <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-4 my-2">
                     <div class="flex flex-wrap flex-col">
                         <label for="business_name" class="text-base text-gray-600 mb-2">Business Name</label>
-                        <input tabindex="7" required class="w-full form-input" minlength="5" maxlength="30" type="text" name="business_name" id="business_name" v-model="business_name" placeholder="eg. Google LLC.">
+                        <input tabindex="7" required class="w-full form-input" minlength="5" maxlength="30" type="text" name="business_name" id="business_name" v-model="business_name" placeholder="Business Name">
                     </div>
                     <div class="flex flex-wrap flex-col relative">
                         <label for="no_of_employee" class="text-base text-gray-600 mb-2">No. of Employee</label>
@@ -47,7 +47,7 @@
                 </div>
                 <div class="w-full flex flex-wrap flex-col mt-4 mb-2 pr-2" >
                     <label for="message" class="text-base text-gray-600 mb-2">Additional Message</label>
-                    <textarea tabindex="10" class="form-input" rows="5" maxlength="2000" type="text" name="message" id="message" v-model="message" placeholder="Start typing ..."/>
+                    <textarea tabindex="10" class="form-input" rows="5" maxlength="2000" type="text" name="message" id="message" v-model="message" placeholder="Type your message here."/>
                 </div>
                 <div class="w-full flex flex-wrap flex-row items-center my-2 pr-2 pt-6 justify-between" >
                     <button tabindex="11" class="base-btn bg-blue-600 text-gray-100" type="submit">
