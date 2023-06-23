@@ -9,37 +9,25 @@
                     <div class="my-4 p-3 w-full md:w-1/2 lg:w-1/3 flex flex-wrap justify-between items-stretch select-none" v-scroll-reveal="{ delay: 400, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}">
                         <div class="bg-white shadow-lg rounded-lg p-6">
                             <div class="w-full flex flex-wrap flex-col items-start justify-center">
-                                <p class="text-xl font-secondary text-gray-800">Senior Full Stack Engineer</p>
+                                <p class="text-xl font-secondary text-gray-800">Lead Full Stack Engineer</p>
                                 <p class="text-lg text-blue-500">Datomar Labs</p>
                                 <p class="text-base font-secondary text-gray-500 font-mono mt-3">Mar 2022 - Present</p>
                             </div>
                             <ul class="text-gray-800 pt-6 list-disc pl-4 text-base font-light">
                               <li>
-                                Work with the business unit to understand, develop or refine requirements for projects within the company
+                                Work with the business unit to understand, develop or refine requirements for projects within the company.
                               </li>
                               <li>
-                                Work with the back end team to architect solutions for the Company projects
+                                Manage UX and UI design and/or work with outside design stakeholders to ensure high quality design is implemented.
                               </li>
                               <li>
-                                Lead the front end development for all projects at Datomar Labs
+                                Build ci-cd pipelines, dockerize applications, setup projects, develop independently, research emerging technologies.
                               </li>
                               <li>
-                                Work with the team to determine the technologies and development stacks used
+                                Make use of technologies like React/Nextjs, MUI, Typescript, GO, PostgreSQL, Vuejs, Wordpress, TailwindCss, Headless UI and Framer Motion.
                               </li>
                               <li>
-                                Manage UX and UI design and/or work with outside design stakeholders to ensure high quality design is implemented
-                              </li>
-                              <li>
-                                Design front end development processes and best practices to optimize development at the Company
-                              </li>
-                              <li>
-                                Work with the Company leadership to evaluate new front end candidates for hiring
-                              </li>
-                              <li>
-                                Assist in the onboarding and training of new employees within the team
-                              </li>
-                              <li>
-                                Work with Project Management and Product Management resources to ensure project work is completed on time and within budget
+                                Work on optimizing, refactoring, analysis of code. Ensure good quality of testing and setup logging & analytics.
                               </li>
                             </ul>
                         </div>
@@ -53,11 +41,21 @@
                                 <p class="text-base font-secondary text-gray-500 font-mono mt-3">Jan 2021 - Jan 2022</p>
                             </div>
                             <ul class="text-gray-800 pt-6 list-disc pl-4 text-base font-light">
-                                <li>Designing, coding and debugging software applications using front end frameworks and enterprise applications (Full stack development).</li>
-                                <li>Performing Software analysis, code analysis, requirements analysis, software reviews, identification of code metrics, system risk analysis, and software reliability analysis.</li>
-                                <li>Providing assistance with installations, system configuration and third-party system integrations.</li>
-                                <li>Providing team members and clients with support and guidance</li>
-                                <li>Writing Tests and Migrations for back-end.</li>
+                                <li>
+                                  Design, code and debug software applications using front end frameworks and enterprise applications
+                                </li>
+                                <li>
+                                  Performing Software analysis, requirements gathering, software reviews, identification of code metrics, system risk analysis, and software reliability analysis.
+                                </li>
+                                <li>
+                                  Writing tests, migrations, end-to-end feature testing and development using Python, Django, Postgres, Vuejs.
+                                </li>
+                                <li>
+                                  Mentor junior devs to meet code quality standards.
+                                </li>
+                                <li>
+                                  UI & UX design using figma, keeping up with latest technologies, design UI animations using leaflet and keyframes.
+                                </li>
                             </ul>
                         </div>
                     </div>
