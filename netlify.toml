@@ -1,0 +1,35 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = '''
+    max-age=63072000;
+    includeSubDomains;
+    preload'''
+
+[[redirects]]
+  from = "*.smitpatelx.netlify.com/*"
+  to = "https://www.smitpatelx.com/"
+  status = 301
+  force = true
+  query = {path = ":path"}
+
+[[redirects]]
+  from = "http://smitpatelx.com/*"
+  to = "https://www.smitpatelx.com/"
+  status = 301
+  force = true
+  query = {path = ":path"}
+
+[[redirects]]
+  from = "http://smitpatelx.com/*"
+  to = "https://www.smitpatelx.com/"
+  status = 301
+  force = true
+  query = {path = ":path"}
+
+[[redirects]]
+  from = "http://www.smitpatelx.com/*"
+  to = "https://www.smitpatelx.com/"
+  status = 301
+  force = true
+  query = {path = ":path"}
