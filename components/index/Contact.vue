@@ -150,7 +150,7 @@ export default {
             this.first_name=''
             this.last_name=''
             this.business_name=''
-            this.est_budget=10000
+            this.est_budget=1500
             this.message=''
             this.no_of_employee=''
             this.phone=''
