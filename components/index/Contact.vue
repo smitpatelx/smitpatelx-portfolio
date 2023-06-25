@@ -41,7 +41,7 @@
                 <div class="w-full flex flex-wrap flex-col my-2" >
                     <label for="est_budget" class="text-base text-gray-600 mb-2 flex">Estimated budget: <span class="text-lg ml-1">{{est_budget_f}}</span></label>
                     <div class="w-full flex flex-wrap flex-col relative">
-                        <input tabindex="9" required step="500" class="focus:outline-none z-10" min="3000" max="200000" type="range" name="est_budget" id="est_budget" v-model="est_budget">
+                        <input tabindex="9" required step="500" class="focus:outline-none z-10" min="3000" max="50000" type="range" name="est_budget" id="est_budget" v-model="est_budget">
                         <div class="slider_progress absolute h-2 w-1/2 z-0 rounded mt-2" :style="`width:${(est_budget*100/200000)-1}%`"></div>
                     </div>
                 </div>
@@ -80,7 +80,7 @@ export default {
             first_name:'',
             last_name:'',
             business_name:'',
-            est_budget:10000,
+            est_budget:1500,
             message:'',
             no_of_employee:'',
             phone:'',
