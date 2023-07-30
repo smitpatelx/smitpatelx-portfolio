@@ -1,15 +1,15 @@
 <template>
     <div style="z-index:1; ">
-      <canvas style="z-index:1;" id="gradient-canvas"></canvas>  
+      <canvas style="z-index:1;" id="gradient-canvas"></canvas>
     </div>
 </template>
 <script>
 export default {
-  mounted(){   
+  mounted(){
     /*
     *   Stripe WebGl Gradient Animation
     *   All Credits to Stripe.com
-    *   ScrollObserver functionality to disable animation when not scrolled into view has been disabled and 
+    *   ScrollObserver functionality to disable animation when not scrolled into view has been disabled and
     *   commented out for now.
     *   https://kevinhufnagl.com
     */
@@ -109,15 +109,15 @@ export default {
                             if ("array" === uniform.type) return uniform.value[0].getDeclaration(name, type, uniform.value.length) + `\nconst int ${name}_length = ${uniform.value.length};`;
                             if ("struct" === uniform.type) {
                                 let name_no_prefix = name.replace("u_", "");
-                                return name_no_prefix = 
-                                    name_no_prefix.charAt(0).toUpperCase() + 
-                                    name_no_prefix.slice(1), 
-                                    `uniform struct ${name_no_prefix} 
-                                    {\n` + 
-                                    Object.entries(uniform.value).map(([name, uniform]) => 
+                                return name_no_prefix =
+                                    name_no_prefix.charAt(0).toUpperCase() +
+                                    name_no_prefix.slice(1),
+                                    `uniform struct ${name_no_prefix}
+                                    {\n` +
+                                    Object.entries(uniform.value).map(([name, uniform]) =>
                                     uniform.getDeclaration(name, type)
                                     .replace(/^uniform/, ""))
-                                    .join("") 
+                                    .join("")
                                     + `\n} ${name}${length>0?`[${length}]`:""};`
                             }
                             return `uniform ${uniform.type} ${name}${length>0?`[${length}]`:""};`
@@ -171,7 +171,7 @@ export default {
                         geometry.width = width,
                         geometry.height = height,
                         geometry.orientation = orientation,
-                        geometry.attributes.position.values && geometry.attributes.position.values.length === 3 * geometry.vertexCount 
+                        geometry.attributes.position.values && geometry.attributes.position.values.length === 3 * geometry.vertexCount
                         || (geometry.attributes.position.values = new Float32Array(3 * geometry.vertexCount));
                         const o = width / -2,
                             r = height / -2,
@@ -182,7 +182,7 @@ export default {
                             for (let xIndex = 0; xIndex <= geometry.xSegCount; xIndex++) {
                                 const r = o + xIndex * segment_width,
                                     l = yIndex * (geometry.xSegCount + 1) + xIndex;
-                                geometry.attributes.position.values[3 * l + "xyz".indexOf(orientation[0])] = r, 
+                                geometry.attributes.position.values[3 * l + "xyz".indexOf(orientation[0])] = r,
                                 geometry.attributes.position.values[3 * l + "xyz".indexOf(orientation[1])] = -t
                             }
                         }
@@ -338,10 +338,10 @@ export default {
             zoom: 1,
             rotation: 0,
             playing: true
-        }, 
+        },
         document.querySelectorAll("canvas").length < 1 ? console.log("DID NOT LOAD HERO STRIPE CANVAS") : (
-            
-            this.minigl = new MiniGl(this.el, null, null, !0), 
+
+            this.minigl = new MiniGl(this.el, null, null, !0),
             requestAnimationFrame(() => {
                 this.el && (this.computedCanvasStyle = getComputedStyle(this.el), this.waitForCssVars())
             })
@@ -350,7 +350,7 @@ export default {
             this.scrollObserver.observe(this.el),
             this.scrollObserver.onSeparate(() => {
                 window.removeEventListener("scroll", this.handleScroll), window.removeEventListener("mousedown", this.handleMouseDown), window.removeEventListener("mouseup", this.handleMouseUp), window.removeEventListener("keydown", this.handleKeyDown), this.isIntersecting = !1, this.conf.playing && this.pause()
-            }), 
+            }),
             this.scrollObserver.onIntersect(() => {
                 window.addEventListener("scroll", this.handleScroll), window.addEventListener("mousedown", this.handleMouseDown), window.addEventListener("mouseup", this.handleMouseUp), window.addEventListener("keydown", this.handleKeyDown), this.isIntersecting = !0, this.addIsLoadedClass(), this.play()
             })*/
@@ -527,7 +527,7 @@ export default {
             gradient.initGradient("#gradient-canvas");
         }
     } catch (err) {
-        
+
     }
   }
 }
@@ -538,11 +538,10 @@ export default {
         top: 0;
         width:100%;
         height:100%;
-        --gradient-color-1: #0054ef;
+        --gradient-color-1: #0ea5e9;
         --gradient-color-2: #82dcff;
-        --gradient-color-3: #54baff;
-        // --gradient-color-3: #6c44ee;
-        --gradient-color-4: #6117c2;
+        --gradient-color-3: #60a5fa;
+        --gradient-color-4: #a855f7;
         clip-path: polygon(0 0, 100% 0, 100% 25%, 0 40%);
 
         @media (min-width: 1024px) {
