@@ -541,7 +541,7 @@ export default {
         --gradient-color-1: #0ea5e9;
         --gradient-color-2: #82dcff;
         --gradient-color-3: #60a5fa;
-        --gradient-color-4: #a855f7;
+        --gradient-color-4: #8b5cf6;
         clip-path: polygon(0 0, 100% 0, 100% 25%, 0 40%);
 
         @media (min-width: 1024px) {

@@ -7,7 +7,7 @@
           <h1 style="color: #3a3a3a; opacity: 0.3; z-index: 2;" class="dbi_txt text-6xl md:text-8xl font-semibold w-full leading-none absolute">Developing<br/>Beautiful<br/>Interfaces</h1>
           <h1 style="color: #bdc6d2;" class="dbi_txt text-6xl md:text-8xl font-semibold w-full leading-none opacity-75 absolute">Developing<br/>Beautiful<br/>Interfaces</h1>
         </div>
-        <h3 v-scroll-reveal="{ delay: 1400, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="text-lg lg:text-xl text-gray-900 w-full z-10 my-6 md:my-6 font-medium">
+        <h3 v-scroll-reveal="{ delay: 1400, mobile: true, origin: 'bottom', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '80px'}" class="text-lg lg:text-xl text-gray-900 w-full z-10 my-6 md:my-6 font-normal">
           I'm a Full Stack Software Engineer based in Winnipeg.<br/>
           Specialised in building and designing websites and applications.
         </h3>
