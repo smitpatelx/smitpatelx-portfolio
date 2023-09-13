@@ -40,6 +40,7 @@
               <li>Django</li>
               <li>Nestjs</li>
               <li>Vue2/3</li>
+              <li>Svelte</li>
             </ul>
           </div>
           <div>
@@ -55,7 +56,7 @@
                 <path class="animate-pulse"  stroke="#0A2540" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.5 18.6667h4.9259M10.2222 17.6111l3.6944-3.6944-3.6944-3.6945" />
               </svg>
             </div>
-            <p>Languages</p>
+            <p>Language & Tech.</p>
             <ul>
               <li>Typescript</li>
               <li>Python</li>
@@ -63,6 +64,10 @@
               <li>PHP</li>
               <li>C Sharp</li>
               <li>Java</li>
+              <li>Html5/Css/Scss</li>
+              <li>PostgrSql/MySql</li>
+              <li>DynamoDB/MongoDB</li>
+              <li>Redis/Memecached</li>
             </ul>
           </div>
           <div>
