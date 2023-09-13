@@ -31,13 +31,15 @@
                 <path class=" animate-pulse" fill="#00D4FF" fill-rule="evenodd" d="M13.8112 22.5904l3.8158 3.8158-1.1614 1.1613-4.9771-4.9771 4.9771-4.9771 1.1614 1.1613-3.8158 3.8158zm11.9451 0l-3.8158 3.8158 1.1613 1.1613 4.9771-4.9771-4.9771-4.9771-1.1613 1.1613 3.8158 3.8158z" clip-rule="evenodd" />
               </svg>
             </div>
-            <p>Libraries</p>
+            <p>Frameworks</p>
             <ul>
-              <li>Vue</li>
-              <li>Express.js</li>
               <li>React</li>
-              <li>Jquery</li>
-              <li>Tailwindcss</li>
+              <li>Nextjs</li>
+              <li>Go-Fiber</li>
+              <li>FastApi</li>
+              <li>Django</li>
+              <li>Nestjs</li>
+              <li>Vue2/3</li>
             </ul>
           </div>
           <div>
@@ -55,9 +57,10 @@
             </div>
             <p>Languages</p>
             <ul>
-              <li>Javascipt</li>
-              <li>PHP</li>
+              <li>Typescript</li>
               <li>Python</li>
+              <li>Go</li>
+              <li>PHP</li>
               <li>C Sharp</li>
               <li>Java</li>
             </ul>
@@ -76,10 +79,13 @@
             <p>Tools</p>
             <ul>
               <li>Figma</li>
-              <li>Adobe XD</li>
-              <li>VS Code</li>
+              <li>Kubernetes</li>
+              <li>Docker</li>
               <li>Blender</li>
-              <li>Photohsop</li>
+              <li>Framer Motion</li>
+              <li>TailwindCss</li>
+              <li>MUI</li>
+              <li>Shadcn Ui</li>
             </ul>
           </div>
         </div>
@@ -87,12 +93,12 @@
       <div class="flex col-span-4 lg:col-span-2 justify-center items-center">
         <div class="w-full flex flex-wrap justify-center items-center mt-24 lg:mt-0 p-8" >
           <nuxt-picture
-            placeholder 
+            placeholder
             src="/SMIT-GRAY-SCALED.jpg"
             alt="Smit Patel"
             width="400"
             height="400"
-            class="w-64 md:w-full max-w-sm z-10 h-auto ml-0 md:ml-8 rounded transform hover:scale-95 skew-y-3 -skew-x-6 transition-all duration-300 ease-in-out" 
+            class="w-64 md:w-full max-w-sm z-10 h-auto ml-0 md:ml-8 rounded transform hover:scale-95 skew-y-3 -skew-x-6 transition-all duration-300 ease-in-out"
           />
         </div>
       </div>
