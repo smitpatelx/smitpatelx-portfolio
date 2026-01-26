@@ -32,7 +32,7 @@
     "vuelidate": "^0.7.6"
   },
   "devDependencies": {
-    "@nuxt/image": "^0.3.0",
+    "@nuxt/image": "^2.0.0",
     "@nuxtjs/tailwindcss": "^3.4.2",
     "@tailwindcss/postcss7-compat": "^2.0.3",
     "@tailwindcss/typography": "^0.3.1",
