@@ -20,7 +20,7 @@
     "cross-env": "^7.0.2",
     "locomotive-scroll": "^3.6.1",
     "lottie-web": "^5.7.4",
-    "nuxt": "^2.14.7",
+    "nuxt": "^4.3.1",
     "tailwindcss-markdown": "^1.0.1",
     "velocity-animate": "^1.5.2",
     "vue-click-outside": "^1.1.0",
@@ -37,10 +37,10 @@
     "@tailwindcss/postcss7-compat": "^2.0.3",
     "@tailwindcss/typography": "^0.3.1",
     "autoprefixer": "^9.8.6",
-    "node-sass": "4.14.1",
+    "node-sass": "9.0.0",
     "postcss": "^8.2.10",
-    "responsive-loader": "^2.2.0",
-    "sass-loader": "^8.0.2",
+    "responsive-loader": "^3.1.2",
+    "sass-loader": "^16.0.7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3"
   },
   "browserslist": [
