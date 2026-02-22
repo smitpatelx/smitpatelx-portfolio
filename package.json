@@ -20,7 +20,7 @@
     "cross-env": "^7.0.2",
     "locomotive-scroll": "^3.6.1",
     "lottie-web": "^5.7.4",
-    "nuxt": "^2.14.7",
+    "nuxt": "^4.3.1",
     "tailwindcss-markdown": "^1.0.1",
     "velocity-animate": "^1.5.2",
     "vue-click-outside": "^1.1.0",
